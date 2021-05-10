@@ -1,32 +1,91 @@
 *
 {
-  margin:0px;
-  padding:0px;
+  margin:0;
+  padding:0;
+
 }
 
 body{
-  margin:0px;
-  background-color:	goldenrod;
-}
-.title{
-    background-image:url("../image/img1.jpg");
-    max-width: 100%;
-    height:650px;
+  margin:0;
+  padding: 0;
+  font-family: poppins;
+  background:black;
 }
 
-.cc{
-  padding-left: 200px;
-  padding-top: 100px;
-  color:white;
-  font-size: 50px;
+header{
+  overflow: hidden;
+  height: 100vh;
 }
 
-.ccs{
-  padding-top: 200px;
+.vid-bg{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  min-height: 100%;
+  min-width: 100%;
+
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.header-overlay{
+  height: 100vh;
+  position:absolute;
+  top: 0;
+  left:0;
+  background:#225470;
+  z-index: 1;
+  opacity: 0.85;
+}
+.banner-text{
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  color: white;
+
+}
+
+.banner-text h1{
+  color: #fff;
+  font-size: 200px;
+  margin: 0;
+}
+
+.banner-text p{
+  color:#fff;
+  font-size: 30px;
+  margin:0;
+  font-weight: bold;
+
 }
 
 
+.moto{
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
 
+.services{
+  background-blend-mode: darken;
+  background-attachment: fixed;
+ background-size: cover;
+}
+
+.tts1{
+  text-align: center;
+  font-size: 60px;
+  color: white;
+}
+h1{
+  color: white;
+}
 .grid-container{
   width:100%;
   height:100px;
@@ -35,6 +94,7 @@ body{
   grid-template-columns: auto auto auto auto auto;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 .box{
   width:250px;
@@ -54,4 +114,9 @@ body{
   max-height: 100%;
   max-width: 100%;
   margin-top: 0px;
+}
+.cont-img{
+  max-width: 100%;
+  max-height: 100%;
+  background-blend-mode: lighten;
 }
