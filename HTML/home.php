@@ -23,25 +23,12 @@
                 Your browser does not support the video tag.
             </video>
           </div> -->
-        <div class="service">
-          <h1 class="tts1">Our services</h1>
-          <div class="grid-container">
-            <div class="box">
-              <p class="marvel">Logo Design </p>
-            </div>
-            <div class="box">
-              <p class="marvel">Web Design </p>
-            </div>
-            <div class="box">
-              <p class="marvel">Html, css, javascript,php coding </p>
-            </div>
-            <div class="box">
-              <p class="marvel">Social Media handeling</p>
-            </div>
-            <div class="box">
-              <p class="marvel">Social Media Advertising</p>
-            </div>
+        <header class="v-header container">
+          <div class="fullscreen-video-wrap">
+              .<video src="../" autoplay poster="posterimage.jpg">
+
+              </video>
           </div>
-        </div>
+        </header>
   </body>
 </html>
