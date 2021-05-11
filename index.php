@@ -11,7 +11,7 @@
       <!-- company name  -->
 
       <header>
-        <video src="MEDIA/tech.mp4" class="vid-big"autoplay loop ></video>
+        <video src="MEDIA/touch.mp4" class="vid-big"autoplay loop ></video>
         <script>
           document.getElementById('vid').play();
         </script>
@@ -46,6 +46,8 @@
             <p class="marvel">Social Media Advertising</p>
           </div>
         </div>
+        <br><br><br><br>
+          <button class="btn-services">Learn More</button>
       </div>
 
   </body>

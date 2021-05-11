@@ -9,7 +9,7 @@ body{
   margin:0;
   padding: 0;
   font-family: poppins;
-  background:#111111;
+  background:black;
 }
 
 header{
@@ -119,4 +119,21 @@ h1{
   max-width: 100%;
   max-height: 100%;
   background-blend-mode: lighten;
+}
+
+.btn-services{
+  border-radius: 5px;
+  background:white;
+  color: black;
+  align-items: center;
+  align-content: center;
+  margin-left: 45%;
+  height:50px;
+  width:150px;
+  border-color: #51c4d3;
+  font-size: 20px;
+}
+
+.btn-services:hover{
+  background-color: #51c4d3;
 }
