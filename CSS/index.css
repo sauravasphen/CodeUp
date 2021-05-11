@@ -19,14 +19,13 @@ body{
   top: 0;
   left: 0;
 }
-
 .CodeUp{
   z-index: 1;
-  color: #126e82;
+  color: #20a2be;
   position: absolute;
   top: 5%;
   right: 1%;
-  text-align: right;
+  text-align: center;
 }
 .CodeUp span{
   font-size: 70px;
