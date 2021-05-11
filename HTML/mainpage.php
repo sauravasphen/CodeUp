@@ -32,23 +32,23 @@
         <div class="grid-container">
           <div class="box">
             <p class="marvel">Logo Design </p>
-            <img src="MEDIA/logodesign.jpg" class="model">
+            <img src="../MEDIA/logodesign.jpg" class="model">
           </div>
           <div class="box">
             <p class="marvel">Web Design </p>
-            <img src="MEDIA/webdesign.jpg" class="model">
+            <img src="../MEDIA/webdesign.jpg" class="model">
           </div>
           <div class="box">
             <p class="marvel">Html, css, javascript,php coding </p>
-            <img src="MEDIA/hcjp.jpg" class="model">
+            <img src="../MEDIA/hcjp.jpg" class="model">
           </div>
           <div class="box">
             <p class="marvel">Social Media handeling</p>
-            <img src="MEDIA/mediahandeling.jpg" class="model">
+            <img src="../MEDIA/mediahandeling.jpg" class="model">
           </div>
           <div class="box">
             <p class="marvel">Social Media Advertising</p>
-            <img src="MEDIA/advertising.jpg" class="model">
+            <img src="../MEDIA/advertising.jpg" class="model">
           </div>
         </div>
       </div>
