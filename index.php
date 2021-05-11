@@ -27,28 +27,37 @@
       <br><br><br>
       <div class="services">
         <p class="moto">digital agency with solid design and development expertise.<br> We build websites,<br>and elaborate online business services.</p>
-        <br><br><br><h1 class="tts1">Our services</h1>
+        <br><br><br><br><br><h1 class="tts1">Our services</h1>
         <br><br>
         <div class="grid-container">
           <div class="box">
             <p class="marvel">Logo Design </p>
+            <img src="MEDIA/logodesign.jpg" class="model">
           </div>
           <div class="box">
             <p class="marvel">Web Design </p>
+            <img src="MEDIA/webdesign.jpg" class="model">
           </div>
           <div class="box">
             <p class="marvel">Html, css, javascript,php coding </p>
+            <img src="MEDIA/hcjp.jpg" class="model">
           </div>
           <div class="box">
             <p class="marvel">Social Media handeling</p>
+            <img src="MEDIA/mediahandeling.jpg" class="model">
           </div>
           <div class="box">
             <p class="marvel">Social Media Advertising</p>
+            <img src="MEDIA/advertising.jpg" class="model">
           </div>
         </div>
-        <br><br><br><br>
+      </div>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      .<div>
           <button class="btn-services">Learn More</button>
       </div>
+
+
 
   </body>
 </html>
