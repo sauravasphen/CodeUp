@@ -15,8 +15,6 @@
         <script>
           document.getElementById('vid').play();
         </script>
-        .<div class="header-overlay">
-        </div>
         <div class="banner-text">
           <h1>CodeUp<h1>
           <p class="pps">It’s your time to grow through digital marketing
