@@ -1,1 +1,39 @@
 /* code coming soon */
+body{
+  font-family: candara;
+  background-color: #111111;
+  color:red;
+}
+
+.header{
+  margin: 0px;
+}
+
+.header video{
+  position: absolute;
+  background-color: red;
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.CodeUp{
+  z-index: 1;
+  color: #126e82;
+  position: absolute;
+  top: 5%;
+  right: 1%;
+  text-align: right;
+}
+.CodeUp span{
+  font-size: 70px;
+  letter-spacing: 5px;
+  font-weight: bolder;
+}
+.CodeUp p{
+font-size: 35px;
+
+}

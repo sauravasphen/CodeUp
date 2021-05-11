@@ -3,14 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="CSS/index.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/work.css"> -->
   </head>
   <body>
-    <!-- home  -->
-      <!-- company name  -->
-
-      <header>
+    <div class="header">
+      <video src="MEDIA/touch.mp4" autoplay loop></video>
+      <div class="CodeUp">
+        <span>CodeUp</span><br>
+        <p>It’s your time to grow through digital marketing
+        </br>and</br>
+         we're here to support u all the way through</p>
+    </div>
+    <!-- <header>
         <video src="MEDIA/touch.mp4" class="vid-big"autoplay loop ></video>
         <script>
           document.getElementById('vid').play();
@@ -46,7 +51,6 @@
         </div>
         <br><br><br><br>
           <button class="btn-services">Learn More</button>
-      </div>
-
+      </div> -->
   </body>
 </html>
