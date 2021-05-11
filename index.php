@@ -22,7 +22,7 @@
         </script>
         <div class="banner-text">
           <h1>CodeUp<h1>
-          <p class="pps">It’s your time to grow through digital marketing
+          <p class="pps">It’s your time to grow through digital marketi ng
           </br>and</br>
            we're here to support u all the way through</p>
         </div>
