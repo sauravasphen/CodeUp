@@ -19,6 +19,7 @@
         <img src="../MEDIA/logo.png" alt="logo">
       </div>
   </div>
+<<<<<<< HEAD
     <!-- <header>
         <video src="MEDIA/touch.mp4" class="vid-big"autoplay loop ></video>
         <script>
@@ -32,6 +33,9 @@
         </div>
       </header>
       <br><br><br>      <div class="services">
+=======
+      <div class="services">
+>>>>>>> 4815905348f2da2f24cdfac6cfe31d4f7135a358
         <p class="moto">digital agency with solid design and development expertise.<br> We build websites,<br>and elaborate online business services.</p>
       </div>
         <br><br><br><br>

@@ -1,6 +1,9 @@
 /* code coming soon */
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 /* font-family: 'Rubik', sans-serif; */
+*{
+  cursor: default;
+}
 body{
   font-family: 'Rubik', sans-serif;
   background-color: #111111;
@@ -17,7 +20,7 @@ body{
 .head-section video{
   position: absolute;
   top: 25%;
-  left: 31%;
+  left: 28%;
   width: 1000px;
 }
 .CodeUp{
@@ -31,7 +34,7 @@ body{
   top: 25%;
   left: 10%;
   float: left;
-  cursor: default;
+
 }
 .CodeUp:hover{
   background-position: -100%;
@@ -43,15 +46,37 @@ body{
 .CodeUp h1{
   letter-spacing: 5px;
   line-height: 5px;
-  font-size: 250px;
+  font-size: 200px;
 }
 .logo{
   /* background-color: blue; */
   position: absolute;
   float: right;
-  top: 27%;
+  top: 37%;
   right: 5%;
 }
 .logo img{
-  width: 450px;
+  width: 250px;
+}
+.moto{
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+.btn-services{
+  border-radius: 5px;
+  background:white;
+  color: black;
+  align-items: center;
+  align-content: center;
+  margin-left: 45%;
+  height:50px;
+  width:150px;
+  border-color: #51c4d3;
+  font-size: 20px;
+}
+
+.btn-services:hover{
+  background-color: #51c4d3;
 }
