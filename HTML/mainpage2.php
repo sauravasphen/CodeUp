@@ -64,8 +64,8 @@
     <script type="text/javascript" src="../JS/vanilla-tilt.js"></script>
     <script type="text/javascript">
 	VanillaTilt.init(document.querySelectorAll(".image"), {
-		max: 25,
-		speed: 200,
+		max: 10,
+		speed:50,
     glare:true,
     "max-glare":1,
 	});
