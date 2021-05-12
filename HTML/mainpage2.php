@@ -7,13 +7,16 @@
     <!-- <link rel="stylesheet" type="text/css" href="css/work.css"> -->
   </head>
   <body>
-    <div class="codeup">
-      <h1>CodeUp</h1><br>
-      <p>It's time to get digital!</p>
-    </div>
-    <div class="logo">
-      <img src="../MEDIA/logo.png" alt="logo">
-    </div>
+    <div class="head-section">
+      <div class="CodeUp">
+        <p>It's time to get digital!</p>
+        <h1>CodeUp</h1>
+      </div>
+      <div class="logo">
+        <img src="../MEDIA/logo.png" alt="logo">
+      </div>
+  </div>
+
     <!-- <header>
         <video src="MEDIA/touch.mp4" class="vid-big"autoplay loop ></video>
         <script>
