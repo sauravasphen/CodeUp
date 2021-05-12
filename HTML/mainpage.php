@@ -3,17 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/work.css"> -->
   </head>
   <body>
-    <div class="header">
-      <video src="MEDIA/touch.mp4" autoplay loop></video>
-      <div class="CodeUp">
-        <span>CodeUp</span><br>
-        <p>It’s your time to grow through digital marketing
-        </br>and</br>
-         we're here to support u all the way through</p>
+    <div class="codeup">
+      <h1>CodeUp</h1><br>
+      <p>It's time to get digital!</p>
+    </div>
+    <div class="logo">
+      <img src="../MEDIA/logo.png" alt="logo">
     </div>
     <!-- <header>
         <video src="MEDIA/touch.mp4" class="vid-big"autoplay loop ></video>

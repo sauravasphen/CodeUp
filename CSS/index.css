@@ -1,38 +1,18 @@
 /* code coming soon */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+/* font-family: 'Rubik', sans-serif; */
 body{
-  font-family: candara;
+  font-family: 'Rubik', sans-serif;
   background-color: #111111;
-  color:red;
 }
 
-.header{
-  margin: 0px;
-}
-
-.header video{
-  position: absolute;
-  background-color: red;
-  width: 100vw;
-  height: auto;
-  overflow: hidden;
-  z-index: -1;
-  top: 0;
-  left: 0;
-}
-.CodeUp{
-  z-index: 1;
-  color: #20a2be;
-  position: absolute;
-  top: 5%;
-  right: 1%;
+.codeup{
+  height: 100vh;
   text-align: center;
+  width: 70%;
+  float: left;
 }
-.CodeUp span{
-  font-size: 70px;
-  letter-spacing: 5px;
-  font-weight: bolder;
-}
-.CodeUp p{
-font-size: 35px;
-
+.logo{
+  width: 30%;
+  float: left;
 }
