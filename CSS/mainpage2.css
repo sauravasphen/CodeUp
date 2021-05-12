@@ -31,7 +31,7 @@ body{
   transition: 0.5s ease-out;
   background-size: 200%;
   position: absolute;
-  top: 25%;
+  top: 28%;
   left: 10%;
   float: left;
 
@@ -52,11 +52,11 @@ body{
   /* background-color: blue; */
   position: absolute;
   float: right;
-  top: 37%;
+  top: 28%;
   right: 5%;
 }
 .logo img{
-  width: 250px;
+  width: 500px;
 }
 .moto{
   text-align: center;
