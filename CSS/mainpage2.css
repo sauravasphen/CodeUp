@@ -14,7 +14,7 @@ body{
 /* -------------- 1.HEAD SECTION ----------------- */
 .container{
   height: 100vh;
-  /* background-color: yellow; */
+   background-color: black;
 }
 .container video{
   position: absolute;
@@ -60,17 +60,31 @@ body{
 /* --------------- 2. ATTRACT-SECTION ------------*/
 .attract{
   width: 100%;
+  background: linear-gradient(180deg, black 20%, #0f4c75 40%,#3282b8 60%,#0f4c75 80%,black 100%);
 }
 .box{
   position: relative;
   height: 100vh;
-  margin: 0px;
+  margin: 150px;
   padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  border-left: 1px solid rgba(255,255,255,0.5);
+  backdrop-filter:blur(5px);
 }
 .text{
   position: absolute;
   top: 20%;
   left: 10%;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
 }
 .image{
   position: absolute;
@@ -80,7 +94,7 @@ body{
 .image video{
   width: 500px;
 }
-#box1{
+/* #box1{
   background-color: #d8e3e7;
 }
 #box2{
@@ -94,4 +108,9 @@ body{
 }
 #box5{
   background-color: #d8e3e7;
+<<<<<<< HEAD
 }
+=======
+} */ */
+/* check
+>>>>>>> ecb61a3a5b3c3dce67f5eab54ef5831d6d740d99
