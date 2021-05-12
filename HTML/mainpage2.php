@@ -7,6 +7,10 @@
   </head>
   <body>
     <div class="head-section">
+      <video src="../MEDIA/touch.mp4" class="vid-big"autoplay loop></video>
+      <script>
+        document.getElementById('vid').play();
+      </script>
       <div class="CodeUp">
         <p>It's time to get digital!</p>
         <h1>CodeUp</h1>

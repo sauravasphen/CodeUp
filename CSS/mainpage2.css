@@ -11,7 +11,14 @@ body{
 
 .head-section{
   height: 100vh;
+  background-color:black;
   /* background-color: yellow; */
+}
+.head-section video{
+  position: absolute;
+  top: 25%;
+  left: 31%;
+  width: 1000px;
 }
 .CodeUp{
   /* background-color: red; */
@@ -24,7 +31,7 @@ body{
   top: 25%;
   left: 10%;
   float: left;
-  cursor: initial;
+  cursor: default;
 }
 .CodeUp:hover{
   background-position: -100%;
@@ -43,9 +50,9 @@ letter-spacing: 5px;
   /* background-color: blue; */
   position: absolute;
   float: right;
-  top: 25%;
+  top: 27%;
   right: 5%;
 }
 .logo img{
-  width: 500px;
+  width: 450px;
 }
