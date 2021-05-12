@@ -63,7 +63,7 @@
     </div>
     <script type="text/javascript" src="../JS/vanilla-tilt.js"></script>
     <script type="text/javascript">
-	VanillaTilt.init(document.querySelector(".image"), {
+	VanillaTilt.init(document.querySelectorAll(".image"), {
 		max: 25,
 		speed: 200,
     glare:true,
