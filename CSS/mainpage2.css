@@ -18,22 +18,21 @@ body{
 }
 .container video{
   position: absolute;
-  top: 25%;
+  top: 28%;
   left: 28%;
   width: 1000px;
 }
 .CodeUp{
   /* background-color: red; */
-  background: linear-gradient(to right, #d8e3e7 50%, #126e82 50%, #51c4d3, #d8e3e7);
+  background: linear-gradient(to right, white 60%, #3bf3ff, white);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.5s ease-out;
   background-size: 200%;
   position: absolute;
-  top: 28%;
+  top: 30%;
   left: 10%;
   float: left;
-
 }
 .CodeUp:hover{
   background-position: -100%;
@@ -48,16 +47,15 @@ body{
   font-size: 200px;
 }
 .logo{
-  /* background-color: blue; */
+  /* background-color: blue;   */
   position: absolute;
   float: right;
-  top: 28%;
+  top: 25%;
   right: 5%;
 }
 .logo img{
   width: 500px;
 }
-
 
 /* --------------- 2. ATTRACT-SECTION ------------*/
 .attract{
@@ -97,4 +95,3 @@ body{
 #box5{
   background-color: #d8e3e7;
 }
-/* check */
