@@ -6,18 +6,17 @@
 }
 body{
   font-family: 'Rubik', sans-serif;
-  background-color: #111111;
+  background-color: black;
   padding: 0px;
   margin: 0px;
   color: #d8e3e7;
 }
 /* -------------- 1.HEAD SECTION ----------------- */
-.head-section{
+.container{
   height: 100vh;
-  background-color:black;
   /* background-color: yellow; */
 }
-.head-section video{
+.container video{
   position: absolute;
   top: 25%;
   left: 28%;
@@ -58,40 +57,43 @@ body{
 .logo img{
   width: 500px;
 }
-.moto{
-  text-align: center;
-  font-size: 30px;
-  color: white;
-}
 
-.btn-services{
-  border-radius: 20px;
-  background:white;
-  color: black;
-  align-items: center;
-  align-content: center;
-  margin-left: 45%;
-  height:50px;
-  width:150px;
-  border-color: #51c4d3;
-  font-size: 20px;
-  text-decoration: none;
-}
 
-.btn-services:hover{
-  background-color: #51c4d3;
-}
-
-.container{
-  height: 100vh;
+/* --------------- 2. ATTRACT-SECTION ------------*/
+.attract{
   width: 100%;
 }
-
-
-
- .img{
-  float: right;
+.box{
+  position: relative;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+.text{
   position: absolute;
+  top: 20%;
+  left: 10%;
+}
+.image{
+  position: absolute;
+  top: 20%;
+  right: 10%;
+}
+.image video{
   width: 500px;
-  height: 600px;
+}
+#box1{
+  background-color: #d8e3e7;
+}
+#box2{
+  background-color: #51c4d3;
+}
+#box3{
+  background-color: #111111;
+}
+#box4{
+  background-color: #126e82;
+}
+#box5{
+  background-color: #d8e3e7;
 }
