@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="container">
-      <video src="../MEDIA/touch.mp4" autoplay loop></video>
+      <video src="../MEDIA/touch.mp4" autoplay loop id="vid"></video>
       <script>
         document.getElementById('vid').play();
       </script>
@@ -20,41 +20,41 @@
       </div>
     </div>
     <div class="attract">
-      <div class="box" id="box1">
+      <div class="box" id="box1" data-color="#d8e3e7">
         <div class="text">
-          Some random piece of Shit.
+          <p>Make your Brand Unique. (Logo designing, digital content)</p>
         </div>
         <div class="image">
           <video src="../media/design.mp4" autoplay loop>
         </div>
       </div>
-      <div class="box" id="box2">
+      <div class="box" id="box2" data-color="#51c4d3">
         <div class="text">
-          Some random piece of Shit.
+          <p>Let clients know you're digital. (Social media)</p>
         </div>
         <div class="image">
           <video src="../media/design.mp4" autoplay loop>
         </div>
       </div>
-      <div class="box" id="box3">
+      <div class="box" id="box3" data-color="#111111">
         <div class="text">
-          Some random piece of Shit.
+          <p>Reach out to more people. (Boosting)</p>
         </div>
         <div class="image">
           <video src="../media/design.mp4" autoplay loop>
         </div>
       </div>
-      <div class="box" id="box4">
+      <div class="box" id="box4" data-color="#126e82">
         <div class="text">
-          Some random piece of Shit.
+          <p>Get yourself a daziling website!(Website)</p>
         </div>
         <div class="image">
           <video src="../media/design.mp4" autoplay loop>
         </div>
       </div>
-      <div class="box" id="box5">
+      <div class="box" id="box5" data-color="#d8e3e7">
         <div class="text">
-          Some random piece of Shit.
+          <p> Get easy-breezy digital management portal. (Portal)</p>
         </div>
         <div class="image">
           <video src="../media/design.mp4" autoplay loop>
