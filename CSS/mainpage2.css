@@ -24,27 +24,27 @@ body{
 }
 .CodeUp{
   /* background-color: red; */
-  background: linear-gradient(to right, white 60%, #3bf3ff, white);
+  background: linear-gradient(to right, white 60%, #3bf3ff, #3bf3ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.5s ease-out;
   background-size: 200%;
   position: absolute;
-  top: 30%;
-  left: 10%;
+  top: 20%;
+  left: 9%;
   float: left;
 }
 .CodeUp:hover{
   background-position: -100%;
 }
 .CodeUp p{
-  font-size: 30px;
+  font-size: 35px;
   letter-spacing: 5px;
 }
 .CodeUp h1{
-  letter-spacing: 5px;
+  letter-spacing: 7px;
   line-height: 5px;
-  font-size: 200px;
+  font-size: 210px;
 }
 .logo{
   /* background-color: blue;   */

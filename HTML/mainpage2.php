@@ -33,7 +33,7 @@
           <p>Let clients know you're digital. <br>(Social media)</p>
         </div>
         <div class="image">
-          <video src="../media/design.mp4" autoplay loop>
+          <video src="../media/socialmedia.mp4" autoplay loop>
         </div>
       </div>
       <div class="box" id="box3" data-color="#111111">
@@ -41,7 +41,7 @@
           <p>Reach out to more people.<br> (Boosting)</p>
         </div>
         <div class="image">
-          <video src="../media/design.mp4" autoplay loop>
+          <video src="../media/sales.mp4" autoplay loop>
         </div>
       </div>
       <div class="box" id="box4" data-color="#126e82">
@@ -49,7 +49,7 @@
           <p>Get yourself a daziling website!<br>(Website)</p>
         </div>
         <div class="image">
-          <video src="../media/design.mp4" autoplay loop>
+          <video src="../media/website.mp4" autoplay loop>
         </div>
       </div>
       <div class="box" id="box5" data-color="#d8e3e7">
@@ -57,14 +57,14 @@
           <p> Get easy-breezy digital <br>management portal.<br>(Portal)</p>
         </div>
         <div class="image">
-          <video src="../media/design.mp4" autoplay loop>
+          <video src="../media/portal.mp4" autoplay loop>
         </div>
       </div>
     </div>
     <script type="text/javascript" src="../JS/vanilla-tilt.js"></script>
     <script type="text/javascript">
 	VanillaTilt.init(document.querySelector(".image"), {
-		max: 25,
+		max: 15,
 		speed: 200,
     glare:true,
     "max-glare":1,
