@@ -6,7 +6,7 @@
 }
 body{
   font-family: 'Rubik', sans-serif;
-  background-color: black;
+  background: linear-gradient(180deg, black 15%, #111111,#49b5ff,#fcff45 , #2dffda);
   padding: 0px;
   margin: 0px;
   color: #d8e3e7;
@@ -16,22 +16,16 @@ body{
   height: 100vh;
    background-color: black;
 }
-.container video{
-  position: absolute;
-  top: 28%;
-  left: 28%;
-  width: 1000px;
-}
 .CodeUp{
   /* background-color: red; */
-  background: linear-gradient(to right, white 60%, #3bf3ff, #3bf3ff);
+  background: linear-gradient(to right, white 60%, #3bf3ff, #3bf3ff, white);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.5s ease-out;
   background-size: 200%;
   position: absolute;
-  top: 20%;
-  left: 9%;
+  top: 10%;
+  left: 7%;
   float: left;
 }
 .CodeUp:hover{
@@ -39,56 +33,57 @@ body{
 }
 .CodeUp p{
   font-size: 35px;
-  letter-spacing: 5px;
+  letter-spacing: 7px;
 }
 .CodeUp h1{
-  letter-spacing: 7px;
+  letter-spacing: 5px;
   line-height: 5px;
-  font-size: 210px;
+  font-size: 180px;
 }
 .logo{
   /* background-color: blue;   */
   position: absolute;
   float: right;
-  top: 25%;
-  right: 5%;
+  top: 45%;
+  right: 7%;
 }
 .logo img{
-  width: 500px;
+  width: 450px;
+}
+.container video{
+  position: absolute;
+  top: 40%;
+  left: 27%;
+  width: 1000px;
 }
 
 /* --------------- 2. ATTRACT-SECTION ------------*/
 .attract{
   width: 100%;
-  background: linear-gradient(180deg, black 20%, #0f4c75 40%,#3282b8 60%,#0f4c75 80%,black 100%);
+  margin: 0px;
+  padding: 0px;
 }
 .box{
   position: relative;
   height: 100vh;
-  margin: 150px;
+  margin: 0px;
   padding: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
 }
 .text{
   position: absolute;
-  top: 20%;
+  top: 45%;
   left: 10%;
   font-size: 40px;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
 
 }
 .image{
   position: absolute;
   top: 20%;
-  right: 10%;
+  right: 5%;
 }
 .image video{
-  width: 500px;
+  width: 550px;
+    border-radius: 10px;
 }
 /* #box1{
   background-color: #d8e3e7;
