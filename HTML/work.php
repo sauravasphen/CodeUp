@@ -18,7 +18,7 @@
           <h2>01</h2>
           <h3>Nirvana</h3>
           <p>Nirvana Band History</p>
-          <a href="https://pradhan21.github.io/curt-cobain/">read more</a>
+          <a href="https://pradhan21.github.io/kurt-cobain/">read more</a>
         </div>
       </div>
 
