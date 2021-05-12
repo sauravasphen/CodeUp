@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../CSS/mainpage2.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/work.css"> -->
   </head>
   <body>
     <div class="head-section">
