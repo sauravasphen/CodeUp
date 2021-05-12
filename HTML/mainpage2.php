@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="head-section">
-      <video src="../MEDIA/touch.mp4" class="vid-big"autoplay loop></video>
+      <video src="../MEDIA/touch.mp4" autoplay loop></video>
       <script>
         document.getElementById('vid').play();
       </script>
@@ -19,7 +19,6 @@
         <img src="../MEDIA/logo.png" alt="logo">
       </div>
   </div>
-
     <!-- <header>
         <video src="MEDIA/touch.mp4" class="vid-big"autoplay loop ></video>
         <script>
