@@ -44,18 +44,18 @@
                 <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
                 <button type='button'onclick='register()'class='toggle-btn'>Sign Up</button>
             </div>
-            <form id='login' class='input-group-login'>
-                <input type='text'class='input-field'placeholder='Email Id' required >
-                <input type='password'class='input-field'placeholder='Enter Password' required>
+            <form id='login' class='input-group-login' method="post" action="../Handel/login.php">
+                <input type='text'class='input-field'placeholder='Id' name="username"required >
+                <input type='password'class='input-field'placeholder='Enter Password' name="password"required>
                 <input type='checkbox'class='check-box'><span>Remember Password</span>
                 <button type='submit'class='submit-btn'>Log in</button>
             </form>
-            <form id='register' class='input-group-register'>
-                <input type='text' class='input-field' placeholder='First Name' required>
-                <input type='text' class='input-field' placeholder='Last Name' required>
-                <input type='email' class='input-field' placeholder='Email Id' required>
-                <input type='password' class='input-field' placeholder='Enter Password' required>
-                <input type='password' class='input-field' placeholder='Confirm Password' required>
+            <form id='register' class='input-group-register'method="post" action="register.php">
+                <input type='text' class='input-field' placeholder='First Name'name="fname" required>
+                <input type='text' class='input-field' placeholder='Last Name'name="lname" required>
+                <input type='email' class='input-field' placeholder='Email Id'name="email" required>
+                <input type='password' class='input-field' placeholder='Enter Password' name="password"required>
+                <input type='password' class='input-field' placeholder='Confirm Password'name="c-password" required>
                 <input type='checkbox' class='check-box'> <span>I agree to the terms and                                                   conditions</span>
                 <button type='submit'class='submit-btn'>Sign Up</button>
             </form>
