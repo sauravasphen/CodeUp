@@ -11,14 +11,7 @@
         header.classList.toggle("sticky", window.scrollY>0);})
     </script>
     <script type="text/javascript" src="../JS/vanilla-tilt.js"></script>
-    <script type="text/javascript">
-  VanillaTilt.init(document.querySelectorAll(".image"), {
-    max: 10,
-    speed:50,
-    glare:true,
-    "max-glare":1,
-  });
-  </script>
+
   </head>
   <body>
     <header>
@@ -69,7 +62,7 @@
         </div>
     </div>
 
-    
+
     <div class="container">
       <video src="../MEDIA/touch.mp4" autoplay loop></video>
       <div class="CodeUp">
@@ -127,5 +120,13 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".image"), {
+        max: 10,
+        speed:50,
+        glare:true,
+        "max-glare":1,
+      });
+  </script>
   </body>
 </html>
