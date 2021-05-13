@@ -185,6 +185,23 @@ button.submit-btn
 	border-radius: 30px;
 }
 
+button.google-btn
+{
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: #teal;
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+}
+
+form.input-group-register p{
+    text-align: center;
+}
+
 input.check-box
 {
 	margin: 30px 10px 34px 0;
