@@ -13,7 +13,7 @@
     <br><br>
     <br><br>
     <div class="work-container">
-      <div class="card">
+      <div class="card img1">
         <div class="content">
           <h2>01</h2>
           <h3>Nirvana</h3>
@@ -22,7 +22,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card img2">
         <div class="content">
           <h2>02</h2>
           <h3>Image gallary</h3>
@@ -31,7 +31,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card img3">
         <div class="content">
           <h2>03</h2>
           <h3>Interactive Resume</h3>
@@ -40,9 +40,9 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card img4">
         <div class="content">
-          <h2>01</h2>
+          <h2>04</h2>
           <h3>Nirvana</h3>
           <p>Nirvana Band History</p>
           <a href="https://sauravasphen.github.io/asphenphotos/index.html">read more</a>
