@@ -13,7 +13,8 @@
     <br><br>
     <br><br>
     <div class="work-container">
-      <div class="card img1">
+      <div class="card">
+        <img src="../MEDIA/nirpro.png">
         <div class="content">
           <h2>01</h2>
           <h3>Nirvana</h3>
@@ -22,7 +23,8 @@
         </div>
       </div>
 
-      <div class="card img2">
+      <div class="card">
+        <img src="../MEDIA/saurav.png">
         <div class="content">
           <h2>02</h2>
           <h3>Image gallary</h3>
@@ -31,7 +33,8 @@
         </div>
       </div>
 
-      <div class="card img3">
+      <div class="card">
+        <img src="../MEDIA/aniraj.png">
         <div class="content">
           <h2>03</h2>
           <h3>Interactive Resume</h3>
@@ -40,7 +43,8 @@
         </div>
       </div>
 
-      <div class="card img4">
+      <div class="card">
+        <img src="../MEDIA/nirpro.png">
         <div class="content">
           <h2>04</h2>
           <h3>Nirvana</h3>
