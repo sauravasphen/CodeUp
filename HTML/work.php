@@ -3,10 +3,36 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/work.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/work.css"> -->
+    <link rel="stylesheet" type="text/css" href="../CSS/work.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/navigation.css">
+    <script type="text/javascript" src="../JS/menu.js">
+    </script>
   </head>
   <body>
+    <!-- Copy -->
+    <header>
+      <div class="nav-logo">
+        <a href="mainpage.php">
+          <img src="../MEDIA/logo.png" alt="logo">
+          <span>CodeUp</span>
+        </a>
+      </div>
+      <div class="menu-bar" onclick="menuslide()">
+        <img src="../MEDIA/menu.png">
+      </div>
+    </div>
+    </header>
+    <div id="menu" onclick="menuslide()">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="work.php">Our WorK</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Portal</a></li>
+      </ul>
+    </div>
+    <!-- Copy till here for Navigation-->
     <div class="header">
       <h1>Our Work</h1>
     </div>
@@ -53,7 +79,5 @@
         </div>
       </div>
     </div>
-
-
   </body>
   </html>

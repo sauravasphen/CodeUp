@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", sans-serif;
+    box-sizing: border-box;
+}
+
+div.head{
+    width: 100%;
+    height: 85vh;
+    background-color: #fff;
+}
+
+div.head div.about{
+    position: relative;
+    width: 80%;
+    top: 34%;
+    left: 10%;
+    font-size: 2.5em;
+}
+
+div.img-parallax{
+  width: 100%;
+  height: 99.7vh;
+  background-image: url("../MEDIA/marketing.jpg");
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.body1, div.body2{
+    width: 100%;
+    height: 100.1vh;
+}
+
+div.sub-body{
+  position: relative;
+  width: 80%;
+  top: 34%;
+  left: 10%;
+  height: auto;
+}
+
+div.sub1{
+    width: 30%;
+    float: left;
+    font-size: 1.4em;
+    height: 36vh;
+}
+
+div.sub2{
+    width: 70%;
+    float: left;
+    font-size: 1.3em;
+    height: 36vh;
+}
+
+
+div.sub-body2{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    height: 100.1vh;
+}
+
+div.body2-img1{
+  width: 45%;
+  height: 60.7vh;
+  top: 2%;
+  left: 2%;
+  background-image: url("../MEDIA/person1.jpg");
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+}
+
+div.body2-img2{
+  left: 53%;
+  top: 30%;
+  width: 45%;
+  height: 60.7vh;
+  background-image: url("../MEDIA/person1.jpg");
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+}
+
+
+div.body3{
+    width: 100%;
+    height: 94vh;
+}
+
+div.body3 div.heading3{
+    width: 76%;
+    left: 12%;
+    font-size: 1.5em;
+    top: 7%;
+    position: relative;
+}
+
+div.sub-body3{
+  width: 76%;
+  left: 12%;
+  position: relative;
+  top: 15%;
+  text-align: justify;
+}
+
+div.body3 div.body3-part1,div.body3-part2{
+
+  font-size: 1.5em;
+}
+
+
+div.body4{
+    width: 100%;
+    height: 94vh;
+}
+
+div.body4 div.heading4{
+    width: 76%;
+    left: 12%;
+    font-size: 1.5em;
+    top: 9%;
+    position: relative;
+}
+
+div.sub-body4{
+  width: 76%;
+  left: 12%;
+  position: relative;
+  top: 15%;
+  text-align: justify;
+}
+
+div.body4 div.body4-part1,div.body4-part2{
+
+  font-size: 1.5em;
+}

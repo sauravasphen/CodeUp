@@ -3,27 +3,40 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../CSS/mainpage2.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/mainpage.css">
     <script type="text/javascript" src="../JS/menu.js"></script>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY>0);})
+    </script>
+    <script type="text/javascript" src="../JS/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+  VanillaTilt.init(document.querySelectorAll(".image"), {
+    max: 10,
+    speed:50,
+    glare:true,
+    "max-glare":1,
+  });
+  </script>
   </head>
   <body>
-    <div class="nav-bar">
+    <header>
       <div class="nav-logo">
-        <a href="mainpage2.php">
+        <a href="mainpage.php">
           <img src="../MEDIA/logo.png" alt="logo">
           <span>CodeUp</span>
         </a>
       </div>
-      <div class="menu-bar" onclick="menuslide()">
-        <img src="../MEDIA/menu.png">
-      </div>
-
+    </header>
+    <div class="menu-bar" onclick="menuslide()">
+      <img src="../MEDIA/menu.png">
     </div>
     <div id="menu" onclick="menuslide()">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Service</a></li>
-        <li><a href="#">Our WorK</a></li>
+        <li><a href="work.php">Our Work</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Contact Us</a></li>
         <li><a href="#">Portal</a></li>
@@ -86,14 +99,5 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="../JS/vanilla-tilt.js"></script>
-    <script type="text/javascript">
-	VanillaTilt.init(document.querySelectorAll(".image"), {
-		max: 10,
-		speed:50,
-    glare:true,
-    "max-glare":1,
-	});
-  </script>
   </body>
 </html>
