@@ -10,6 +10,52 @@ body{
   background: linear-gradient( black 16%, #2df2ff, #0056c7, #7900b3);
   color: #d8e3e7;
 }
+@keyframes swing {
+    0% { transform: rotate(4deg); }
+    50%{ transform: rotate(-4deg);}
+    100% { transform: rotate(4deg); }
+}
+/* -----------Navigation---------- */
+.nav-bar{
+  height: 8vh;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: rgb(216, 227, 231,0.1);
+}
+.nav-logo{
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+.nav-logo span{
+  position: absolute;
+  left: 70px;
+  top: 14px;
+  letter-spacing: 4px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+.nav-logo img{
+    width: 50px;
+}
+.menu-bar{
+  position: absolute;
+  right: 50px;
+  top: 15px;
+}
+.menu-bar img{
+  width: 50px;
+  transform-origin: center -20px;
+}
+.menu-bar img:hover{
+  animation-name: swing;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
 /* -------------- 1.HEAD SECTION ----------------- */
 .container{
   height: 100vh;
@@ -51,7 +97,8 @@ body{
 .container video{
   position: absolute;
   top: 40%;
-  left: 27%;
+  left: 28%;
+  z-index: -1;
   width: 1000px;
 }
 
@@ -89,20 +136,5 @@ body{
 }
 .image video{
   width: 550px;
-    border-radius: 15px;
+  border-radius: 15px;
 }
-/* #box1{
-  background-color: #d8e3e7;
-}
-#box2{
-  background-color: #51c4d3;
-}
-#box3{
-  background-color: #111111;s
-}
-#box4{
-  background-color: #126e82;
-}
-#box5{
-  background-color: red;
-} */

@@ -4,11 +4,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../CSS/mainpage2.css">
+    <script type="text/javascript" src="../JS/menu.js"></script>
   </head>
   <body>
     <div class="nav-bar">
-      <div class="menu-bar" onclick="">
-
+      <div class="nav-logo">
+        <a href="mainpage2.php">
+          <img src="../MEDIA/logo.png" alt="logo">
+          <span>CodeUp</span>
+        </a>
+      </div>
+      <div class="menu-bar" onclick="menuslide()">
+        <img src="../MEDIA/menu.png">
+      </div>
+      <div id="menu" onclick="menuslide()">
+        <ul>
+    			<li><a href="#">Home</a></li>
+    			<li><a href="#">Service</a></li>
+    			<li><a href="#">Word</a></li>
+    			<li><a href="#">About Us</a></li>
+    			<li><a href="#">Contact Us</a></li>
+    			<li><a href="#">Portal</a></li>
+    		</ul>
       </div>
     </div>
     <div class="container">

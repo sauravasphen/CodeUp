@@ -1,4 +1,4 @@
-function menuPull(){
+function menuslide(){
   var x = document.getElementById("menu");
   if (x.style.display === "none") {
     x.style.display = "block";
@@ -6,7 +6,7 @@ function menuPull(){
   else {
         x.style.display = "none";
   }
-}
+ }
 
 
 function Popup() {
