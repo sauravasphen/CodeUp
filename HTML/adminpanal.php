@@ -25,7 +25,7 @@
                 <li>
                   <a href="">
                       <span class="ti-user"></span>
-                      <span>Clients</span>
+                      <span><?php echo $_SESSION['name']; ?></span>
                   </a>
                 </li>
                 <li>

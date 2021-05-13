@@ -44,7 +44,10 @@
                 <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
                 <button type='button'onclick='register()'class='toggle-btn'>Sign Up</button>
             </div>
-            <form id='login' class='input-group-login' method="post" action="../Handel/login.php">
+            <form id='login' class='input-group-login' method="post" action="login.php">
+              <?php if (isset($_GET['error'])){?>
+              <p class="error"><?php echo $_GET['error']; ?></p>
+            <?php } ?>
                 <input type='text'class='input-field'placeholder='Id' name="username"required >
                 <input type='password'class='input-field'placeholder='Enter Password' name="password"required>
                 <input type='checkbox'class='check-box'><span>Remember Password</span>

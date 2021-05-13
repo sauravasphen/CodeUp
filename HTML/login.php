@@ -24,8 +24,8 @@ $sql="select *from Admin
       if (mysqli_num_rows($result)===1){
         $row=mysqli_fetch_assoc($result);
         if($row['admin_id']===$user&& $row['Password']===$pass){
-          $_SESSION['name']=$row['fname'];
-          $_SESSION['username']=$row['agent_id'];
+          $_SESSION['name']=$row['f_name'];
+          $_SESSION['username']=$row['admin_id'];
           $_SESSION['contact_num']=$row['contact_num'];
           header("location:adminpanal.php");
           exit();
