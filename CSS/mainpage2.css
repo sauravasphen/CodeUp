@@ -19,47 +19,64 @@ body{
     50%{ transform: rotate(-4deg);}
     100% { transform: rotate(4deg); }
 }
-
+@keyframes transdown{
+	from {opacity: 0; transform: translateY(-100px);}
+	to {opacity: 1;	transform: translateY(0px);}
+}
+@keyframes transleft{
+	from {opacity: 0; transform: translateX(100px);}
+	to {opacity: 1;	transform: translateX(0px);}
+}
 /* -----------Navigation--------------------------- */
-.nav-bar{
-  height: 8vh;
-  width: 100%;
+header{
   position: fixed;
+  padding: 0px 50px;
+  height: 9vh;
+  width: 100%;
+  padding: 0px;
+  display: none;
   top: 0;
   left: 0;
   z-index: 1;
   background-color: rgb(216, 227, 231,0.1);
 }
+header.sticky{
+  animation-name: transdown;
+  animation-duration: 0.8s;
+  background: rgb(17, 17, 17,0.5);
+  display: block;
+}
 .nav-logo{
   position: absolute;
-  left: 20px;
   top: 15px;
+  left: 40px;
 }
 .nav-logo span{
   position: absolute;
+  top: 12px;
   left: 70px;
-  top: 14px;
   letter-spacing: 4px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   color: white;
   text-decoration: none;
 }
 .nav-logo img{
-    width: 50px;
+    width: 55px;
 }
 .menu-bar{
-  position: absolute;
-  right: 50px;
-  top: 15px;
+  position: fixed;
+  z-index: 4;
+  top: 12px;
+  right: 40px;
 }
 .menu-bar img{
-  width: 50px;
+  width: 65px;
   transform-origin: center -20px;
 }
 .menu-bar img:hover{
   animation-name: swing;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 #menu{
@@ -67,16 +84,18 @@ body{
   text-align: right;
   height: 100vh;
   width: 100%;
-  z-index: 1000;
+  z-index: 3;
   display: none;
   background-color: rgb(4, 4, 4, 0.8);
+  animation-name: transleft;
+  animation-duration: 1s;
 }
 #menu ul{
   position: relative;
   right: 30px;
   top: 20vh;
   letter-spacing: 9px;
-  line-height: 50px;
+  line-height: 40px;
   font-weight: bolder;
   list-style-type: none;
 }
@@ -166,10 +185,10 @@ body{
 }
 .image{
   position: absolute;
-  top: 10%;
+  top: 15%;
   right: 7%;
 }
 .image video{
   width: 550px;
-  border-radius: 15px;
+  border-radius: 20px;
 }

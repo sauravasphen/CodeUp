@@ -1,0 +1,89 @@
+/* --------------------ANIMATIONS------------------------ */
+@keyframes swing {
+    0% { transform: rotate(4deg); }
+    50%{ transform: rotate(-4deg);}
+    100% { transform: rotate(4deg); }
+}
+@keyframes transdown{
+	from {opacity: 0; transform: translateY(-100px);}
+	to {opacity: 1;	transform: translateY(0px);}
+}
+@keyframes transleft{
+	from {opacity: 0; transform: translateX(100px);}
+	to {opacity: 1;	transform: translateX(0px);}
+}
+/* -----------Navigation--------------------------- */
+header{
+  position: fixed;
+  top: 0;
+  padding: 0px 50px;
+  height: 9vh;
+  width: 100%;
+  padding: 0px;
+  animation-name: transdown;
+  animation-duration: 0.8s;
+  background: rgb(17, 17, 17,0.5);
+}
+.nav-logo{
+  position: fixed;
+  top: 15px;
+  left: 40px;
+}
+.nav-logo span{
+  position: fixed;
+  top: 25px;
+  left: 105px;
+  letter-spacing: 4px;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+.nav-logo img{
+    width: 55px;
+}
+.menu-bar{
+  position: fixed;
+  z-index: 1;
+  top: 12px;
+  right: 45px;
+}
+.menu-bar img{
+  width: 65px;
+  transform-origin: center -20px;
+}
+.menu-bar img:hover{
+  animation-name: swing;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+#menu{
+  position: fixed;
+  text-align: right;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 3;
+  display: none;
+  background-color: rgb(4, 4, 4, 0.8);
+  animation-name: transleft;
+  animation-duration: 0.8s;
+}
+#menu ul{
+  position: relative;
+  right: 40px;
+  top: 25vh;
+  letter-spacing: 9px;
+  line-height: 40px;
+  font-weight: bolder;
+  list-style-type: none;
+}
+#menu a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 60px;
+  color: white;
+}
+#menu a:hover, .nav-logo span:hover{
+  color: #3bf3ff;
+}
