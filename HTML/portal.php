@@ -9,11 +9,11 @@
   </head>
   <body>
     <!-- Navigation part -->
-    <div class="menu-section" onclick="menuPull()">
+    <div class="menu-section" onclick="menuslide()">
         <i class="fas fa-bars"></i>
     </div>
     <div id="menu">
-      <div class="menu-section" onclick="menuPull()">
+      <div class="menu-section" onclick="menuslide()">
           <i class="fas fa-times"></i>
       </div>
         <ul>
@@ -46,8 +46,9 @@
                 <input type='email' class='input-field' placeholder='Email Id' required>
                 <input type='password' class='input-field' placeholder='Enter Password' required>
                 <input type='password' class='input-field' placeholder='Confirm Password' required>
-                <input type='checkbox' class='check-box'> <span>I agree to the terms and                                                   conditions</span>
                 <button type='submit'class='submit-btn'>Sign Up</button>
+                <p>Or</p>
+                <button type="button" class="google-btn">Sign In with Google</button>
             </form>
         </div>
     </div>
