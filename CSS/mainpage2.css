@@ -6,9 +6,10 @@
 }
 body{
   font-family: 'Rubik', sans-serif;
-  background: linear-gradient(180deg, black 15%, #111111,#49b5ff,#fcff45 , #2dffda);
+  /* background: linear-gradient(180deg, black 15%, #111111,#49b5ff,#fcff45 , #2dffda); */
   padding: 0px;
   margin: 0px;
+  background-color: black;
   color: #d8e3e7;
 }
 /* -------------- 1.HEAD SECTION ----------------- */
@@ -78,14 +79,14 @@ body{
 }
 .image{
   position: absolute;
-  top: 20%;
+  top: 10%;
   right: 5%;
 }
 .image video{
   width: 550px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
-/* #box1{
+#box1{
   background-color: #d8e3e7;
 }
 #box2{
@@ -98,10 +99,5 @@ body{
   background-color: #126e82;
 }
 #box5{
-  background-color: #d8e3e7;
-<<<<<<< HEAD
+  background-color: red;
 }
-=======
-} */ */
-/* check
->>>>>>> ecb61a3a5b3c3dce67f5eab54ef5831d6d740d99
