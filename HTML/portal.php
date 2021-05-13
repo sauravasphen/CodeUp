@@ -28,27 +28,30 @@
 
     <div class="popup" id="popup-1">
          <div class="content">
-            <i onclick="Popup()" class="fas fa-times"></i>
+            <span onclick="Popup()" class="close">X</span>
+            <div class="login-head">
+                <h4>Login</h4>
+            </div>
             <div class='button-box'>
                 <div id='btn'></div>
-                <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
-                <button type='button'onclick='register()'class='toggle-btn'>Sign Up</button>
+                <button type='button'onclick='user()'class='toggle-btn' name="user">User</button>
+                <button type='button'onclick='company()'class='toggle-btn' name="company">Company</button>
+                <button type='button'onclick='admin()'class='toggle-btn' name="admin">Admin</button>
             </div>
-            <form id='login' class='input-group-login'>
-                <input type='text'class='input-field'placeholder='Email Id' required >
-                <input type='password'class='input-field'placeholder='Enter Password' required>
-                <input type='checkbox'class='check-box'><span>Remember Password</span>
-                <button type='submit'class='submit-btn'>Log in</button>
+            <form id='user' class='input-group-user'>
+                <input type='text'class='input-field'placeholder='Email Id' name="username" required >
+                <input type='password'class='input-field'placeholder='Enter Password' name="password" required>
+                <button type='submit'class='submit-btn'>User</button>
             </form>
-            <form id='register' class='input-group-register'>
-                <input type='text' class='input-field' placeholder='First Name' required>
-                <input type='text' class='input-field' placeholder='Last Name' required>
-                <input type='email' class='input-field' placeholder='Email Id' required>
-                <input type='password' class='input-field' placeholder='Enter Password' required>
-                <input type='password' class='input-field' placeholder='Confirm Password' required>
-                <button type='submit'class='submit-btn'>Sign Up</button>
-                <p>Or</p>
-                <button type="button" class="google-btn">Sign In with Google</button>
+            <form id='company' class='input-group-company'>
+                <input type='text'class='input-field'placeholder='Email Id' name="username" required >
+                <input type='password'class='input-field'placeholder='Enter Password' name="password" required>
+                <button type='submit'class='submit-btn'>Company</button>
+            </form>
+            <form id='admin' class='input-group-admin'>
+                <input type='text'class='input-field'placeholder='Email Id' name="username" required >
+                <input type='password'class='input-field'placeholder='Enter Password' name="password" required>
+                <button type='submit'class='submit-btn'>Admin</button>
             </form>
         </div>
     </div>
