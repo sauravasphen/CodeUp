@@ -10,12 +10,15 @@ body{
   background: linear-gradient( black 16%, #2df2ff, #0056c7, #7900b3);
   color: #d8e3e7;
 }
+
+/* --------------------ANIMATIONS------------------------ */
 @keyframes swing {
     0% { transform: rotate(4deg); }
     50%{ transform: rotate(-4deg);}
     100% { transform: rotate(4deg); }
 }
-/* -----------Navigation---------- */
+
+/* -----------Navigation--------------------------- */
 .nav-bar{
   height: 8vh;
   width: 100%;
