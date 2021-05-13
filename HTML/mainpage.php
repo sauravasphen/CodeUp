@@ -39,9 +39,37 @@
         <li><a href="work.php">Our Work</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Portal</a></li>
+          <li><button type="button" onclick="Popup()" class="portal-btn">Client Portal</button></li>
       </ul>
     </div>
+
+    <div class="popup" id="popup-1">
+         <div class="content">
+            <i onclick="Popup()" class="fas fa-times"></i>
+            <div class='button-box'>
+                <div id='btn'></div>
+                <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                <button type='button'onclick='register()'class='toggle-btn'>Sign Up</button>
+            </div>
+            <form id='login' class='input-group-login'>
+                <input type='text'class='input-field'placeholder='Email Id' required >
+                <input type='password'class='input-field'placeholder='Enter Password' required>
+                <input type='checkbox'class='check-box'><span>Remember Password</span>
+                <button type='submit'class='submit-btn'>Log in</button>
+            </form>
+            <form id='register' class='input-group-register'>
+                <input type='text' class='input-field' placeholder='First Name' required>
+                <input type='text' class='input-field' placeholder='Last Name' required>
+                <input type='email' class='input-field' placeholder='Email Id' required>
+                <input type='password' class='input-field' placeholder='Enter Password' required>
+                <input type='password' class='input-field' placeholder='Confirm Password' required>
+                <input type='checkbox' class='check-box'> <span>I agree to the terms and                                                   conditions</span>
+                <button type='submit'class='submit-btn'>Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    
     <div class="container">
       <video src="../MEDIA/touch.mp4" autoplay loop></video>
       <div class="CodeUp">
