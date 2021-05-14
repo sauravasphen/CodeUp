@@ -27,7 +27,7 @@
                       <span><?php echo $_SESSION['c_name']; ?></span>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="taskview.php">
                     <span class="ti-clipboard"></span>
                     <span>Task List</span>
                 </a>

@@ -28,19 +28,19 @@
 
                 </li>
                 <li>
-                  <a href="agentsview.php">
+                  <a href="admin-agentsview.php">
                     <span class="ti-ticket"></span>
                     <span>Agent List</span>
                 </a>
               </li>
               <li>
-                <a href="clientview.php">
+                <a href="admin-clientview.php">
                   <span class="ti-ticket"></span>
                   <span>Clients List</span>
               </a>
             </li>
               <li>
-                <a href="taskview.php">
+                <a href="admin-taskview.php">
                   <span class="ti-settings"></span>
                   <span>Task List</span>
               </a>
