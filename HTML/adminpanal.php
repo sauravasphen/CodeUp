@@ -28,11 +28,17 @@
 
                 </li>
                 <li>
-                  <a href="">
+                  <a href="agentsview.php">
                     <span class="ti-ticket"></span>
                     <span>Agent List</span>
                 </a>
               </li>
+              <li>
+                <a href="clientview.php">
+                  <span class="ti-ticket"></span>
+                  <span>Clients List</span>
+              </a>
+            </li>
               <li>
                 <a href="">
                   <span class="ti-settings"></span>
