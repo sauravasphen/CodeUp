@@ -17,12 +17,12 @@ $user=$_POST['username'];
 $pass=$_POST['password'];
 
 $sql="select *from Agent
-      where agent_id='$user' and Password='$pass'";
+      where a_username='$user' and Password='$pass'";
       $result=mysqli_query($conn,$sql);
 
       if (mysqli_num_rows($result)===1){
         $row=mysqli_fetch_assoc($result);
-        if($row['agent_id']===$user&& $row['Password']===$pass){
+        if($row['a_username']===$user&& $row['Password']===$pass){
           $_SESSION['name']=$row['f_name'];
           $_SESSION['username']=$row['agent_id'];
           $_SESSION['contact_num']=$row['contact_num'];

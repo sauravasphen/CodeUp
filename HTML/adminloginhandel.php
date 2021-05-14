@@ -17,12 +17,12 @@ $user=$_POST['username'];
 $pass=$_POST['password'];
 
 $sql="select *from Admin
-      where admin_id='$user' and Password='$pass'";
+      where username='$user' and Password='$pass'";
       $result=mysqli_query($conn,$sql);
 
       if (mysqli_num_rows($result)===1){
         $row=mysqli_fetch_assoc($result);
-        if($row['admin_id']===$user&& $row['Password']===$pass){
+        if($row['username']===$user&& $row['Password']===$pass){
           $_SESSION['admin_name']=$row['f_name'];
           $_SESSION['a_username']=$row['admin_id'];
           $_SESSION['a_contact_num']=$row['contact_num'];

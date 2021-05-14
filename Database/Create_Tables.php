@@ -11,11 +11,12 @@ if(!$conn){
   die("connection failed:".mysqli_connect_error());
 }
 $sql_admin = "CREATE TABLE Admin (
-    admin_id int(10)   PRIMARY KEY,
+    admin_id int(10)   AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
     f_name VARCHAR(50) NOT NULL,
     Email VARCHAR(40) NOT NULL Unique,
     Password CHAR(128),
-    contact_num VARCHAR(10) Unique
+    contact_num int(10) Unique
     )";
 
 
@@ -26,11 +27,12 @@ $sql_admin = "CREATE TABLE Admin (
     }
 
     $sql_agent = "CREATE TABLE Agent (
-        agent_id VARCHAR(30)   PRIMARY KEY,
+        agent_id int(10)  AUTO_INCREMENT PRIMARY KEY,
+        a_username VARCHAR(50) NOT NULL,
         f_name VARCHAR(50) NOT NULL,
         Email VARCHAR(40) NOT NULL Unique,
         Password CHAR(128),
-        contact_num VARCHAR(10) Unique
+        contact_num int(10) Unique
         )";
 
     if ($conn->query($sql_agent) === TRUE) {
@@ -40,12 +42,13 @@ $sql_admin = "CREATE TABLE Admin (
     }
 
     $sql_company = "CREATE TABLE Company (
-        company_id VARCHAR(30)   PRIMARY KEY,
+        company_id int(10) AUTO_INCREMENT  PRIMARY KEY,
+        c_username VARCHAR(50) NOT NULL,
         c_name VARCHAR(50) NOT NULL,
         Email VARCHAR(40) NOT NULL Unique,
         Password CHAR(128),
         contact_num VARCHAR(10) Unique,
-        agent_id VARCHAR(30),
+        agent_id int(10),
         FOREIGN KEY(agent_id) REFERENCES Agent(agent_id)
         )";
 
@@ -57,7 +60,7 @@ $sql_admin = "CREATE TABLE Admin (
 
     $sql_task = "CREATE TABLE Task (
         task_id int(20) AUTO_INCREMENT PRIMARY KEY,
-        company_id VARCHAR(30),
+        company_id int(10),
         subject VARCHAR(50) NOT NULL,
         task VARCHAR(40) NOT NULL,
         report VARCHAR (90),
