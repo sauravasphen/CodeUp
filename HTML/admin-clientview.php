@@ -28,19 +28,19 @@
 
                 </li>
                 <li>
-                  <a href="agentsview.php">
+                  <a href="admin-agentsview.php">
                     <span class="ti-ticket"></span>
                     <span>Agent List</span>
                 </a>
               </li>
               <li>
-                <a href="clientview.php">
+                <a href="admin-clientview.php">
                   <span class="ti-ticket"></span>
                   <span>Clients List</span>
               </a>
             </li>
               <li>
-                <a href="">
+                <a href="admin-taskview.php">
                   <span class="ti-settings"></span>
                   <span>Task List</span>
               </a>
@@ -90,8 +90,8 @@
               <table>
                 <thead>
                   <tr>
-                    <th>Agent ID</th>
-                    <th>Agent Name</th>
+                    <th>Company ID</th>
+                    <th>Company Name</th>
                     <th>Email</th>
                     <th>Contact Number</th>
                   </tr>
@@ -111,13 +111,13 @@
                         }
                         echo "connection successfuly";
 
-                        $selectquery="SELECT *FROM Agent";
+                        $selectquery="SELECT *FROM Company";
                         $query=mysqli_query($conn,$selectquery);
                         while($res=mysqli_fetch_array($query)){
                           ?>
                           <tr>
-                            <td><?php echo $res['agent_id']; ?></td>
-                            <td><?php echo $res['f_name']; ?></td>
+                            <td><?php echo $res['company_id']; ?></td>
+                            <td><?php echo $res['c_name']; ?></td>
                             <td><?php echo $res['Email']; ?></td>
                             <td><?php echo $res['contact_num']; ?></td>
                           </tr>

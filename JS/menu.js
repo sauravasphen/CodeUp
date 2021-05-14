@@ -51,5 +51,5 @@ function admin()
         w.style.left='-710px';
         x.style.left='-340px';
         y.style.left='35px';
-        z.style.left='214px';
+        z.style.left='222px';
       }

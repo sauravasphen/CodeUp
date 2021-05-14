@@ -28,19 +28,19 @@
 
                 </li>
                 <li>
-                  <a href="agentsview.php">
+                  <a href="admin-agentsview.php" >
                     <span class="ti-ticket"></span>
                     <span>Agent List</span>
                 </a>
               </li>
               <li>
-                <a href="clientview.php">
+                <a href="admin-clientview.php">
                   <span class="ti-ticket"></span>
                   <span>Clients List</span>
               </a>
             </li>
               <li>
-                <a href="">
+                <a href="admin-taskview.php">
                   <span class="ti-settings"></span>
                   <span>Task List</span>
               </a>
@@ -86,14 +86,18 @@
         <section class="recent">
           <div class="activity-grid">
             <div class="activity-card">
-              <h3>Agents</h3>
+              <h3>Tasks</h3>
               <table>
                 <thead>
                   <tr>
+                    <th>Task ID</th>
                     <th>Company ID</th>
-                    <th>Company Name</th>
-                    <th>Email</th>
-                    <th>Contact Number</th>
+                    <th>Subject</th>
+                    <th>Task</th>
+                    <th>Report</th>
+                    <th>Status</th>
+                    <th>Issued Date</th>
+                    <th>Closed Date</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -111,15 +115,19 @@
                         }
                         echo "connection successfuly";
 
-                        $selectquery="SELECT *FROM Company";
+                        $selectquery="SELECT *FROM Task";
                         $query=mysqli_query($conn,$selectquery);
                         while($res=mysqli_fetch_array($query)){
                           ?>
                           <tr>
+                            <td><?php echo $res['task_id']; ?></td>
                             <td><?php echo $res['company_id']; ?></td>
-                            <td><?php echo $res['c_name']; ?></td>
-                            <td><?php echo $res['Email']; ?></td>
-                            <td><?php echo $res['contact_num']; ?></td>
+                            <td><?php echo $res['subject']; ?></td>
+                            <td><?php echo $res['task']; ?></td>
+                            <td><?php echo $res['report']; ?></td>
+                            <td><?php echo $res['status']; ?></td>
+                            <td><?php echo $res['issued_date']; ?></td>
+                            <td><?php echo $res['closed_date']; ?></td>
                           </tr>
                         <?php
                         }
