@@ -1,9 +1,3 @@
-<?php
-  SESSION_start();
-
-  if (isset($_SESSION['name']) && isset($_SESSION['contact_num'])){
-
-?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -24,21 +18,26 @@
         <ul>
                 <li>
                       <span class="ti-user"></span>
-                      <span><?php echo $_SESSION['name']; ?></span>
-
+                      <span>Company(name)</span>
                 </li>
                 <li>
                   <a href="">
-                    <span class="ti-ticket"></span>
-                    <span>Tickets</span>
+                    <span class="ti-clipboard"></span>
+                    <span>Task List</span>
                 </a>
               </li>
               <li>
                 <a href="">
-                  <span class="ti-settings"></span>
-                  <span>Accounts</span>
+                  <span class="ti-pin-alt"></span>
+                  <span>Add Task</span>
               </a>
             </li>
+            <li>
+              <a href="">
+                <span class="ti-settings"></span>
+                <span>Edit Profile</span>
+            </a>
+          </li>
             <li>
               <a href="logout.php">
                 <span class="ti-shift-right-alt"></span>
@@ -196,10 +195,3 @@
     </div>
   </body>
 </html>
-
-<?php
-}else{
-  header("location:mainpage.php");
-  exit();
-}
-?>
