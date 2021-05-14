@@ -11,7 +11,6 @@
         header.classList.toggle("sticky", window.scrollY>0);})
     </script>
     <script type="text/javascript" src="../JS/vanilla-tilt.js"></script>
-
   </head>
   <body>
     <header>
@@ -25,20 +24,16 @@
     <div class="menu-bar" onclick="menuslide()">
       <img src="../MEDIA/menu.png">
     </div>
-    <div id="menu">
-      <div class="menu-section" onclick="menuslide()">
-          <i class="fas fa-times"></i>
-      </div>
+    <div id="menu" onclick="menuslide()">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Service</a></li>
+        <li><a href="mainpage.php">Home</a></li>
+        <li><a href="service.php">Service</a></li>
         <li><a href="work.php">Our Work</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><button type="button" onclick="Popup()" class="portal-btn">Client Portal</button></li>
+        <li><a href="aboutus.php">About Us</a></li>
+        <li><a href="contact.php">Contact Us</a></li>
+        <li><a href="#" onclick="Popup()">Client Portal</a></li>
       </ul>
     </div>
-
     <div class="popup" id="popup-1">
          <div class="content">
             <span onclick="Popup()" class="close">X</span>
@@ -47,24 +42,24 @@
             </div>
             <div class='button-box'>
                 <div id='btn'></div>
-                <button type='button'onclick='user()'class='toggle-btn' name="user">Agent</button>
-                <button type='button'onclick='company()'class='toggle-btn' name="company">Company</button>
-                <button type='button'onclick='admin()'class='toggle-btn' name="admin">Admin</button>
+                <button type='button' onclick='user()' class='toggle-btn'>Agent</button>
+                <button type='button' onclick='company()' class='toggle-btn'>Company</button>
+                <button type='button' onclick='admin()' class='toggle-btn'>Admin</button>
             </div>
-            <form id='user' class='input-group-user'method="post" action="agentloginhandel.php">
-                <input type='text'class='input-field'placeholder='Email Id' name="username" required >
-                <input type='password'class='input-field'placeholder='Enter Password' name="password" required>
-                <button type='submit'class='submit-btn'>Agent</button>
+            <form id='user' class='input-group-user' method="post" action="agentloginhandel.php">
+                <input type='text' class='input-field' placeholder='Agent ID' name="username" required >
+                <input type='password'class='input-field' placeholder='Password' name="password" required>
+                <button type='submit' class='submit-btn'>Sign In</button>
             </form>
-            <form id='company' class='input-group-company'method="post" action="companyloginhandel.php">
-                <input type='text'class='input-field'placeholder='Email Id' name="username" required >
-                <input type='password'class='input-field'placeholder='Enter Password' name="password" required>
-                <button type='submit'class='submit-btn'>Company</button>
+            <form id='company' class='input-group-company' method="post" action="companyloginhandel.php">
+                <input type='text' class='input-field' placeholder='Company Id' name="username" required >
+                <input type='password' class='input-field' placeholder='Password' name="password" required>
+                <button type='submit' class='submit-btn'>Sign In</button>
             </form>
-            <form id='admin' class='input-group-admin'method="post" action="adminloginhandel.php">
-                <input type='text'class='input-field'placeholder='Email Id' name="username" required >
-                <input type='password'class='input-field'placeholder='Enter Password' name="password" required>
-                <button type='submit'class='submit-btn'>Admin</button>
+            <form id='admin' class='input-group-admin' method="post" action="adminloginhandel.php">
+                <input type='text' class='input-field' placeholder='Admin ID' name="username" required >
+                <input type='password' class='input-field' placeholder='Password' name="password" required>
+                <button type='submit' class='submit-btn'>Sign In</button>
             </form>
         </div>
     </div>
@@ -127,7 +122,21 @@
         </div>
       </div>
     </div>
-    <div class="footer">©2021 COPYRIGHT<br>BY CodeUp</div>
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="footer-idea">
+        <a href="#">Have an idea?<br>Tell us about it.</a>
+      </div>
+      <div class="footer-email">
+        <h3>info@codup.com</h3>
+        <span>1261 Devkota Sadak Mid Baneshor<br>Kathmandu, Nepal</span>
+      </div>
+      <div class="footer-logo">
+        <a href="mainpage.php"><img src="../MEDIA/logo.png" alt="logo"></a>
+      </div>
+      <div class="copyright">
+        ©2021 COPYRIGHT<br>BY CODEUP
+    </div>
     <script type="text/javascript">
       VanillaTilt.init(document.querySelectorAll(".image"), {
         max: 10,
