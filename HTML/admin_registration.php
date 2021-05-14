@@ -1,9 +1,16 @@
+<?php
+  SESSION_start();
+
+  if (isset($_SESSION['admin_name']) && isset($_SESSION['a_contact_num'])){
+
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="../CSS/registration.css">
+    <script src="../JS/valid.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
   </head>
   <body>
@@ -40,7 +47,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="admin_registration.php">
                 <span class="ti-settings"></span>
                 <span>Register</span>
             </a>
@@ -79,9 +86,15 @@
       <div class="reg-div">
             <div class="registration">
                   <h1>Create an Account</h1>
-                  <form class="registration-form" action="index.html" method="post">
+                  <form class="registration-form" action="registrationhandel.php" method="post">
                       <fieldset>
                           <legend>Registration Form</legend><br><br>
+                          <div class="label-div">
+                              <label for="id">ID</label>
+                          </div>
+                          <div class="input-div">
+                              <input type="text" name="id" placeholder="ID" required>
+                          </div>
                           <div class="label-div">
                               <label for="name">Name</label>
                           </div>
@@ -111,12 +124,12 @@
                           </div>
                           <div class="input-div">
                               <select id="country" name="acc-type">
-                                  <option value="user">User</option>
+                                  <option value="agent">Agent</option>
                                   <option value="company">Company</option>
                                   <option value="admin">Admin</option>
                               </select>
                           </div>
-                              <input type="submit" class="reg-btn" name="submit" value="Submit">
+                              <input type="submit" class="reg-btn" name="submit" value="Submit" onclick="valid()">
                       <fieldset>
                   </form>
             </div>
@@ -124,3 +137,9 @@
 
 </body>
 </html>
+<?php
+}else{
+  header("location:mainpage.php");
+  exit();
+}
+?>

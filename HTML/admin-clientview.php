@@ -46,7 +46,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="admin_registration.php">
                 <span class="ti-settings"></span>
                 <span>Register</span>
             </a>
