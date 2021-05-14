@@ -44,9 +44,9 @@ header{
 }
 .menu-bar{
   position: fixed;
-  z-index: 1;
+  z-index: 4;
   top: 12px;
-  right: 45px;
+  right: 40px;
 }
 .menu-bar img{
   width: 65px;
@@ -66,8 +66,6 @@ header{
   z-index: 3;
   display: none;
   background-color: rgb(4, 4, 4, 0.8);
-  animation-name: transleft;
-  animation-duration: 0.8s;
 }
 #menu ul{
   position: relative;
@@ -83,6 +81,8 @@ header{
   text-transform: uppercase;
   font-size: 60px;
   color: white;
+  animation-name: transleft;
+  animation-duration: 0.8s;
 }
 #menu a:hover, .nav-logo span:hover{
   color: #3bf3ff;
