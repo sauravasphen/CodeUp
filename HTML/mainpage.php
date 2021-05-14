@@ -48,9 +48,9 @@
             </div>
             <div class='button-box'>
                 <div id='btn'></div>
-                <button type='button'onclick='user()'class='toggle-btn' name="user">User</button>
-                <button type='button'onclick='company()'class='toggle-btn' name="company">Company</button>
-                <button type='button'onclick='admin()'class='toggle-btn' name="admin">Admin</button>
+                <button type='button'onclick='user()' class='toggle-btn' name="user">User</button>
+                <button type='button'onclick='company()' class='toggle-btn' name="company">Company</button>
+                <button type='button'onclick='admin()' class='toggle-btn' name="admin">Admin</button>
             </div>
             <form id='user' class='input-group-user'>
                 <input type='text'class='input-field'placeholder='Email Id' name="username" required >
