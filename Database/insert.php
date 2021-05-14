@@ -22,5 +22,25 @@ if (mysqli_multi_query($conn, $sql)) {
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
+
+$sql ="INSERT INTO Agent(agent_id,f_name,Email,Password,contact_num)
+VALUES(1111,'Aniraj Shahi','aniraj@gmail.com','67890','9841554554');";
+
+
+if (mysqli_multi_query($conn, $sql)) {
+    echo "New records created successfully";
+} else {
+    echo "Error adding agent: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+$sql ="INSERT INTO Company(company_id,c_name,Email,Password,contact_num)
+VALUES(1111,'Niscahl Thapa','nischal@gmail.com','00000','9841554554');";
+
+
+if (mysqli_multi_query($conn, $sql)) {
+    echo "New records created successfully";
+} else {
+    echo "Error adding agent: " . $sql . "<br>" . mysqli_error($conn);
+}
 mysqli_close($conn);
  ?>

@@ -13,21 +13,20 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
 echo "connection successfuly";
-
 $user=$_POST['username'];
 $pass=$_POST['password'];
 
-$sql="select *from Admin
-      where admin_id='$user' and Password='$pass'";
+$sql="select *from Company
+      where company_id='$user' and Password='$pass'";
       $result=mysqli_query($conn,$sql);
 
       if (mysqli_num_rows($result)===1){
         $row=mysqli_fetch_assoc($result);
-        if($row['admin_id']===$user&& $row['Password']===$pass){
-          $_SESSION['name']=$row['f_name'];
-          $_SESSION['username']=$row['admin_id'];
-          $_SESSION['contact_num']=$row['contact_num'];
-          header("location:adminpanal.php");
+        if($row['company_id']===$user&& $row['Password']===$pass){
+          $_SESSION['c_name']=$row['c_name'];
+          $_SESSION['C_username']=$row['company_id'];
+          $_SESSION['C_contact_num']=$row['contact_num'];
+          header("location:companypanal.php");
           exit();
         }
         else{

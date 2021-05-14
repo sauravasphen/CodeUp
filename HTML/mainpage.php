@@ -14,7 +14,6 @@
 
   </head>
   <body>
-    check
     <header>
       <div class="nav-logo">
         <a href="mainpage.php">
@@ -48,21 +47,21 @@
             </div>
             <div class='button-box'>
                 <div id='btn'></div>
-                <button type='button'onclick='user()'class='toggle-btn' name="user">User</button>
+                <button type='button'onclick='user()'class='toggle-btn' name="user">Agent</button>
                 <button type='button'onclick='company()'class='toggle-btn' name="company">Company</button>
                 <button type='button'onclick='admin()'class='toggle-btn' name="admin">Admin</button>
             </div>
-            <form id='user' class='input-group-user'>
+            <form id='user' class='input-group-user'method="post" action="agentloginhandel.php">
                 <input type='text'class='input-field'placeholder='Email Id' name="username" required >
                 <input type='password'class='input-field'placeholder='Enter Password' name="password" required>
-                <button type='submit'class='submit-btn'>User</button>
+                <button type='submit'class='submit-btn'>Agent</button>
             </form>
-            <form id='company' class='input-group-company'>
+            <form id='company' class='input-group-company'method="post" action="companyloginhandel.php">
                 <input type='text'class='input-field'placeholder='Email Id' name="username" required >
                 <input type='password'class='input-field'placeholder='Enter Password' name="password" required>
                 <button type='submit'class='submit-btn'>Company</button>
             </form>
-            <form id='admin' class='input-group-admin'>
+            <form id='admin' class='input-group-admin'method="post" action="adminloginhandel.php">
                 <input type='text'class='input-field'placeholder='Email Id' name="username" required >
                 <input type='password'class='input-field'placeholder='Enter Password' name="password" required>
                 <button type='submit'class='submit-btn'>Admin</button>

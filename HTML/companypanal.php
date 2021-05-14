@@ -1,3 +1,9 @@
+<?php
+  SESSION_start();
+
+  if (isset($_SESSION['c_name']) && isset($_SESSION['C_contact_num'])){
+
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -18,7 +24,7 @@
         <ul>
                 <li>
                       <span class="ti-user"></span>
-                      <span>Company(name)</span>
+                      <span><?php echo $_SESSION['c_name']; ?></span>
                 </li>
                 <li>
                   <a href="">
@@ -195,3 +201,10 @@
     </div>
   </body>
 </html>
+
+<?php
+}else{
+  header("location:mainpage.php");
+  exit();
+}
+?>

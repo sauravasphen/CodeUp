@@ -1,7 +1,7 @@
 <?php
   SESSION_start();
 
-  if (isset($_SESSION['name']) && isset($_SESSION['contact_num'])){
+  if (isset($_SESSION['admin_name']) && isset($_SESSION['a_contact_num'])){
 
 ?>
 <!DOCTYPE html>
@@ -24,21 +24,33 @@
         <ul>
                 <li>
                       <span class="ti-user"></span>
-                      <span><?php echo $_SESSION['name']; ?></span>
+                      <span><?php echo $_SESSION['admin_name']; ?></span>
 
                 </li>
                 <li>
                   <a href="">
                     <span class="ti-ticket"></span>
-                    <span>Tickets</span>
+                    <span>Agent List</span>
                 </a>
               </li>
               <li>
                 <a href="">
                   <span class="ti-settings"></span>
-                  <span>Accounts</span>
+                  <span>Task List</span>
               </a>
             </li>
+            <li>
+              <a href="">
+                <span class="ti-settings"></span>
+                <span>Register</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span class="ti-settings"></span>
+              <span>Edit Profile</span>
+          </a>
+        </li>
             <li>
               <a href="logout.php">
                 <span class="ti-shift-right-alt"></span>
