@@ -1,3 +1,9 @@
+<?php
+  SESSION_start();
+
+  if (isset($_SESSION['name']) && isset($_SESSION['contact_num'])){
+
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -19,7 +25,7 @@
                 <li>
                   <a href="">
                       <span class="ti-user"></span>
-                      <span>Clients</span>
+                      <span><?php echo $_SESSION['name']; ?></span>
                   </a>
                 </li>
                 <li>
@@ -35,7 +41,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="logout.php">
                 <span class="ti-shift-right-alt"></span>
                 <span>LogOut</span>
             </a>
@@ -229,3 +235,10 @@
     </div>
   </body>
 </html>
+
+<?php
+}else{
+  header("location:mainpage.php");
+  exit();
+}
+?>
