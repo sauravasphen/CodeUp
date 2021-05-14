@@ -40,7 +40,19 @@ VALUES(1111,'Niscahl Thapa','nischal@gmail.com','00000','9841554554');";
 if (mysqli_multi_query($conn, $sql)) {
     echo "New records created successfully";
 } else {
-    echo "Error adding agent: " . $sql . "<br>" . mysqli_error($conn);
+    echo "Error adding company: " . $sql . "<br>" . mysqli_error($conn);
 }
+
+$sql ="INSERT INTO Task (task_id,company_id,subject,task,report,status,issued_date,closed_date)
+VALUES(1234567890,'1111','no response','go fuck ur self','completed successfully',1,'2021/05-13',CURRENT_DATE());";
+
+
+if (mysqli_multi_query($conn, $sql)) {
+    echo "New records created successfully";
+} else {
+    echo "Error adding company: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+
 mysqli_close($conn);
  ?>

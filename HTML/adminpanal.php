@@ -40,7 +40,7 @@
               </a>
             </li>
               <li>
-                <a href="">
+                <a href="taskview.php">
                   <span class="ti-settings"></span>
                   <span>Task List</span>
               </a>
