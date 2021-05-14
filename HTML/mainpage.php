@@ -127,6 +127,7 @@
         </div>
       </div>
     </div>
+    <div class="footer">©2021 COPYRIGHT<br>BY CodeUp</div>
     <script type="text/javascript">
       VanillaTilt.init(document.querySelectorAll(".image"), {
         max: 10,
