@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Welcome</title>
     <script type="text/javascript" src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../CSS/nav.css">
+    <link rel="stylesheet" href="../CSS/portal.css">
     <script src="../JS/menu.js" charset="utf-8"></script>
   </head>
   <body>
