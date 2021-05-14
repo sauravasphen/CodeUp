@@ -87,3 +87,14 @@ header{
 #menu a:hover, .nav-logo span:hover{
   color: #3bf3ff;
 }
+
+.footer{
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  font-family: Montserrat-Regular;
+  font-size: 10px;
+  letter-spacing: 5px;
+  font-weight: normal;
+  position: absolute;
+}
