@@ -39,7 +39,7 @@ function company()
         w.style.left='-382px';
         x.style.left='32px';
         y.style.left='432px';
-        z.style.left='110px';
+        z.style.left='105px';
       }
 
 function admin()
