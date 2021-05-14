@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+/* font-family: 'Rubik', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+*{
+  cursor: default;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  padding: 0px;
+  margin: 0px;
+  background: linear-gradient( black 16%,  #0056c7, #7900b3);
+  color: #d8e3e7;
+}
+
+/* --------------------ANIMATIONS------------------------ */
+@keyframes swing {
+    0% { transform: rotate(4deg); }
+    50%{ transform: rotate(-4deg);}
+    100% { transform: rotate(4deg); }
+}
+@keyframes transdown{
+	from {opacity: 0; transform: translateY(-100px);}
+	to {opacity: 1;	transform: translateY(0px);}
+}
+@keyframes transleft{
+	from {opacity: 0; transform: translateX(100px);}
+	to {opacity: 1;	transform: translateX(0px);}
+}
+/* -----------Navigation--------------------------- */
+header{
+  position: fixed;
+  padding: 0px 50px;
+  height: 9vh;
+  width: 100%;
+  padding: 0px;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgb(216, 227, 231,0.1);
+}
+header.sticky{
+  animation-name: transdown;
+  animation-duration: 0.8s;
+  background: rgb(17, 17, 17,0.5);
+  display: block;
+}
+.nav-logo{
+  position: absolute;
+  top: 15px;
+  left: 40px;
+}
+.nav-logo span{
+  position: absolute;
+  top: 12px;
+  left: 70px;
+  letter-spacing: 4px;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+.nav-logo img{
+    width: 55px;
+}
+.menu-bar{
+  position: fixed;
+  z-index: 4;
+  top: 12px;
+  right: 40px;
+}
+.menu-bar img{
+  width: 65px;
+  transform-origin: center -20px;
+}
+.menu-bar img:hover{
+  animation-name: swing;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+#menu{
+  position: fixed;
+  text-align: right;
+  height: 100vh;
+  width: 100%;
+  z-index: 3;
+  display: none;
+  background-color: rgb(4, 4, 4, 0.8);
+}
+#menu ul{
+  position: relative;
+  right: 30px;
+  top: 20vh;
+  letter-spacing: 9px;
+  line-height: 40px;
+  font-weight: bolder;
+  list-style-type: none;
+}
+#menu a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 60px;
+  color: white;
+  animation-name: transleft;
+  animation-duration: 0.8s;
+}
+#menu a:hover,
+.nav-logo span:hover{
+  color: #3bf3ff;
+}
+
+button.portal-btn{
+    outline: 0;
+    border: 0;
+    color: white;
+    background: transparent;
+    text-align: right;
+    position: absolute;
+    font-size: 60px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    right: 1px;
+    top: 38.5vh;
+    list-style-type: none;
+    cursor: pointer;
+}
+.footer{
+  width: 100%;
+  height: 5vh;
+  text-align: center;
+  font-family: Montserrat-Regular;
+  font-size: 20px;
+  letter-spacing: 5px;
+  font-weight: normal;
+  z-index: 10000;
+
+}
+
+
+
+/* -------------- 1.HEAD SECTION ----------------- */
+.container{
+  height: 100vh;
+}
+.CodeUp{
+  /* background-color: red; */
+  background: linear-gradient(to right, white 60%, #3bf3ff, #3bf3ff, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s ease-out;
+  background-size: 200%;
+  position: absolute;
+  top: 10%;
+  left: 7%;
+  float: left;
+}
+.CodeUp:hover{
+  background-position: -100%;
+}
+.CodeUp p{
+  font-size: 35px;
+  letter-spacing: 7px;
+}
+.CodeUp h1{
+  letter-spacing: 5px;
+  line-height: 5px;
+  font-size: 180px;
+}
+.logo{
+  /* background-color: blue;   */
+  position: absolute;
+  float: right;
+  top: 45%;
+  right: 7%;
+}
+.logo img{
+  width: 450px;
+}
+.container video{
+  position: absolute;
+  top: 40%;
+  left: 28%;
+  z-index: -1;
+  width: 1000px;
+}
+
+/* --------------- 2. ATTRACT-SECTION ------------*/
+.attract{
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.box{
+  position: relative;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+.text{
+  position: absolute;
+  top: 25%;
+  left: 8%;
+  font-size: 40px;
+}
+.text h1{
+  font-size: 50px;
+  letter-spacing: 3px;
+  color: #ffffff;
+}
+.text p{
+  font-size: 27px;
+  letter-spacing: 3px;
+}
+.image{
+  position: absolute;
+  top: 15%;
+  right: 7%;
+}
+.image video{
+  width: 550px;
+  border-radius: 20px;
+}
+
+
+
+/* login and registration form */
+
+
+div.popup div.content {
+      width:360px;
+      height:380px;
+      position:fixed;
+      left: 50%;
+      top: 50%;
+      background: linear-gradient(370deg,#ededd0,transparent);
+      padding:10px;
+      border-radius: 7px;
+      overflow: hidden;
+      z-index: 1;
+      transform: translate(-50%,-150%) scale(0);
+}
+
+div.content span.close{
+     position: absolute;
+     right: 10px;
+     top: 5px;
+     color: teal;
+     font-size: 1.5em;
+     padding: 3px;
+     cursor: pointer;
+ }
+
+
+div.popup.active div.content{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+
+div.login-head{
+    position: relative;
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: bold;
+    top: 3%;
+    color: #fff;
+}
+
+div.button-box
+{
+	width:92%;
+  left: 4%;
+  top: 1.6%;
+  text-align: center;
+	position:relative;
+	box-shadow: 0 0 20px 9px teal;
+	border-radius: 20px;
+}
+
+div button.toggle-btn
+{
+	padding:10px 30px;
+	cursor:pointer;
+	background:transparent;
+	border:0;
+	outline: none;
+	position: relative;
+  color: white;
+  font-weight: bold;
+}
+
+#btn
+{
+	top: 0;
+	left:0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: teal;
+	border-radius: 30px;
+	transition: .5s;
+}
+
+form.input-group-user,form.input-group-company,form.input-group-admin
+{
+	top: 47%;;
+	position:absolute;
+	width:85%;
+  left: 7.5%;
+	transition:.5s;
+}
+
+
+input.input-field
+{
+	width: 100%;
+	padding:10px 0;
+	border-left:0;
+	border-top:0;
+	border-right:0;
+	border-bottom: 1px solid #999;
+	outline:none;
+	background: transparent;
+}
+
+input.input-field:hover{
+  background: transparent;
+  box-shadow: 0 0 20px 9px teal;
+}
+
+
+button.submit-btn
+{
+  position: relative;
+  margin-top: 12%;
+	width: 85%;
+  left: 7.5%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	background: teal;
+  color: #fff;
+	border: 0;
+	outline: none;
+	border-radius: 20px;
+}
+
+button.submit-btn:hover{
+    background: transparent;
+    box-shadow: 0 0 20px 9px teal;
+}
+
+#user
+{
+	left:32px;
+}
+
+#user input
+{
+	color:white;
+	font-size:15;
+}
+
+#company
+{
+	left:432px;
+}
+
+#company input
+{
+	color:white;
+	font-size: 15;
+}
+
+#admin
+{
+    left: 832px;
+}
+
+#admin input
+{
+	color:white;
+	font-size: 15;
+}
