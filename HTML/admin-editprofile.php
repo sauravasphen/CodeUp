@@ -95,6 +95,9 @@
                           <div class="input-div">
                               <input type="text" name="username" placeholder="username">
                           </div>
+                          <div class="text">
+                              <h2>Enter the required changes</h2>
+                          </div>
                           <div class="label-div">
                               <label for="name">Name</label>
                           </div>
