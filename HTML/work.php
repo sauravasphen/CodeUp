@@ -30,7 +30,7 @@
       </ul>
     </div>
     <div class="popup" id="popup-1">
-         <div class="content">
+         <div class="login">
             <span onclick="Popup()" class="close">X</span>
             <div class="login-head">
                 <h4>Login</h4>
@@ -68,7 +68,7 @@
         <div class="content">
           <h3>Nirvana</h3>
           <p>Music Band</p>
-          <a href="https://pradhan21.github.io/kurt-cobain/">read more</a>
+          <a href="https://pradhan21.github.io/kurt-cobain/" target="_blank">read more</a>
         </div>
       </div>
 
@@ -77,7 +77,7 @@
         <div class="content">
           <h3>Asphen Gallery</h3>
           <p>Photography Portfolio</p>
-          <a href="https://sauravasphen.github.io/asphenphotos/index.html">read more</a>
+          <a href="https://sauravasphen.github.io/asphenphotos/index.html" target="_blank">read more</a>
         </div>
       </div>
 
@@ -86,7 +86,7 @@
         <div class="content">
           <h3>Interactive Resume</h3>
           <p>A brief website of personal resume</p>
-          <a href="https://aniraj1.github.io/Website/#Contacts">read more</a>
+          <a href="https://aniraj1.github.io/Website/#Contacts" target="_blank">read more</a>
         </div>
       </div>
 
@@ -95,9 +95,12 @@
         <div class="content">
           <h3>Cyberpunk 2077</h3>
           <p>Game Website</p>
-          <a href="https://sauravasphen.github.io/asphenphotos/index.html">read more</a>
+          <a href="https://sauravasphen.github.io/asphenphotos/index.html" target="_blank">read more</a>
         </div>
       </div>
+    </div>
+    <div class="contactus-link">
+      <a href="contactus.php">Grab Yours Now!</a>
     </div>
     <div class="footer">
       <div class="footer-idea">

@@ -34,7 +34,7 @@
       </ul>
     </div>
     <div class="popup" id="popup-1">
-         <div class="content">
+         <div class="login">
             <span onclick="Popup()" class="close">X</span>
             <div class="login-head">
                 <h4>Login</h4>
@@ -122,6 +122,9 @@
           <video src="../media/portal.mp4" autoplay loop>
         </div>
       </div>
+    </div>
+    <div class="service-link">
+      <a href="work.php">Check out our work!</a>
     </div>
     <!-- FOOTER -->
     <div class="footer">

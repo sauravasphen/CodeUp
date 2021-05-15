@@ -29,7 +29,7 @@
       </ul>
     </div>
     <div class="popup" id="popup-1">
-         <div class="content">
+         <div class="login">
             <span onclick="Popup()" class="close">X</span>
             <div class="login-head">
                 <h4>Login</h4>
@@ -69,7 +69,7 @@
       <div class="body1">
             <div class="sub-body">
                 <div class="sub1">
-                  <h5>Our Goal</h5>
+                  <h2>Our Goal</h2>
                 </div>
                 <div class="sub2"><p>From the moment our company was founded, we have helped our clients find exceptional solutions for their businesses , creating memorable brands and digital products. Our expertise grows with each year, and our accumulated experience empowers us to develop products exactly as they should be.</p></div>
             </div>
