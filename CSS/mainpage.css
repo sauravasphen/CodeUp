@@ -55,6 +55,7 @@ header.sticky{
   position: absolute;
   top: 15px;
   left: 40px;
+  cursor: pointer;
 }
 .nav-logo span{
   position: absolute;
@@ -103,7 +104,7 @@ header.sticky{
   right: 30px;
   top: 20vh;
   letter-spacing: 9px;
-  line-height: 40px;
+  line-height: 50px;
   font-weight: bolder;
   list-style-type: none;
 }
@@ -281,6 +282,9 @@ button.submit-btn:hover{
   line-height: 30px;
   cursor: pointer;
 }
+.footer-email{
+  padding-left: 20px;
+}
 .footer-logo{
   text-align: center;
 }
@@ -348,6 +352,12 @@ button.submit-btn:hover{
   width: 100%;
   margin: 0px;
   padding: 0px;
+}
+.attract h1{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 100px;
 }
 .box{
   position: relative;

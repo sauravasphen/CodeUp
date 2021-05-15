@@ -5,7 +5,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="../CSS/navigation.css">
     <link rel="stylesheet" type="text/css" href="../CSS/aboutus.css">
-    <script type="text/javascript" src="../JS/menu.js"></script>    
+    <script type="text/javascript" src="../JS/menu.js"></script>
   </head>
   <body>
     <header>
@@ -22,7 +22,6 @@
     <div id="menu" onclick="menuslide()">
       <ul>
         <li><a href="mainpage.php">Home</a></li>
-        <li><a href="service.php">Service</a></li>
         <li><a href="work.php">Our Work</a></li>
         <li><a href="aboutus.php">About Us</a></li>
         <li><a href="contact.php">Contact Us</a></li>
