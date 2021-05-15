@@ -23,9 +23,10 @@
       <div class="sidebar-menu">
         <ul>
                 <li>
+                  <a href="adminpanal.php">
                       <span class="ti-user"></span>
                       <span><?php echo $_SESSION['admin_name']; ?></span>
-
+                  </a>
                 </li>
                 <li>
                   <a href="admin-agentsview.php">
@@ -89,8 +90,26 @@
             <div class="card-body">
               <span class="ti-briefcase"></span>
               <div class="">
-                <h5>Account balance</h5>
-                <h4>$30,659.45</h4>
+                <?php
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "CodeUp_db";
+
+                    // Create connection
+                    $conn = mysqli_connect($servername, $username, $password, $dbname);
+                    // Check connection
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                      }
+                      echo "connection successfuly";
+
+                      $selectquery="SELECT *FROM Agent";
+                      $query=mysqli_query($conn,$selectquery);
+                      $nums=mysqli_num_rows($query);
+                      ?>
+                <h5>Number of Agents</h5>
+                <h4><?php echo "$nums"; ?></h4>
               </div>
             </div>
             <div class="card-footer">
@@ -101,8 +120,26 @@
             <div class="card-body">
               <span class="ti-reload"></span>
               <div class="">
-                <h5>Pending</h5>
-                <h4>$19,500.45</h4>
+                <?php
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "CodeUp_db";
+
+                    // Create connection
+                    $conn = mysqli_connect($servername, $username, $password, $dbname);
+                    // Check connection
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                      }
+                      echo "connection successfuly";
+
+                      $selectquery="SELECT *FROM Company";
+                      $query=mysqli_query($conn,$selectquery);
+                      $nums1=mysqli_num_rows($query);
+                      ?>
+                <h5>Number of Clients</h5>
+                <h4><?php echo"$nums1";?></h4>
               </div>
             </div>
             <div class="card-footer">
@@ -113,8 +150,26 @@
             <div class="card-body">
               <span class="ti-checkbox"></span>
               <div class="">
+                <?php
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "CodeUp_db";
+
+                    // Create connection
+                    $conn = mysqli_connect($servername, $username, $password, $dbname);
+                    // Check connection
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                      }
+                      echo "connection successfuly";
+
+                      $selectquery="SELECT *FROM Task";
+                      $query=mysqli_query($conn,$selectquery);
+                      $nums2=mysqli_num_rows($query);
+                      ?>
                 <h5>Processed</h5>
-                <h4>$19,500.45</h4>
+                <h4><?php echo"$nums2";?></h4>
               </div>
             </div>
             <div class="card-footer">
@@ -138,71 +193,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>App Development</td>
-                    <td>15 August,2020</td>
-                    <td>22 August, 2020 </td>
-                    <td>
-                      <div class="img-1"></div>
-                      <div class="img-2"></div>
-                      <div class="img-3"></div>
-                    </td>
-                    <td>
-                      .<span class="badge success">Success</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Front-end Design</td>
-                    <td>15 August,2020</td>
-                    <td>22 August, 2020 </td>
-                    <td>
-                      <div class="img-1"></div>
-                      <div class="img-2"></div>
-                      <div class="img-3"></div>
-                    </td>
-                    <td>
-                      .<span class="badge success">Success</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Logo Design</td>
-                    <td>15 August,2020</td>
-                    <td>22 August, 2020 </td>
-                    <td>
-                      <div class="img-1"></div>
-                      <div class="img-2"></div>
-                      <div class="img-3"></div>
-                    </td>
-                    <td>
-                      .<span class="badge success">Success</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Server setup</td>
-                    <td>15 August,2020</td>
-                    <td>22 August, 2020 </td>
-                    <td>
-                      <div class="img-1"></div>
-                      <div class="img-2"></div>
-                      <div class="img-3"></div>
-                    </td>
-                    <td>
-                      .<span class="badge success">Success</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Web Development</td>
-                    <td>15 August,2020</td>
-                    <td>22 August, 2020 </td>
-                    <td>
-                      <div class="img-1"></div>
-                      <div class="img-2"></div>
-                      <div class="img-3"></div>
-                    </td>
-                    <td>
-                      .<span class="badge success">Success</span>
-                    </td>
-                  </tr>
+
                 </tbody>
               </table>
             </div>
