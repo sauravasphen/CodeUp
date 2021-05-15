@@ -44,7 +44,10 @@ if (mysqli_multi_query($conn, $sql)) {
 }
 
 $sql ="INSERT INTO Task (company_id,subject,task,report,status,issued_date,closed_date)
-VALUES('1','no response','working on it','completed successfully',1,'2021/05-13',CURRENT_DATE());";
+VALUES('nischal','Boost FB','Please boost recent post','',1,'2021/05-13',CURRENT_DATE());";
+$sql .="INSERT INTO Task (company_id,subject,task,report,status,issued_date,closed_date)
+VALUES('nischal','Edit Website','Please add other products','',0,'2021/05-13',CURRENT_DATE());";
+
 
 
 if (mysqli_multi_query($conn, $sql)) {

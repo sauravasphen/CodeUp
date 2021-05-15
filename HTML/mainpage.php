@@ -27,7 +27,6 @@
     <div id="menu" onclick="menuslide()">
       <ul>
         <li><a href="mainpage.php">Home</a></li>
-        <li><a href="service.php">Service</a></li>
         <li><a href="work.php">Our Work</a></li>
         <li><a href="aboutus.php">About Us</a></li>
         <li><a href="contact.php">Contact Us</a></li>
@@ -75,7 +74,9 @@
         <img src="../MEDIA/logo.png" alt="logo">
       </div>
     </div>
+    </div>
     <div class="attract">
+      <h1>Our Services</h1>
       <div class="box" id="box1">
         <div class="text">
           <h1>Make Your Brand Look Unique</h1>
