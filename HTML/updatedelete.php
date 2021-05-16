@@ -1,13 +1,13 @@
 <?php
-SESSION_start();
+session_start();
 
 $servername = "localhost";
-$user = "root";
+$username = "root";
 $password = "";
 $dbname = "CodeUp_db";
 
 // Create connection
-$conn = mysqli_connect($servername, $user, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
@@ -37,7 +37,7 @@ if (isset($_POST['delete'])) {
   }
 
   elseif ($type==='agent') {
-    $sql ="DELETE FROM Agent WHERE agent_username='$username';";
+    $sql ="DELETE FROM Agent WHERE a_username='$username';";
     if (mysqli_multi_query($conn, $sql)) {
       echo '<script type="text/javascript">';
     echo ' alert("Record Deleted Successfully")';  //not showing an alert box.
@@ -50,7 +50,7 @@ if (isset($_POST['delete'])) {
   }
 
   elseif ($type==='company') {
-    $sql ="DELETE FROM Company  WHERE company_username='$username';";
+    $sql ="DELETE FROM Company  WHERE c_username='$username';";
     if (mysqli_multi_query($conn, $sql)) {
       echo '<script type="text/javascript">';
     echo ' alert("Record Deleted Successfully")';  //not showing an alert box.
@@ -67,7 +67,7 @@ if (isset($_POST['update'])) {
   if($type==='admin'){
     $sql ="UPDATE Admin
            SET f_name='$name',Email='$email',Password='$password',contact_num='$contact'
-           WHERE admin_username='$username';";
+           WHERE username='$username';";
     if (mysqli_multi_query($conn, $sql)) {
       echo '<script type="text/javascript" >';
     echo ' alert("Record Deleted Successfully")';  //not showing an alert box.
@@ -82,7 +82,7 @@ if (isset($_POST['update'])) {
   elseif ($type==='agent') {
     $sql ="UPDATE Agent
             SET f_name='$name',Email='$email',Password='$password',contact_num='$contact'
-    WHERE agent_username='$username';";
+    WHERE a_username='$username';";
     if (mysqli_multi_query($conn, $sql)) {
       echo '<script type="text/javascript">';
     echo ' alert("Record Deleted Successfully")';  //not showing an alert box.
@@ -96,8 +96,8 @@ if (isset($_POST['update'])) {
 
   elseif ($type==='company') {
     $sql ="UPDATE Company
-          SET company_name='$name',Email='$email',Password='$password',contact_num='$contact'
-          WHERE company_username='$username';";
+          SET c_name='$name',Email='$email',Password='$password',contact_num='$contact'
+          WHERE c_username='$username';";
     if (mysqli_multi_query($conn, $sql)) {
       echo '<script type="text/javascript">';
     echo ' alert("Record Deleted Successfully")';  //not showing an alert box.
