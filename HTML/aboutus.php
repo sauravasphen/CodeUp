@@ -3,9 +3,60 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="../CSS/aboutus.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/navigation.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/aboutus.css">
+    <script type="text/javascript" src="../JS/menu.js"></script>
   </head>
   <body>
+    <header>
+      <div class="nav-logo">
+        <a href="mainpage.php">
+          <img src="../MEDIA/logo.png" alt="logo">
+          <span>CodeUp</span>
+        </a>
+      </div>
+    </header>
+    <div class="menu-bar" onclick="menuslide()">
+      <img src="../MEDIA/menu.png">
+    </div>
+    <div id="menu" onclick="menuslide()">
+      <ul>
+        <li><a href="mainpage.php">Home</a></li>
+        <li><a href="work.php">Our Work</a></li>
+        <li><a href="aboutus.php">About Us</a></li>
+        <li><a href="contact.php">Contact Us</a></li>
+        <li><a href="#" onclick="Popup()">Client Portal</a></li>
+      </ul>
+    </div>
+    <div class="popup" id="popup-1">
+         <div class="login">
+            <span onclick="Popup()" class="close">X</span>
+            <div class="login-head">
+                <h4>Login</h4>
+            </div>
+            <div class='button-box'>
+                <div id='btn'></div>
+                <button type='button' onclick='user()' class='toggle-btn'>Agent</button>
+                <button type='button' onclick='company()' class='toggle-btn'>Company</button>
+                <button type='button' onclick='admin()' class='toggle-btn'>Admin</button>
+            </div>
+            <form id='user' class='input-group-user' method="post" action="agentloginhandel.php">
+                <input type='text' class='input-field' placeholder='Agent ID' name="username" required >
+                <input type='password'class='input-field' placeholder='Password' name="password" required>
+                <button type='submit' class='submit-btn'>Sign In</button>
+            </form>
+            <form id='company' class='input-group-company' method="post" action="companyloginhandel.php">
+                <input type='text' class='input-field' placeholder='Company Id' name="username" required >
+                <input type='password' class='input-field' placeholder='Password' name="password" required>
+                <button type='submit' class='submit-btn'>Sign In</button>
+            </form>
+            <form id='admin' class='input-group-admin' method="post" action="adminloginhandel.php">
+                <input type='text' class='input-field' placeholder='Admin ID' name="username" required >
+                <input type='password' class='input-field' placeholder='Password' name="password" required>
+                <button type='submit' class='submit-btn'>Sign In</button>
+            </form>
+        </div>
+    </div>
       <div class="head">
             <div class="about">
                   <h1> Creavity <br> Meets Technology</h1>
@@ -18,7 +69,7 @@
       <div class="body1">
             <div class="sub-body">
                 <div class="sub1">
-                  <h5>Our Goal</h5>
+                  <h2>Our Goal</h2>
                 </div>
                 <div class="sub2"><p>From the moment our company was founded, we have helped our clients find exceptional solutions for their businesses , creating memorable brands and digital products. Our expertise grows with each year, and our accumulated experience empowers us to develop products exactly as they should be.</p></div>
             </div>
@@ -59,6 +110,19 @@
                     </div>
                 </div>
       </div>
-
+      <div class="footer">
+        <div class="footer-idea">
+          <a href="#">Have an idea?<br>Tell us about it.</a>
+        </div>
+        <div class="footer-email">
+          <h3>info@codup.com</h3>
+          <span>1261 Devkota Sadak Mid Baneshor<br>Kathmandu, Nepal</span>
+        </div>
+        <div class="footer-logo">
+          <a href="mainpage.php"><img src="../MEDIA/logo.png" alt="logo"></a>
+        </div>
+        <div class="copyright">
+          ©2021 COPYRIGHT<br>BY CODEUP
+      </div>
   </body>
 </html>

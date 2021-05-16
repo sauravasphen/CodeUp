@@ -1,7 +1,7 @@
 <?php
   SESSION_start();
 
-  if (isset($_SESSION['admin_name']) && isset($_SESSION['contact_num'])){
+  if (isset($_SESSION['agent_name']) && isset($_SESSION['contact_num'])){
 
 ?>
 <!DOCTYPE html>
@@ -23,42 +23,27 @@
       <div class="sidebar-menu">
         <ul>
                 <li>
-                  <a href="adminpanal.php">
                       <span class="ti-user"></span>
-                      <span><?php echo $_SESSION['admin_name']; ?></span>
-                  </a>
-
+                      <span><?php echo $_SESSION['agent_name']; ?></span>
                 </li>
                 <li>
-                  <a href="admin-agentview.php" >
-                    <span class="ti-ticket"></span>
-                    <span>Agent List</span>
+                  <a href="agent-taskview.php">
+                    <span class="ti-clipboard"></span>
+                    <span>Task List</span>
                 </a>
               </li>
               <li>
-                <a href="admin-companyview.php">
-                  <span class="ti-ticket"></span>
-                  <span>Clients List</span>
-              </a>
-            </li>
-              <li>
-                <a href="admin-taskview.php">
-                  <span class="ti-settings"></span>
-                  <span>Task List</span>
+                <a href="agent-taskadd.php">
+                  <span class="ti-pin-alt"></span>
+                  <span>Add Task</span>
               </a>
             </li>
             <li>
-              <a href="admin_registration.php">
+              <a href="">
                 <span class="ti-settings"></span>
-                <span>Register</span>
+                <span>Edit Profile</span>
             </a>
           </li>
-          <li>
-            <a href="">
-              <span class="ti-settings"></span>
-              <span>Edit Profile</span>
-          </a>
-        </li>
             <li>
               <a href="logout.php">
                 <span class="ti-shift-right-alt"></span>

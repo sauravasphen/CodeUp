@@ -1,0 +1,281 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+.sidebar
+{
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: #027581;
+  color: #fff;
+  overflow-y: auto;
+}
+
+.sidebar-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0rem 1rem;
+}
+
+.sidebar-menu{
+  padding: 1rem;
+
+}
+
+.sidebar li{
+  margin-bottom: 1.2rem;
+}
+
+.sidebar a{
+  color: #fff;
+  font-size: .9rem;
+}
+
+
+.sidebar a span:last-child{
+  padding-left:.5rem;
+}
+
+.main-content{
+  position: relative;
+  margin-left:240px;
+
+}
+header{
+  position: fixed;
+  left: 240px;
+  top: 0;
+  z-index: 100;
+  width:calc(100% - 240px);
+  background: #fff;
+  height: 60px;
+  display: flex;
+  padding: 0rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+.search-wrap{
+  display: flex;
+}
+
+.search-wrap input{
+    border: 0;
+    outline: 0;
+    padding: 1rem;
+    height: 30px;
+}
+
+.social-icons{
+  display: flex;
+  align-items: center;
+
+}
+
+.social-icons span,
+.social-icons div{
+  margin-left:1.2rem;
+}
+
+.social-icons div{
+  height: 38px;
+  width: 38px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../MEDIA/logo.png");
+  border-radius: 50%;
+}
+
+main{
+  margin-top: 60px;
+  background: #f1f5f9;
+  min-height: 90vh;
+  padding: 1rem 4rem;
+}
+
+.dash-title{
+  color: #1D2231;
+  margin-bottom: 1rem;
+}
+
+
+
+/* agent task-form css */
+
+
+div.agent-div{
+    position: relative;
+    background: transparent;
+    width: 100%;
+    height: 100vh;
+    float: right;
+    background: transparent;
+}
+
+div.agent-div h1{
+    position: absolute;
+    top: 12%;
+    font-size: 40px;
+    color: teal;
+    left: 5%;
+}
+
+
+form.agent-form{
+    position: absolute;
+    top: 30%;
+    width: 75%;
+    left: 12.5%;
+    height: 20vh;
+}
+
+
+
+/* form.agent-form fieldset{
+      position: relative;
+      top: 35%;
+      width: 90%;
+      left: 5%;
+} */
+
+
+form.agent-form legend{
+    text-align: center;
+    font-size: 2em;
+    color: teal;
+    margin-left: calc(10% - 35px - 8px);
+}
+
+
+div.agent-label-div{
+      position: relative;
+      width: 29%;
+      margin: .5%;
+      float: left;
+}
+
+div.agent-input-div{
+      position: relative;
+      width: 69%;
+      margin: .5%;
+      float: left;
+}
+
+
+div.agent-label-div label{
+      font-size: 1.2em;
+      font-weight: lighter;
+      color: teal;
+      position: relative;
+      left: 10%;
+      line-height: 2;
+      text-align: center;
+}
+
+
+div.agent-input-div input[type=text]{
+  position: relative;
+  resize: none;
+  width: 90%;
+  left: 5%;
+  border-radius: 3px;
+  height: 5vh;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #1eae98;
+  border-top: 2px solid #1eae98;
+  margin: 2px;
+
+}
+
+div.agent-input-div textarea{
+      position: relative;
+      resize: none;
+      width: 90%;
+      left: 5%;
+      height: 8vh;
+      border-radius: 4px;
+      background: transparent;
+      border-bottom: 2px solid #1eae98;
+      border-top: 2px solid #1eae98;
+}
+
+div.agent-input-div textarea:hover, div.agent-input-div input[type=text]:hover{
+      border-left: 2px solid #1eae98;
+      border-right: 2px solid #1eae98;
+}
+
+
+input.agent-create-btn{
+      position:relative;
+      margin: 1%;
+      float: right;
+      background:linear-gradient(to bottom, white 5%, #1eae98 90%);
+      border-radius:5px;
+      outline: 0;
+      border: 0;
+      cursor:pointer;
+      color:#ffffff;
+      font-size:1em;
+      padding:7px 28px;
+}
+
+input.agent-create-btn:hover{
+      background: transparent;
+      color: #1eae98;
+      box-shadow: 2px 2px 4px 3px #1eae98;
+}
+
+input.add-btn{
+    position:relative;
+    margin: 1%;
+    float: right;
+    background:linear-gradient(to bottom, white 5%, teal 90%);
+    border-radius:5px;
+    outline: 0;
+    border: 0;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:1em;
+    padding:7px 20px;
+    text-shadow:4px 5px 2px #3d768a;
+
+}
+
+
+input.add-btn:hover{
+    background: transparent;
+    color: teal;
+    box-shadow: 2px 2px 4px 3px teal;
+}
+
+
+input.close-btn{
+      position:relative;
+      margin: 1%;
+      float: right;
+      background:linear-gradient(to bottom, white 5%, #fb3640 90%);
+      border-radius:5px;
+      outline: 0;
+      border: 0;
+      cursor:pointer;
+      color:#ffffff;
+      font-size:1em;
+      padding:7px 16px;
+}
+
+input.close-btn:hover{
+      background: transparent;
+      color: #fb3640;
+      box-shadow: 2px 2px 4px 3px #fb3640;
+}

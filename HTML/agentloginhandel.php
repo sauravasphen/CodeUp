@@ -17,14 +17,14 @@ $user=$_POST['username'];
 $pass=$_POST['password'];
 
 $sql="select *from Agent
-      where agent_id='$user' and Password='$pass'";
+      where agent_username='$user' and Password='$pass'";
       $result=mysqli_query($conn,$sql);
 
       if (mysqli_num_rows($result)===1){
         $row=mysqli_fetch_assoc($result);
-        if($row['agent_id']===$user&& $row['Password']===$pass){
-          $_SESSION['name']=$row['f_name'];
-          $_SESSION['username']=$row['agent_id'];
+        if($row['agent_username']===$user&& $row['Password']===$pass){
+          $_SESSION['agent_name']=$row['f_name'];
+          $_SESSION['agent_id']=$row['agent_id'];
           $_SESSION['contact_num']=$row['contact_num'];
           header("location:agentpanal.php");
           exit();
@@ -44,7 +44,7 @@ $sql="select *from Agent
       // }
       else{
         header("location:mainpage.php");
-        window.alert("not registered. go fuck ur self");
+        window.alert("Not Registered.");
         exit();
       }
   ?>

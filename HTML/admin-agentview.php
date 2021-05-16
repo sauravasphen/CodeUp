@@ -1,7 +1,7 @@
 <?php
   SESSION_start();
 
-  if (isset($_SESSION['admin_name']) && isset($_SESSION['a_contact_num'])){
+  if (isset($_SESSION['admin_name']) && isset($_SESSION['contact_num'])){
 
 ?>
 <!DOCTYPE html>
@@ -23,18 +23,18 @@
       <div class="sidebar-menu">
         <ul>
                 <li>
+                  <a href="adminpanal.php">
                       <span class="ti-user"></span>
                       <span><?php echo $_SESSION['admin_name']; ?></span>
-
                 </li>
                 <li>
-                  <a href="admin-agentsview.php">
+                  <a href="admin-agentview.php">
                     <span class="ti-ticket"></span>
                     <span>Agent List</span>
                 </a>
               </li>
               <li>
-                <a href="admin-clientview.php">
+                <a href="admin-companyview.php">
                   <span class="ti-ticket"></span>
                   <span>Clients List</span>
               </a>
@@ -46,7 +46,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="admin_registration.php">
                 <span class="ti-settings"></span>
                 <span>Register</span>
             </a>
@@ -91,6 +91,7 @@
                 <thead>
                   <tr>
                     <th>Agent ID</th>
+                    <th>Username</th>
                     <th>Agent Name</th>
                     <th>Email</th>
                     <th>Contact Number</th>
@@ -117,6 +118,7 @@
                           ?>
                           <tr>
                             <td><?php echo $res['agent_id']; ?></td>
+                            <td><?php echo $res['agent_username']; ?></td>
                             <td><?php echo $res['f_name']; ?></td>
                             <td><?php echo $res['Email']; ?></td>
                             <td><?php echo $res['contact_num']; ?></td>
@@ -128,9 +130,7 @@
                 </tbody>
               </table>
             </div>
-
           </div>
-
         </section>
       </main>
     </div>

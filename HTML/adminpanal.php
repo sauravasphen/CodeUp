@@ -1,7 +1,7 @@
 <?php
   SESSION_start();
 
-  if (isset($_SESSION['admin_name']) && isset($_SESSION['a_contact_num'])){
+  if (isset($_SESSION['admin_name']) && isset($_SESSION['contact_num'])){
 
 ?>
 <!DOCTYPE html>
@@ -23,18 +23,19 @@
       <div class="sidebar-menu">
         <ul>
                 <li>
+                  <a href="adminpanal.php">
                       <span class="ti-user"></span>
                       <span><?php echo $_SESSION['admin_name']; ?></span>
-
+                  </a>
                 </li>
                 <li>
-                  <a href="admin-agentsview.php">
+                  <a href="admin-agentview.php">
                     <span class="ti-ticket"></span>
                     <span>Agent List</span>
                 </a>
               </li>
               <li>
-                <a href="admin-clientview.php">
+                <a href="admin-companyview.php">
                   <span class="ti-ticket"></span>
                   <span>Clients List</span>
               </a>
@@ -46,13 +47,13 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="admin_registration.php">
                 <span class="ti-settings"></span>
                 <span>Register</span>
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="admin-editprofile.php">
               <span class="ti-settings"></span>
               <span>Edit Profile</span>
           </a>
@@ -89,8 +90,26 @@
             <div class="card-body">
               <span class="ti-briefcase"></span>
               <div class="">
-                <h5>Account balance</h5>
-                <h4>$30,659.45</h4>
+                <?php
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "CodeUp_db";
+
+                    // Create connection
+                    $conn = mysqli_connect($servername, $username, $password, $dbname);
+                    // Check connection
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                      }
+                      echo "connection successfuly";
+
+                      $selectquery="SELECT *FROM Agent";
+                      $query=mysqli_query($conn,$selectquery);
+                      $agent_count=mysqli_num_rows($query);
+                      ?>
+                <h5>Number of Agents</h5>
+                <h4><?php echo "$agent_count"; ?></h4>
               </div>
             </div>
             <div class="card-footer">
@@ -101,8 +120,26 @@
             <div class="card-body">
               <span class="ti-reload"></span>
               <div class="">
-                <h5>Pending</h5>
-                <h4>$19,500.45</h4>
+                <?php
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "CodeUp_db";
+
+                    // Create connection
+                    $conn = mysqli_connect($servername, $username, $password, $dbname);
+                    // Check connection
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                      }
+                      echo "connection successfuly";
+
+                      $selectquery="SELECT *FROM Company";
+                      $query=mysqli_query($conn,$selectquery);
+                      $client_count=mysqli_num_rows($query);
+                      ?>
+                <h5>Number of Clients</h5>
+                <h4><?php echo"$client_count";?></h4>
               </div>
             </div>
             <div class="card-footer">
@@ -113,8 +150,26 @@
             <div class="card-body">
               <span class="ti-checkbox"></span>
               <div class="">
+                <?php
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "CodeUp_db";
+
+                    // Create connection
+                    $conn = mysqli_connect($servername, $username, $password, $dbname);
+                    // Check connection
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                      }
+                      echo "connection successfuly";
+
+                      $selectquery="SELECT *FROM Task";
+                      $query=mysqli_query($conn,$selectquery);
+                      $task_count=mysqli_num_rows($query);
+                      ?>
                 <h5>Processed</h5>
-                <h4>$19,500.45</h4>
+                <h4><?php echo"$task_count";?></h4>
               </div>
             </div>
             <div class="card-footer">
@@ -138,71 +193,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>App Development</td>
-                    <td>15 August,2020</td>
-                    <td>22 August, 2020 </td>
-                    <td>
-                      <div class="img-1"></div>
-                      <div class="img-2"></div>
-                      <div class="img-3"></div>
-                    </td>
-                    <td>
-                      .<span class="badge success">Success</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Front-end Design</td>
-                    <td>15 August,2020</td>
-                    <td>22 August, 2020 </td>
-                    <td>
-                      <div class="img-1"></div>
-                      <div class="img-2"></div>
-                      <div class="img-3"></div>
-                    </td>
-                    <td>
-                      .<span class="badge success">Success</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Logo Design</td>
-                    <td>15 August,2020</td>
-                    <td>22 August, 2020 </td>
-                    <td>
-                      <div class="img-1"></div>
-                      <div class="img-2"></div>
-                      <div class="img-3"></div>
-                    </td>
-                    <td>
-                      .<span class="badge success">Success</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Server setup</td>
-                    <td>15 August,2020</td>
-                    <td>22 August, 2020 </td>
-                    <td>
-                      <div class="img-1"></div>
-                      <div class="img-2"></div>
-                      <div class="img-3"></div>
-                    </td>
-                    <td>
-                      .<span class="badge success">Success</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Web Development</td>
-                    <td>15 August,2020</td>
-                    <td>22 August, 2020 </td>
-                    <td>
-                      <div class="img-1"></div>
-                      <div class="img-2"></div>
-                      <div class="img-3"></div>
-                    </td>
-                    <td>
-                      .<span class="badge success">Success</span>
-                    </td>
-                  </tr>
+
                 </tbody>
               </table>
             </div>

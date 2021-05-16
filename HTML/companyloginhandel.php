@@ -17,15 +17,16 @@ $user=$_POST['username'];
 $pass=$_POST['password'];
 
 $sql="select *from Company
-      where company_id='$user' and Password='$pass'";
+      where company_username='$user' and Password='$pass'";
       $result=mysqli_query($conn,$sql);
 
       if (mysqli_num_rows($result)===1){
         $row=mysqli_fetch_assoc($result);
-        if($row['company_id']===$user&& $row['Password']===$pass){
-          $_SESSION['c_name']=$row['c_name'];
-          $_SESSION['C_username']=$row['company_id'];
-          $_SESSION['C_contact_num']=$row['contact_num'];
+        if($row['company_username']===$user&& $row['Password']===$pass){
+          $_SESSION['company_id']=$row['company_id'];
+          $_SESSION['company_name']=$row['company_name'];
+          $_SESSION['company_username']=$row['company_username'];
+          $_SESSION['contact_num']=$row['contact_num'];
           header("location:companypanal.php");
           exit();
         }

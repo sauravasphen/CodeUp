@@ -1,10 +1,10 @@
 function menuslide(){
-  var x = document.getElementById("menu");
-  if (x.style.display === "none") {
-    x.style.display = "block";
+  var menu = document.getElementById("menu");
+  if (menu.style.display === "none") {
+    menu.style.display = "block";
   }
   else {
-        x.style.display = "none";
+        menu.style.display = "none";
   }
  }
 
@@ -12,9 +12,7 @@ function menuslide(){
 function Popup() {
 
   var x = document.getElementById("popup-1");
-  var y = document.getElementById("menu");
     x.classList.toggle("active");
-    y.style.display = "none";
 }
 
 
