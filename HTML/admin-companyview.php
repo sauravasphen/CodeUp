@@ -1,7 +1,7 @@
 <?php
   SESSION_start();
 
-  if (isset($_SESSION['admin_name']) && isset($_SESSION['a_contact_num'])){
+  if (isset($_SESSION['admin_name']) && isset($_SESSION['contact_num'])){
 
 ?>
 <!DOCTYPE html>
@@ -30,13 +30,13 @@
 
                 </li>
                 <li>
-                  <a href="admin-agentsview.php">
+                  <a href="admin-agentview.php">
                     <span class="ti-ticket"></span>
                     <span>Agent List</span>
                 </a>
               </li>
               <li>
-                <a href="admin-clientview.php">
+                <a href="admin-companyview.php">
                   <span class="ti-ticket"></span>
                   <span>Clients List</span>
               </a>
@@ -121,7 +121,7 @@
                           <tr>
                             <td><?php echo $res['company_id']; ?></td>
                             <td><?php echo $res['company_username']; ?></td>
-                            <td><?php echo $res['c_name']; ?></td>
+                            <td><?php echo $res['company_name']; ?></td>
                             <td><?php echo $res['Email']; ?></td>
                             <td><?php echo $res['contact_num']; ?></td>
                           </tr>

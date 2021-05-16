@@ -2,19 +2,19 @@
 SESSION_start();
 
 $servername = "localhost";
-$username = "root";
+$user = "root";
 $password = "";
 $dbname = "CodeUp_db";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $user, $password, $dbname);
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
 echo "connection successfuly";
 
-$id=$_POST['id'];
+$username=$_POST['username'];
 $name=$_POST['name'];
 $email=$_POST['email'];
 $password=$_POST['password'];
@@ -22,10 +22,8 @@ $contact=$_POST['contact'];
 $type=$_POST['acc-type'];
 
 if($type==='admin'){
-  $sql ="INSERT INTO Admin(admin_id,f_name,Email,Password,contact_num)
-  VALUES('$id','$name','$email','$password','$contact');";
-  $sql .="INSERT INTO Admin(admin_id,f_name,Email,Password,contact_num)
-  VALUES('$id','$name','$email','$password','$contact');";
+  $sql ="INSERT INTO Admin(admin_username,f_name,Email,Password,contact_num)
+  VALUES('$username','$name','$email','$password','$contact');";
 
   if (mysqli_multi_query($conn, $sql)) {
     echo '<script type="text/javascript">';
@@ -39,11 +37,8 @@ if($type==='admin'){
 }
 
 elseif ($type==='agent') {
-  $sql ="INSERT INTO Agent(agent_id,f_name,Email,Password,contact_num)
-  VALUES('$id','$name','$email','$password','$contact');";
-  $sql .="INSERT INTO Agent(agent_id,f_name,Email,Password,contact_num)
-  VALUES('$id','$name','$email','$password','$contact');";
-
+  $sql ="INSERT INTO Agent(agent_username,f_name,Email,Password,contact_num)
+  VALUES('$username','$name','$email','$password','$contact');";
   if (mysqli_multi_query($conn, $sql)) {
     echo '<script type="text/javascript">';
   echo ' alert("New records added successfully")';  //not showing an alert box.
@@ -56,11 +51,8 @@ elseif ($type==='agent') {
 }
 
 elseif ($type==='company') {
-  $sql ="INSERT INTO Company(company_id,c_name,Email,Password,contact_num)
-  VALUES('$id','$name','$email','$password','$contact');";
-  $sql .="INSERT INTO Company(company_id,c_name,Email,Password,contact_num)
-  VALUES('$id','$name','$email','$password','$contact');";
-
+  $sql ="INSERT INTO Company(company_username,company_name,Email,Password,contact_num)
+  VALUES('$username','$name','$email','$password','$contact');";
   if (mysqli_multi_query($conn, $sql)) {
     echo '<script type="text/javascript">';
   echo ' alert("New records added successfully")';  //not showing an alert box.

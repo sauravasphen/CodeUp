@@ -1,7 +1,7 @@
 <?php
   SESSION_start();
 
-  if (isset($_SESSION['c_name']) && isset($_SESSION['C_contact_num'])){
+  if (isset($_SESSION['company_name']) && isset($_SESSION['contact_num'])){
 
 ?>
 <!DOCTYPE html>
@@ -25,7 +25,7 @@
         <ul>
                 <li>
                       <span class="ti-user"></span>
-                      <span><?php echo $_SESSION['c_name']; ?></span>
+                      <span><?php echo $_SESSION['company_name']; ?></span>
                 </li>
                 <li>
                   <a href="company-taskview.php">
@@ -34,7 +34,7 @@
                 </a>
               </li>
               <li>
-                <a href="company-task.php">
+                <a href="company-taskadd.php">
                   <span class="ti-pin-alt"></span>
                   <span>Add Task</span>
               </a>
@@ -86,10 +86,10 @@
                                    <textarea class="task-input-field" name="subject"></textarea>
                                </div>
                                <div class="task-label-div">
-                                   <label for="Description">Description:</label>
+                                   <label for="Description">Task:</label>
                                </div>
                                <div class="task-input-div">
-                                   <textarea class="task-input-field" name="desc"></textarea>
+                                   <textarea class="task-input-field" name="task"></textarea>
                                </div>
                                <input type="submit" class="task-btn" name="submit" value="Submit">
                                <button type="button" class="close-btn" onclick="togglePopup()" name="close">Close</button>

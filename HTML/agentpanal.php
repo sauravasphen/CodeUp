@@ -1,7 +1,7 @@
 <?php
   SESSION_start();
 
-  if (isset($_SESSION['name']) && isset($_SESSION['contact_num'])){
+  if (isset($_SESSION['agent_name']) && isset($_SESSION['contact_num'])){
 
 ?>
 <!DOCTYPE html>
@@ -24,7 +24,7 @@
         <ul>
                 <li>
                       <span class="ti-user"></span>
-                      <span><?php echo $_SESSION['name']; ?></span>
+                      <span><?php echo $_SESSION['agent_name']; ?></span>
                 </li>
                 <li>
                   <a href="agent-taskview.php">
@@ -33,7 +33,7 @@
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="agent-taskadd.php">
                   <span class="ti-pin-alt"></span>
                   <span>Add Task</span>
               </a>

@@ -16,7 +16,7 @@ $sql_admin = "CREATE TABLE Admin (
     f_name VARCHAR(50) NOT NULL,
     Email VARCHAR(40) NOT NULL Unique,
     Password CHAR(128),
-    contact_num int(10) Unique
+    contact_num CHAR(10) Unique
     )";
 
 
@@ -32,7 +32,7 @@ $sql_admin = "CREATE TABLE Admin (
         f_name VARCHAR(50) NOT NULL,
         Email VARCHAR(40) NOT NULL Unique,
         Password CHAR(128),
-        contact_num int(10) Unique
+        contact_num CHAR(10) Unique
         )";
 
     if ($conn->query($sql_agent) === TRUE) {
@@ -47,7 +47,7 @@ $sql_admin = "CREATE TABLE Admin (
         company_name VARCHAR(50) NOT NULL,
         Email VARCHAR(40) NOT NULL Unique,
         Password CHAR(128),
-        contact_num int(10) Unique,
+        contact_num CHAR(10) Unique,
         agent_id int(10),
         FOREIGN KEY(agent_id) REFERENCES Agent(agent_id)
         )";
@@ -76,6 +76,20 @@ $sql_admin = "CREATE TABLE Admin (
         echo "Error creating table: " . $conn->error;
     }
     // Contact Us table pending
+    $sql_contact = "CREATE TABLE Contactus (
+        contactus_id int(20) AUTO_INCREMENT PRIMARY Key,
+        company_name VARCHAR(50) NOT NULL,
+        Email VARCHAR(40) NOT NULL,
+        contact_num CHAR(10) NOT NULL,
+        subject VARCHAR(30) NOT NULL,
+        message VARCHAR(180) NOT NULL,
+        mgs_date DATE
+        )";
 
+    if ($conn->query($sql_contact) === TRUE) {
+        echo "5. Contact table created successfully <br/>";
+    } else {
+        echo "Error creating table: " . $conn->error;
+    }
     mysqli_close($conn);
      ?>

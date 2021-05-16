@@ -1,7 +1,7 @@
 <?php
 SESSION_start();
 
-if(isset($_SESSION['c_id'])){
+if(isset($_SESSION['company_id'])){
 
 $servername = "localhost";
 $username = "root";
@@ -17,7 +17,7 @@ if (!$conn) {
 echo "connection successfuly";
 
 $subject=$_POST['subject'];
-$desc=$_POST['desc'];
+$task=$_POST['task'];
 
 // //   $name=$_SESSION['c_name'];
 // //   $selectquery="SELECT c_name FROM Company WHERE c_name==='$name' ;";
@@ -32,9 +32,9 @@ $desc=$_POST['desc'];
 // }
 
   $sql= "INSERT INTO Task(company_id,subject,task,status,issued_date)
-  VALUES('$_SESSION['c_id']','$subject','$desc',CURRENT_DATE());";
+  VALUES('$_SESSION['company_id']','$subject','$task',CURRENT_DATE());";
   $sql .= "INSERT INTO Task(company_id,subject,task,status,issued_date)
-  VALUES('$_SESSION['c_id']','$subject','$desc',CURRENT_DATE());";
+  VALUES('$_SESSION['company_id']','$subject','$task',CURRENT_DATE());";
 
   if(mysqli_multi_query($conn,$sql)){
     echo"task added successfully";

@@ -1,7 +1,7 @@
 <?php
   SESSION_start();
 
-  if (isset($_SESSION['company_name']) && isset($_SESSION['C_contact_num'])){
+  if (isset($_SESSION['company_name']) && isset($_SESSION['contact_num'])){
 
 ?>
 <!DOCTYPE html>
@@ -24,7 +24,7 @@
         <ul>
                 <li>
                       <span class="ti-user"></span>
-                      <span><?php echo $_SESSION['c_name']; ?></span>
+                      <span><?php echo $_SESSION['company_name']; ?></span>
                 </li>
                 <li>
                   <a href="company-taskview.php">
@@ -33,7 +33,7 @@
                 </a>
               </li>
               <li>
-                <a href="company-task.php">
+                <a href="company-taskadd.php">
                   <span class="ti-pin-alt"></span>
                   <span>Add Task</span>
               </a>

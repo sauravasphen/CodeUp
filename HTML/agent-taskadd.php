@@ -1,9 +1,16 @@
+<?php
+  SESSION_start();
+
+  if (isset($_SESSION['agent_name']) && isset($_SESSION['contact_num'])){
+
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="../CSS/agenttask.css">
+    <link rel="stylesheet" href="../CSS/agent-taskadd.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
     <!-- <script src="aa.js" charset="utf-8"></script> -->
   </head>
   <body>
@@ -18,39 +25,26 @@
         <ul>
                 <li>
                       <span class="ti-user"></span>
-                      <span><?php echo $_SESSION['admin_name']; ?></span>
-
+                      <span><?php echo $_SESSION['agent_name']; ?></span>
                 </li>
                 <li>
-                  <a href="admin-agentsview.php">
-                    <span class="ti-ticket"></span>
-                    <span>Agent List</span>
+                  <a href="agent-taskview.php">
+                    <span class="ti-clipboard"></span>
+                    <span>Task List</span>
                 </a>
               </li>
               <li>
-                <a href="admin-clientview.php">
-                  <span class="ti-ticket"></span>
-                  <span>Clients List</span>
-              </a>
-            </li>
-              <li>
-                <a href="admin-taskview.php">
-                  <span class="ti-settings"></span>
-                  <span>Task List</span>
+                <a href="agent-taskadd.php">
+                  <span class="ti-pin-alt"></span>
+                  <span>Add Task</span>
               </a>
             </li>
             <li>
               <a href="">
                 <span class="ti-settings"></span>
-                <span>Register</span>
+                <span>Edit Profile</span>
             </a>
           </li>
-          <li>
-            <a href="">
-              <span class="ti-settings"></span>
-              <span>Edit Profile</span>
-          </a>
-        </li>
             <li>
               <a href="logout.php">
                 <span class="ti-shift-right-alt"></span>
@@ -125,3 +119,9 @@
           </div>
   </body>
 </html>
+<?php
+}else{
+  header("location:mainpage.php");
+  exit();
+}
+?>

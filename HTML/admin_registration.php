@@ -1,7 +1,7 @@
 <?php
   SESSION_start();
 
-  if (isset($_SESSION['admin_name']) && isset($_SESSION['a_contact_num'])){
+  if (isset($_SESSION['admin_name']) && isset($_SESSION['contact_num'])){
 
 ?>
 <!DOCTYPE html>
@@ -28,16 +28,15 @@
                       <span class="ti-user"></span>
                       <span><?php echo $_SESSION['admin_name']; ?></span>
                   </a>
-
                 </li>
                 <li>
-                  <a href="admin-agentsview.php">
+                  <a href="admin-agentview.php">
                     <span class="ti-ticket"></span>
                     <span>Agent List</span>
                 </a>
               </li>
               <li>
-                <a href="admin-clientview.php">
+                <a href="admin-companyview.php">
                   <span class="ti-ticket"></span>
                   <span>Clients List</span>
               </a>
@@ -92,10 +91,10 @@
                       <fieldset>
                           <legend>Registration Form</legend><br><br>
                           <div class="label-div">
-                              <label for="id">ID</label>
+                              <label for="id">Username</label>
                           </div>
                           <div class="input-div">
-                              <input type="text" name="id" placeholder="ID" required>
+                              <input type="text" name="username" placeholder="Username" required>
                           </div>
                           <div class="label-div">
                               <label for="name">Name</label>

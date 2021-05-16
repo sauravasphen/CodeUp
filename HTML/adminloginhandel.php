@@ -17,15 +17,15 @@ $user=$_POST['username'];
 $pass=$_POST['password'];
 
 $sql="select *from Admin
-      where username='$user' and Password='$pass'";
+      where admin_username='$user' and Password='$pass'";
       $result=mysqli_query($conn,$sql);
 
       if (mysqli_num_rows($result)===1){
         $row=mysqli_fetch_assoc($result);
-        if($row['username']===$user&& $row['Password']===$pass){
+        if($row['admin_username']===$user&& $row['Password']===$pass){
           $_SESSION['admin_name']=$row['f_name'];
-          $_SESSION['agent_username']=$row['admin_id'];
-          $_SESSION['a_contact_num']=$row['contact_num'];
+          $_SESSION['admin_id']=$row['admin_id'];
+          $_SESSION['contact_num']=$row['contact_num'];
           header("location:adminpanal.php");
           exit();
         }

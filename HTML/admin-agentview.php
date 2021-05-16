@@ -1,7 +1,7 @@
 <?php
   SESSION_start();
 
-  if (isset($_SESSION['admin_name']) && isset($_SESSION['a_contact_num'])){
+  if (isset($_SESSION['admin_name']) && isset($_SESSION['contact_num'])){
 
 ?>
 <!DOCTYPE html>
@@ -26,20 +26,15 @@
                   <a href="adminpanal.php">
                       <span class="ti-user"></span>
                       <span><?php echo $_SESSION['admin_name']; ?></span>
-<<<<<<< HEAD
-=======
-                  </a>
-
->>>>>>> cdd8bcca5702ff524db326af2661a78e08799d65
                 </li>
                 <li>
-                  <a href="admin-agentsview.php">
+                  <a href="admin-agentview.php">
                     <span class="ti-ticket"></span>
                     <span>Agent List</span>
                 </a>
               </li>
               <li>
-                <a href="admin-clientview.php">
+                <a href="admin-companyview.php">
                   <span class="ti-ticket"></span>
                   <span>Clients List</span>
               </a>

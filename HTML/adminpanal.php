@@ -1,7 +1,7 @@
 <?php
   SESSION_start();
 
-  if (isset($_SESSION['admin_name']) && isset($_SESSION['a_contact_num'])){
+  if (isset($_SESSION['admin_name']) && isset($_SESSION['contact_num'])){
 
 ?>
 <!DOCTYPE html>
@@ -29,13 +29,13 @@
                   </a>
                 </li>
                 <li>
-                  <a href="admin-agentsview.php">
+                  <a href="admin-agentview.php">
                     <span class="ti-ticket"></span>
                     <span>Agent List</span>
                 </a>
               </li>
               <li>
-                <a href="admin-clientview.php">
+                <a href="admin-companyview.php">
                   <span class="ti-ticket"></span>
                   <span>Clients List</span>
               </a>
@@ -106,10 +106,10 @@
 
                       $selectquery="SELECT *FROM Agent";
                       $query=mysqli_query($conn,$selectquery);
-                      $nums=mysqli_num_rows($query);
+                      $agent_count=mysqli_num_rows($query);
                       ?>
                 <h5>Number of Agents</h5>
-                <h4><?php echo "$nums"; ?></h4>
+                <h4><?php echo "$agent_count"; ?></h4>
               </div>
             </div>
             <div class="card-footer">
@@ -136,10 +136,10 @@
 
                       $selectquery="SELECT *FROM Company";
                       $query=mysqli_query($conn,$selectquery);
-                      $nums1=mysqli_num_rows($query);
+                      $client_count=mysqli_num_rows($query);
                       ?>
                 <h5>Number of Clients</h5>
-                <h4><?php echo"$nums1";?></h4>
+                <h4><?php echo"$client_count";?></h4>
               </div>
             </div>
             <div class="card-footer">
@@ -166,10 +166,10 @@
 
                       $selectquery="SELECT *FROM Task";
                       $query=mysqli_query($conn,$selectquery);
-                      $nums2=mysqli_num_rows($query);
+                      $task_count=mysqli_num_rows($query);
                       ?>
                 <h5>Processed</h5>
-                <h4><?php echo"$nums2";?></h4>
+                <h4><?php echo"$task_count";?></h4>
               </div>
             </div>
             <div class="card-footer">
