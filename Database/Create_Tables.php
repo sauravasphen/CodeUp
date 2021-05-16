@@ -11,8 +11,8 @@ if(!$conn){
   die("connection failed:".mysqli_connect_error());
 }
 $sql_admin = "CREATE TABLE Admin (
-    admin_id int(10)   AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL,
+    admin_id int(10) AUTO_INCREMENT PRIMARY KEY,
+    admin_username VARCHAR(50) NOT NULL,
     f_name VARCHAR(50) NOT NULL,
     Email VARCHAR(40) NOT NULL Unique,
     Password CHAR(128),
@@ -21,14 +21,14 @@ $sql_admin = "CREATE TABLE Admin (
 
 
     if ($conn->query($sql_admin) === TRUE) {
-        echo "2. Table MEMBERS created successfully <br/>";
+        echo "1.  Admin table created successfully <br/>";
     } else {
         echo "Error creating table: " . $conn->error;
     }
 
     $sql_agent = "CREATE TABLE Agent (
-        agent_id int(10)  AUTO_INCREMENT PRIMARY KEY,
-        a_username VARCHAR(50) NOT NULL,
+        agent_id int(10) AUTO_INCREMENT PRIMARY KEY,
+        agent_username VARCHAR(50) NOT NULL,
         f_name VARCHAR(50) NOT NULL,
         Email VARCHAR(40) NOT NULL Unique,
         Password CHAR(128),
@@ -36,15 +36,15 @@ $sql_admin = "CREATE TABLE Admin (
         )";
 
     if ($conn->query($sql_agent) === TRUE) {
-        echo "3. Table CONTENT created successfully <br/>";
+        echo "2. Agent table created successfully <br/>";
     } else {
         echo "Error creating table: " . $conn->error;
     }
 
     $sql_company = "CREATE TABLE Company (
         company_id int(10) AUTO_INCREMENT  PRIMARY KEY,
-        c_username VARCHAR(50) NOT NULL,
-        c_name VARCHAR(50) NOT NULL,
+        company_username VARCHAR(50) NOT NULL,
+        company_name VARCHAR(50) NOT NULL,
         Email VARCHAR(40) NOT NULL Unique,
         Password CHAR(128),
         contact_num VARCHAR(10) Unique,
@@ -53,7 +53,7 @@ $sql_admin = "CREATE TABLE Admin (
         )";
 
     if ($conn->query($sql_company) === TRUE) {
-        echo "3. Table CONTENT created successfully <br/>";
+        echo "3. Company table created successfully <br/>";
     } else {
         echo "Error creating table: " . $conn->error;
     }
@@ -71,10 +71,11 @@ $sql_admin = "CREATE TABLE Admin (
         )";
 
     if ($conn->query($sql_task) === TRUE) {
-        echo "4. Table CONTENT created successfully <br/>";
+        echo "4. Task table created successfully <br/>";
     } else {
         echo "Error creating table: " . $conn->error;
     }
+    // Contact Us table pending
 
     mysqli_close($conn);
      ?>

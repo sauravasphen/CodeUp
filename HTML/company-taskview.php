@@ -1,7 +1,7 @@
 <?php
   SESSION_start();
 
-  if (isset($_SESSION['c_name']) && isset($_SESSION['C_contact_num'])){
+  if (isset($_SESSION['company_name']) && isset($_SESSION['C_contact_num'])){
 
 ?>
 <!DOCTYPE html>
@@ -78,7 +78,6 @@
                 <thead>
                   <tr>
                     <th>Task ID</th>
-                    <th>Company ID</th>
                     <th>Subject</th>
                     <th>Task</th>
                     <th>Report</th>
@@ -108,7 +107,6 @@
                           ?>
                           <tr>
                             <td><?php echo $res['task_id']; ?></td>
-                            <td><?php echo $res['company_id']; ?></td>
                             <td><?php echo $res['subject']; ?></td>
                             <td><?php echo $res['task']; ?></td>
                             <td><?php echo $res['report']; ?></td>

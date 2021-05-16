@@ -91,6 +91,7 @@
                 <thead>
                   <tr>
                     <th>Company ID</th>
+                    <th>Username</th>
                     <th>Company Name</th>
                     <th>Email</th>
                     <th>Contact Number</th>
@@ -117,6 +118,7 @@
                           ?>
                           <tr>
                             <td><?php echo $res['company_id']; ?></td>
+                            <td><?php echo $res['company_username']; ?></td>
                             <td><?php echo $res['c_name']; ?></td>
                             <td><?php echo $res['Email']; ?></td>
                             <td><?php echo $res['contact_num']; ?></td>

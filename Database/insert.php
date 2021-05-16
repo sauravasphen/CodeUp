@@ -12,9 +12,9 @@ if(!$conn){
 }
 
 
-$sql ="INSERT INTO Admin(username,f_name,Email,Password,contact_num)
+$sql ="INSERT INTO Admin(admin_username,f_name,Email,Password,contact_num)
 VALUES('saurav21','Saurav Majhi','saurav@gmail.com','67890','984155674');";
-$sql.="INSERT INTO Admin(username,f_name,Email,Password,contact_num)
+$sql.="INSERT INTO Admin(admin_username,f_name,Email,Password,contact_num)
 VALUES('pradhan21','Nirdesh Pradhan','nirdesh@gmail.com','12345','9860102400');";
 
 if (mysqli_multi_query($conn, $sql)) {
@@ -23,7 +23,7 @@ if (mysqli_multi_query($conn, $sql)) {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
-$sql ="INSERT INTO Agent(a_username,f_name,Email,Password,contact_num)
+$sql ="INSERT INTO Agent(agent_username,f_name,Email,Password,contact_num)
 VALUES('aniraj','Aniraj Shahi','aniraj@gmail.com','67890','9841554554');";
 
 
@@ -33,7 +33,7 @@ if (mysqli_multi_query($conn, $sql)) {
     echo "Error adding agent: " . $sql . "<br>" . mysqli_error($conn);
 }
 
-$sql ="INSERT INTO Company(c_username,c_name,Email,Password,contact_num)
+$sql ="INSERT INTO Company(company_username,company_name,Email,Password,contact_num)
 VALUES('nischal','Niscahl Thapa','nischal@gmail.com','00000','9841554554');";
 
 

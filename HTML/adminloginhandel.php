@@ -24,7 +24,7 @@ $sql="select *from Admin
         $row=mysqli_fetch_assoc($result);
         if($row['username']===$user&& $row['Password']===$pass){
           $_SESSION['admin_name']=$row['f_name'];
-          $_SESSION['a_username']=$row['admin_id'];
+          $_SESSION['agent_username']=$row['admin_id'];
           $_SESSION['a_contact_num']=$row['contact_num'];
           header("location:adminpanal.php");
           exit();
@@ -44,7 +44,7 @@ $sql="select *from Admin
       // }
       else{
         header("location:mainpage.php");
-        window.alert("not registered. go fuck ur self");
+        window.alert("not registered.");
         exit();
       }
   ?>

@@ -25,7 +25,6 @@
                 <li>
                       <span class="ti-user"></span>
                       <span><?php echo $_SESSION['admin_name']; ?></span>
-
                 </li>
                 <li>
                   <a href="admin-agentsview.php">
@@ -91,6 +90,7 @@
                 <thead>
                   <tr>
                     <th>Agent ID</th>
+                    <th>Username</th>
                     <th>Agent Name</th>
                     <th>Email</th>
                     <th>Contact Number</th>
@@ -117,6 +117,7 @@
                           ?>
                           <tr>
                             <td><?php echo $res['agent_id']; ?></td>
+                            <td><?php echo $res['agent_username']; ?></td>
                             <td><?php echo $res['f_name']; ?></td>
                             <td><?php echo $res['Email']; ?></td>
                             <td><?php echo $res['contact_num']; ?></td>
@@ -128,9 +129,7 @@
                 </tbody>
               </table>
             </div>
-
           </div>
-
         </section>
       </main>
     </div>

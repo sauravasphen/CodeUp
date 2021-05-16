@@ -120,10 +120,10 @@
                               <input type="tel" name="contact" required>
                           </div>
                           <div class="label-div">
-                              <label for=account"">Account Type</label>
+                              <label for="account">Account Type</label>
                           </div>
                           <div class="input-div">
-                              <select id="country" name="acc-type">
+                              <select name="acc-type">
                                   <option value="agent">Agent</option>
                                   <option value="company">Company</option>
                                   <option value="admin">Admin</option>
