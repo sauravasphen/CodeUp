@@ -19,12 +19,12 @@ $subject=$_POST['subject'];
 $desc=$_POST['task'];
 
   $sql= "INSERT INTO Task(company_id,subject,task,issued_date)
-  VALUES($company_id,'$subject','$task',CURRENT_DATE())";
+  VALUES($company_id,'$subject','$desc',CURRENT_DATE())";
 
 
   if(mysqli_multi_query($conn,$sql)){
     echo"task added successfully";
-    header("location:company-task.php");
+    header("location:company-taskadd.php");
   }
   else{
     echo "error:".$sql."<br>".mysqli_error($conn);
