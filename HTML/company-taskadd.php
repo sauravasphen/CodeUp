@@ -86,7 +86,7 @@
                                    <textarea class="task-input-field" name="subject"></textarea>
                                </div>
                                <div class="task-label-div">
-                                   <label for="Description">Task:</label>
+                                   <label for="Task">Task:</label>
                                </div>
                                <div class="task-input-div">
                                    <textarea class="task-input-field" name="task"></textarea>

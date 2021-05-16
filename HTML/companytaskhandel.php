@@ -16,10 +16,10 @@ if (!$conn) {
   }
 
 $subject=$_POST['subject'];
-$desc=$_POST['task'];
+$task=$_POST['task'];
 
   $sql= "INSERT INTO Task(company_id,subject,task,issued_date)
-  VALUES($company_id,'$subject','$desc',CURRENT_DATE())";
+  VALUES($company_id,'$subject','$task',CURRENT_DATE())";
 
 
   if(mysqli_multi_query($conn,$sql)){
