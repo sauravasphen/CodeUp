@@ -119,7 +119,7 @@
                               <label for="contact">Contact Number</label>
                           </div>
                           <div class="input-div">
-                              <input type="text" name="contact" required>
+                              <input type="int" name="contact" required>
                           </div>
                           <div class="label-div">
                               <label for=account"">Account Type</label>

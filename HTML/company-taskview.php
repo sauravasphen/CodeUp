@@ -33,7 +33,7 @@
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="company-task.php">
                   <span class="ti-pin-alt"></span>
                   <span>Add Task</span>
               </a>
