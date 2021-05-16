@@ -24,8 +24,10 @@
       <div class="sidebar-menu">
         <ul>
                 <li>
+                    <a href="agentpanal.php">
                       <span class="ti-user"></span>
                       <span><?php echo $_SESSION['agent_name']; ?></span>
+                    </a>
                 </li>
                 <li>
                   <a href="agent-taskview.php">
@@ -77,7 +79,7 @@
           <div class="agent-div">
                 <h1>Create Agent Task</h1>
                 <div class="agent-form-div">
-                      <form class="agent-form" action="index.html" method="post">
+                      <form class="agent-form" action="agent-taskaddhandel.php" method="post">
                             <fieldset>
                                   <legend>Agent Form</legend>
                                   <div class="agent-label-div">
@@ -102,17 +104,16 @@
                                       <label for="report">Report:</label>
                                   </div>
                                   <div class="agent-input-div">
-                                      <input type="text" name="report" required>
+                                      <input type="text" name="report">
                                   </div>
                                   <div class="agent-label-div">
                                       <label for="status">Status:</label>
                                   </div>
                                   <div class="agent-input-div">
-                                      <input type="text" name="status" required>
+                                      <input type="text" name="status">
                                   </div>
                                   <input type="submit" class="agent-create-btn" name="agent-create-btn" value="Submit">
-                                  <input type="button" class="add-btn" name="add-btn" value="Add Task">
-                                  <input type="submit" class="close-btn" name="close-btn" value="Close Task">
+                                  <input type="submit" class="add-btn" name="edit-btn" value="Edit Task">
                             </fieldset>
                       </form>
                 </div>
