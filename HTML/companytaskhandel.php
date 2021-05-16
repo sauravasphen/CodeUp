@@ -1,6 +1,6 @@
 <?php
 session_start();
-$company_id=$_SESSION['c_id'];
+$company_id=$_SESSION['company_id'];
 if(isset($_POST['submit'])){
 
 $servername = "localhost";
@@ -16,10 +16,10 @@ if (!$conn) {
   }
 
 $subject=$_POST['subject'];
-$desc=$_POST['desc'];
+$desc=$_POST['task'];
 
   $sql= "INSERT INTO Task(company_id,subject,task,issued_date)
-  VALUES($company_id,'$subject','$desc',CURRENT_DATE())";
+  VALUES($company_id,'$subject','$task',CURRENT_DATE())";
 
 
   if(mysqli_multi_query($conn,$sql)){
