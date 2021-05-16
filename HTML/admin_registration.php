@@ -24,8 +24,10 @@
       <div class="sidebar-menu">
         <ul>
                 <li>
+                  <a href="adminpanal.php">
                       <span class="ti-user"></span>
                       <span><?php echo $_SESSION['admin_name']; ?></span>
+                  </a>
 
                 </li>
                 <li>
@@ -53,7 +55,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="admin-editprofile.php">
               <span class="ti-settings"></span>
               <span>Edit Profile</span>
           </a>
@@ -117,7 +119,7 @@
                               <label for="contact">Contact Number</label>
                           </div>
                           <div class="input-div">
-                              <input type="tel" name="contact" required>
+                              <input type="int" name="contact" required>
                           </div>
                           <div class="label-div">
                               <label for="account">Account Type</label>

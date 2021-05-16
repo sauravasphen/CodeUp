@@ -47,7 +47,7 @@ $sql_admin = "CREATE TABLE Admin (
         company_name VARCHAR(50) NOT NULL,
         Email VARCHAR(40) NOT NULL Unique,
         Password CHAR(128),
-        contact_num VARCHAR(10) Unique,
+        contact_num int(10) Unique,
         agent_id int(10),
         FOREIGN KEY(agent_id) REFERENCES Agent(agent_id)
         )";

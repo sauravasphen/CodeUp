@@ -23,8 +23,10 @@
       <div class="sidebar-menu">
         <ul>
                 <li>
+                  <a href="adminpanal.php">
                       <span class="ti-user"></span>
                       <span><?php echo $_SESSION['admin_name']; ?></span>
+                  </a>
 
                 </li>
                 <li>

@@ -23,8 +23,14 @@
       <div class="sidebar-menu">
         <ul>
                 <li>
+                  <a href="adminpanal.php">
                       <span class="ti-user"></span>
                       <span><?php echo $_SESSION['admin_name']; ?></span>
+<<<<<<< HEAD
+=======
+                  </a>
+
+>>>>>>> cdd8bcca5702ff524db326af2661a78e08799d65
                 </li>
                 <li>
                   <a href="admin-agentsview.php">

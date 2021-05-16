@@ -23,6 +23,7 @@ $sql="select *from Company
       if (mysqli_num_rows($result)===1){
         $row=mysqli_fetch_assoc($result);
         if($row['c_username']===$user&& $row['Password']===$pass){
+          $_SESSION['c_id']=$row['company_id'];
           $_SESSION['c_name']=$row['c_name'];
           $_SESSION['C_username']=$row['company_id'];
           $_SESSION['C_contact_num']=$row['contact_num'];

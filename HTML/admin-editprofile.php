@@ -24,9 +24,10 @@
       <div class="sidebar-menu">
         <ul>
                 <li>
+                  <a href="adminpanal.php">
                       <span class="ti-user"></span>
                       <span><?php echo $_SESSION['admin_name']; ?></span>
-
+                  </a>
                 </li>
                 <li>
                   <a href="admin-agentsview.php">
@@ -94,6 +95,9 @@
                           </div>
                           <div class="input-div">
                               <input type="text" name="username" placeholder="username">
+                          </div>
+                          <div class="text">
+                              <h2>Enter the required changes</h2>
                           </div>
                           <div class="label-div">
                               <label for="name">Name</label>
