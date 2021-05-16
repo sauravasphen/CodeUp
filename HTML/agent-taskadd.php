@@ -117,6 +117,34 @@
                             </fieldset>
                       </form>
                 </div>
+                  <!-- update form -->
+                <div class="agent-form-div">
+                      <form class="update-form" action="index.html" method="post">
+                            <fieldset>
+                                  <legend>Update Form</legend>
+                                  <div class="agent-label-div">
+                                      <label for="Cname">Task Id:</label>
+                                  </div>
+                                  <div class="agent-input-div">
+                                      <input type="text" name="task-id" placeholder="Task id" required>
+                                  </div>
+                                  <div class="agent-label-div">
+                                      <label for="report">Report:</label>
+                                  </div>
+                                  <div class="agent-input-div">
+                                      <input type="text" name="report" required>
+                                  </div>
+                                  <div class="agent-label-div">
+                                      <label for="status">Status:</label>
+                                  </div>
+                                  <div class="agent-input-div">
+                                      <input type="text" name="status" required>
+                                  </div>
+                                  <input type="submit" class="add-btn" name="edit-btn" value="Update Task">
+                            </fieldset>
+                      </form>
+                </div>
+
           </div>
   </body>
 </html>
