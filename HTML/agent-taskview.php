@@ -23,8 +23,10 @@
       <div class="sidebar-menu">
         <ul>
                 <li>
-                      <span class="ti-user"></span>
-                      <span><?php echo $_SESSION['agent_name']; ?></span>
+                  <a href="agentpanal.php">
+                    <span class="ti-user"></span>
+                    <span><?php echo $_SESSION['agent_name']; ?></span>
+                  </a>
                 </li>
                 <li>
                   <a href="agent-taskview.php">

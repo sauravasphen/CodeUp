@@ -12,8 +12,8 @@ if(!$conn){
 }
 
 
-$sql ="INSERT INTO contactus(company_name,Email,contact_num,subject,message,mgs_date)
-VALUES('Curt Cobin','curtcobin@gmail.com','9818714084','Need Website','I want a wonderful website','2021-05-15');
+$sql ="INSERT INTO contactus(company_name,f_name,Email,contact_num,subject,message,mgs_date)
+VALUES('Curt Cobin','Nirdesh','curtcobin@gmail.com','9818714084','Need Website','I want a wonderful website','2021-05-15');
 ";
 
 

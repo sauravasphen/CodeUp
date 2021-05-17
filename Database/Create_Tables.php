@@ -64,7 +64,7 @@ $sql_admin = "CREATE TABLE Admin (
         subject VARCHAR(50) NOT NULL,
         task VARCHAR(40) NOT NULL,
         report VARCHAR (90),
-        status boolean default 0,
+        status BIT(1) default 0,
         issued_date date,
         closed_date date,
         FOREIGN KEY(company_id) REFERENCES Company(company_id)
@@ -75,9 +75,9 @@ $sql_admin = "CREATE TABLE Admin (
     } else {
         echo "Error creating table: " . $conn->error;
     }
-    // Contact Us table pending
     $sql_contact = "CREATE TABLE Contactus (
         contactus_id int(20) AUTO_INCREMENT PRIMARY Key,
+        F_name VARCHAR(50) NOT NULL,
         company_name VARCHAR(50) NOT NULL,
         Email VARCHAR(40) NOT NULL,
         contact_num CHAR(10) NOT NULL,

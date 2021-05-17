@@ -13,11 +13,11 @@ if(!$conn){
 
 
 $sql ="INSERT INTO task(company_id,subject,task,report,status,issued_date)
-VALUES('1','Website Edit','Please edit my Website.','','0','2021-05-01');
+VALUES('1','Website Edit','Please edit my Website.','',1,'2021-05-01');
 INSERT INTO task(company_id,subject,task,report,status,issued_date)
-VALUES('1','Website Edit','Please add my new photos.','','0','2021-05-11');
-INSERT INTO task(company_id,subject,task,report,status,issued_date)
-VALUES('1','Boost FB page','Please boost giveaway post','','1','2021-05-01','2021-05-02');";
+VALUES('1','Add Photo','Please add my new photos.','',1,'2021-05-11');
+INSERT INTO task(company_id,subject,task,report,status,issued_date, closed_date)
+VALUES('1','Boost FB page','Please boost giveaway post','',0,'2021-05-01','2021-05-02');";
 
 
 if (mysqli_multi_query($conn, $sql)) {
