@@ -51,11 +51,15 @@ if(isset($_POST['agent-create-btn'])){
 
     }
     if(isset($_POST['edit-btn'])){
+      $task_id=$_POST['task-id'];
+      $report=$_POST['report'];
+      $status=$_POST['status'];
+
 
 
         $sql ="UPDATE Task
-               SET company_id='$company_id',subject='$subject',task='$task',report='$report',status='$status' , closed_date=CURRENT_DATE()
-               WHERE company_id='$company_id' AND subject='$subject' ; ";
+               SET report='$report',status='$status', closed_date=CURRENT_DATE()
+               WHERE task_id='$task_id' ";
 
                if(mysqli_multi_query($conn,$sql)){
                  echo"task added successfully";

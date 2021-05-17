@@ -118,8 +118,9 @@
                       </form>
                 </div>
                   <!-- update form -->
+
                 <div class="agent-form-div">
-                      <form class="update-form" action="index.html" method="post">
+                      <form class="update-form" action="agent-taskaddhandel.php" method="post">
                             <fieldset>
                                   <legend>Update Form</legend>
                                   <div class="agent-label-div">
