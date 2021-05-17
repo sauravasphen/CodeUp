@@ -403,3 +403,10 @@ button.submit-btn:hover{
 color: #3bf3ff;
 transition: ease-in .3s;
 }
+
+/* -------------Responsive Design--------------- */
+@media screen and (max-width: 1200px) {
+  
+}
+@media screen and (max-width: 450px) {
+}
