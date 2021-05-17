@@ -23,8 +23,8 @@ $sql_contactus = "INSERT INTO Contactus(f_name,company_name,email,contact_num,su
 VALUES('$f_name','$company_name','$email','$contact_num','$subject','$message');";
 
 if (mysqli_query($conn, $sql_contactus)) {
-    echo "Database created successfully";
-    header("location:contactus.php");
+    echo '<script>  alert("welldone");   </script>';
+    // header("location:contactus.php"); Not Working
 } else {
     echo "Error: " . mysqli_error($conn);
 }
