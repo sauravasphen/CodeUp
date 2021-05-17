@@ -29,7 +29,7 @@
         <li><a href="mainpage.php">Home</a></li>
         <li><a href="work.php">Our Work</a></li>
         <li><a href="aboutus.php">About Us</a></li>
-        <li><a href="contact.php">Contact Us</a></li>
+        <li><a href="contactus.php">Contact Us</a></li>
         <li><a href="#" onclick="Popup()">Client Portal</a></li>
       </ul>
     </div>
