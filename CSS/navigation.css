@@ -151,7 +151,7 @@ div.button-box
   top: 1.6%;
   text-align: center;
 	position:relative;
-	box-shadow: 0 0 20px 9px #126e82;
+	box-shadow: 0 0 7px 3px #126e82;
 	border-radius: 20px;
 }
 div button.toggle-btn
