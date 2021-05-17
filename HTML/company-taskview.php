@@ -101,18 +101,18 @@ $company_id=$_SESSION['company_id'];
                         }
                         echo "connection successfuly";
 
-                        $sql="SELECT * FROM Task";
-                              $result=mysqli_query($conn,$sql);
-                              $row=mysqli_fetch_assoc($result);
-                              if($row['company_id']===$company_id){
-                                $cmp_id=$row['company_id'];
-
-                              }
-                              else{
-                                echo "error:".$sql."<br>".mysqli_error($conn);
-                              }
-                        if($company_id===$cmp_id){
-                        $selectquery="SELECT *FROM Task";
+                        // $sql="SELECT * FROM Task";
+                        //       $result=mysqli_query($conn,$sql);
+                        //       $row=mysqli_fetch_assoc($result);
+                        //       if($row['company_id']===$company_id){
+                        //         $cmp_id=$row['company_id'];
+                        //
+                        //       }
+                        //       else{
+                        //         echo "error:".$sql."<br>".mysqli_error($conn);
+                        //       }
+                        // if($company_id===$cmp_id){
+                        $selectquery="SELECT *FROM Task where company_id='$company_id'";
                         $query=mysqli_query($conn,$selectquery);
                         while($res=mysqli_fetch_array($query)){
                           ?>
@@ -142,7 +142,7 @@ $company_id=$_SESSION['company_id'];
 </html>
 
 <?php
-  }
+  
 }
 else{
   header("location:mainpage.php");
