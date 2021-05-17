@@ -59,36 +59,45 @@
       </div>
   </div>
   <div class="contact-section">
+    <center>
     <h1>Contact Us</h1>
-    <div class="contact-form" action="contactus_handle.php">
-      <form class="" action="index.html" method="post">
+    <p>Have a question?<br><br>
+    Thinking about collaboration?<br><br>
+    Feel free to reach out for any reason -- email, call, or just fill out the form below and hit "send".<br><br>
+    e-mail: info@codeup.com<br><br>
+    phone: 01-5525285</p>
+    <hr width = "75%">
+    <div class="contact-form">
+      <form class="" action="contactus_handle.php" method="post">
         <div class="input-container">
-          <input class="input" type="text" name="fullname"><br />
+          <input class="input" type="text" name="f_name" required><br />
           <label>Full Name</label>
         </div>
         <div class="input-container">
-          <input class="input" type="text" name="mail_id"><br>
+          <input class="input" type="text" name="company_name" required><br>
           <label>Company Name</label>
         </div>
         <div class="input-container">
-          <input class="input" type="email" name="mail_id"><br>
-          <label>E-mail ID</label>
+          <input class="input" type="Email" name="email" required><br>
+          <label>Email ID</label>
         </div>
         <div class="input-container">
-          <input class="input" type="text" name="phone"><br>
+          <input class="input" type="text" name="contact_num" required><br>
           <label>Contact No</label>
         </div>
         <div class="input-container">
-          <input class="input" type="text" name="subject"><br />
+          <input class="input" type="text" name="subject" required><br>
           <label>Subject</label>
         </div>
         <div class="input-container">
-          <textarea class="input"></textarea><br>
+          <textarea class="input" name="message" required></textarea><br>
           <label>Message</label>
         </div>
           <input type="submit" Value="Send" class="submit-btn">
       </form>
+
     </div>
+  </center>
   </div>
   <div class="footer">
     <div class="footer-idea">

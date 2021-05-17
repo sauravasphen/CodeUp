@@ -3,10 +3,18 @@ body{
   padding: 0;
 }
 .contact-section{
-  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.contact-section h1{
+  letter-spacing: 5px;
+  font-size: 90px;
+}
+.contact-section p{
+  font-size: 20px;
 }
 .contact-form{
-  padding: 20px 100px;
+  padding-top: 30px;
   border-radius: 20px;
   width: 40%;
   color: #303133;
@@ -48,5 +56,5 @@ textarea.input{
   cursor: pointer;
 }
 .submit-btn:hover{
-  background-color: #929aab;
+  background-color: #51c4d3;
 }

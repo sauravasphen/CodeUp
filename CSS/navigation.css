@@ -126,7 +126,7 @@ div.login span.close{
      position: absolute;
      right: 10px;
      top: 5px;
-     color: teal;
+     color: #126e82;
      font-size: 1.5em;
      padding: 3px;
      cursor: pointer;
@@ -251,7 +251,7 @@ button.submit-btn:hover{
 	color:white;
 	font-size: 15;
 }
-/* ---------Footer----------- */
+/* ------------------------Footer---------------------------- */
 .footer{
   background-color: #51c4d3;
   padding: 20px 10px 10px;

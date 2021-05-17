@@ -1,3 +1,4 @@
+/* Brand Colorcode: https://colorhunt.co/palette/273466 */
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 /* font-family: 'Rubik', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -406,7 +407,7 @@ transition: ease-in .3s;
 
 /* -------------Responsive Design--------------- */
 @media screen and (max-width: 1200px) {
-  
+
 }
 @media screen and (max-width: 450px) {
 }
