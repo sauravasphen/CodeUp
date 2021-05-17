@@ -40,7 +40,7 @@ textarea.input{
   overflow-y: auto;
 }
 .input:focus{
-  background-color: #eeeeee;
+  background-color: rgb(81, 195, 210, 0.4);
 ;
 }
 .submit-btn{
