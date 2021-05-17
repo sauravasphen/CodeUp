@@ -21,7 +21,7 @@ body, html {
 
 /*---------------------------------------------*/
 a {
-	font-family: Poppins-Regular;
+	font-family: 'Warnes', cursive;
 	font-size: 15px;
 	line-height: 1.7;
 	color: #666666;
@@ -125,14 +125,18 @@ videobackground*/
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: absolute;
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
 .wrap-contact100 {
   width: 500px;
+	height:100%;
+	overflow: hidden;
   background: #140606;
   border-radius: 15px;
-  overflow: hidden;
+
   padding: 50px 55px 45px 55px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 50), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
