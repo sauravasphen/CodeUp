@@ -47,7 +47,7 @@
                 <button type='submit' class='submit-btn'>Sign In</button>
             </form>
             <form id='company' class='input-group-company' method="post" action="companyloginhandel.php">
-                <input type='text' class='input-field' placeholder='Company Id' name="username" required >
+                <input type='text' class='input-field' placeholder='Company ID' name="username" required >
                 <input type='password' class='input-field' placeholder='Password' name="password" required>
                 <button type='submit' class='submit-btn'>Sign In</button>
             </form>

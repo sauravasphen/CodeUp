@@ -115,9 +115,9 @@ div.popup div.login {
       position:fixed;
       left: 50%;
       top: 50%;
-      background-color: black;
+      background-color: rgb(38, 38, 38);
       padding: 10px;
-      border-radius: 7px;
+      border-radius: 15px;
       overflow: hidden;
       z-index: 10000;
       transform: translate(-50%,-150%) scale(0);

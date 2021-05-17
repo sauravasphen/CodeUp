@@ -131,9 +131,9 @@ div.popup div.login {
       position:fixed;
       left: 50%;
       top: 50%;
-      background-color: #111111;
+      background-color: rgb(38, 38, 38);
       padding:10px;
-      border-radius: 7px;
+      border-radius: 15px;
       overflow: hidden;
       z-index: 1;
       transform: translate(-50%,-150%) scale(0);
@@ -160,8 +160,7 @@ div.login-head{
     top: 3%;
     color: #fff;
 }
-div.button-box
-{
+div.button-box{
   width:92%;
   left: 4%;
   top: 1.6%;
@@ -170,8 +169,7 @@ div.button-box
 	box-shadow: 0 0 20px 9px #126e82;
 	border-radius: 20px;
 }
-div button.toggle-btn
-{
+div button.toggle-btn{
 	padding:10px 30px;
 	cursor:pointer;
 	background:transparent;
@@ -181,8 +179,7 @@ div button.toggle-btn
   color: white;
   font-weight: bold;
 }
-#btn
-{
+#btn{
 	top: 0;
 	left:0;
 	position: absolute;
@@ -192,16 +189,14 @@ div button.toggle-btn
 	border-radius: 30px;
 	transition: .5s;
 }
-form.input-group-user,form.input-group-company,form.input-group-admin
-{
+form.input-group-user,form.input-group-company,form.input-group-admin{
 	top: 47%;;
 	position:absolute;
 	width:85%;
   left: 7.5%;
 	transition:.5s;
 }
-input.input-field
-{
+input.input-field{
 	width: 100%;
   font-size: 1.1em;
 	padding:15px 0;
@@ -217,8 +212,7 @@ input.input-field:hover{
   background: transparent;
   /* box-shadow: 0 0 20px 9px #126e82; */
 }
-button.submit-btn
-{
+button.submit-btn{
   position: absolute;
   margin-top: 12%;
 	/* width: 85%; */
@@ -240,33 +234,28 @@ button.submit-btn:hover{
     animation-iteration-count: infinite;
     /* box-shadow: 0 0 20px 9px #126e82; */
 }
-#user
-{
+#user{
 	left:32px;
 }
-#user input
-{
+#user input{
 	color:white;
 	font-size:15;
 }
-#company
-{
+#company{
 	left:432px;
 }
-#company input
-{
+#company input{
 	color:white;
 	font-size: 15;
 }
-#admin
-{
+#admin{
     left: 832px;
 }
-#admin input
-{
+#admin input{
 	color:white;
 	font-size: 15;
 }
+
 /* ---------Footer----------- */
 .footer{
   background-color: #51c4d3;
@@ -401,8 +390,8 @@ button.submit-btn:hover{
   cursor: pointer;
 }
 .service-link a:hover{
-color: #3bf3ff;
-transition: ease-in .3s;
+  color: #3bf3ff;
+  transition: ease-in .3s;
 }
 
 /* -------------Responsive Design--------------- */
