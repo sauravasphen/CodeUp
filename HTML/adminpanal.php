@@ -75,8 +75,8 @@
           <input type="search" placeholder="Search">
         </div>
         <div class="social-icons">
-          <span class="ti-bell"></span>
-          <span class="ti-comment"></span>
+          <!-- <span class="ti-bell"></span>
+          <span class="ti-comment"></span> -->
           <div class="">
 
           </div>
@@ -162,7 +162,7 @@
                     if (!$conn) {
                         die("Connection failed: " . mysqli_connect_error());
                       }
-                      
+
 
                       $selectquery="SELECT *FROM Task";
                       $query=mysqli_query($conn,$selectquery);

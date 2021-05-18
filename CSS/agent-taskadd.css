@@ -29,7 +29,8 @@
 
 .sidebar-menu{
   padding: 1rem;
-
+  position: relative;
+  top: 2%;
 }
 
 .sidebar li{
@@ -38,7 +39,11 @@
 
 .sidebar a{
   color: #fff;
-  font-size: .9rem;
+  font-size: 1rem;
+}
+
+.sidebar a:active{
+    color: #d8e3e7;
 }
 
 
@@ -69,6 +74,12 @@ header{
   display: flex;
 }
 
+
+span.ti-search{
+      line-height: 2;
+
+}
+
 .search-wrap input{
     border: 0;
     outline: 0;
@@ -82,10 +93,10 @@ header{
 
 }
 
-.social-icons span,
+/* .social-icons span,
 .social-icons div{
   margin-left:1.2rem;
-}
+} */
 
 .social-icons div{
   height: 38px;
