@@ -120,19 +120,23 @@
                         $selectquery="SELECT *FROM Task";
                         $query=mysqli_query($conn,$selectquery);
                         while($res=mysqli_fetch_array($query)){
-                          ?>
+                          echo "
                           <tr>
-                            <td><?php echo $res['task_id']; ?></td>
-                            <td><?php echo $res['company_id']; ?></td>
-                            <td><?php echo $res['subject']; ?></td>
-                            <td><?php echo $res['task']; ?></td>
-                            <td><?php echo $res['report']; ?></td>
-                            <td><?php echo $res['status']; ?></td>
-                            <td><?php echo $res['issued_date']; ?></td>
-                            <td><?php echo $res['closed_date']; ?></td>
+                            <td> ".$res['task_id'] ."</td>
+                            <td>".$res['company_id']."</td>
+                            <td>".$res['subject']."</td>
+                            <td>".$res['task']."</td>
+                            <td>".$res['report']."</td>
+                            <td>".$res['status']."</td>
+                            <td>". $res['issued_date']."</td>
+                            <td>".$res['closed_date']."</td>
+                            <td> <a href='delete.php? task_id=$res[task_id] '>
+                              DELETE
+                            </td>
                           </tr>
-                        <?php
+                          ";
                         }
+
                    ?>
 
                 </tbody>

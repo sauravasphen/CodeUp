@@ -87,6 +87,7 @@
                     <th>Status</th>
                     <th>Issued Date</th>
                     <th>Closed Date</th>
+                    <th colspan="2">Operation</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -107,21 +108,22 @@
                         $selectquery="SELECT *FROM Task";
                         $query=mysqli_query($conn,$selectquery);
                         while($res=mysqli_fetch_array($query)){
-                          ?>
+                          echo "
                           <tr>
-                            <td><?php echo $res['task_id']; ?></td>
-                            <td><?php echo $res['company_id']; ?></td>
-                            <td><?php echo $res['subject']; ?></td>
-                            <td><?php echo $res['task']; ?></td>
-                            <td><?php echo $res['report']; ?></td>
-                            <td><?php echo $res['status']; ?></td>
-                            <td><?php echo $res['issued_date']; ?></td>
-                            <td><?php echo $res['closed_date']; ?></td>
+                            <td> ".$res['task_id'] ."</td>
+                            <td>".$res['company_id']."</td>
+                            <td>".$res['subject']."</td>
+                            <td>".$res['task']."</td>
+                            <td>".$res['report']."</td>
+                            <td>".$res['status']."</td>
+                            <td>". $res['issued_date']."</td>
+                            <td>".$res['closed_date']."</td>
+                            <td> <a href='agent-editprofile.php? task_id=$res[task_id] & company_id= $res[company_id] & subject=$res[subject] & task=$res[task] & report= $res[report] &  status=$res[status]'>EDIT/UPDATE</td>
                           </tr>
-                        <?php
+                          ";
                         }
-                   ?>
 
+                   ?>
                 </tbody>
               </table>
             </div>

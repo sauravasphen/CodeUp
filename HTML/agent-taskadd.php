@@ -1,5 +1,11 @@
 <?php
   SESSION_start();
+  $task_id=$_GET['task_id'];
+  $company_id=$_GET['company_id'];
+  $subject=$_GET['subject'];
+  $task=$res['task'];
+   $report= $res['report'];
+    $status=$res['status'];
 
   if (isset($_SESSION['agent_name']) && isset($_SESSION['contact_num'])){
 
@@ -113,38 +119,50 @@
                                       <input type="text" name="status">
                                   </div>
                                   <input type="submit" class="agent-create-btn" name="agent-create-btn" value="Submit">
-                                  <input type="submit" class="add-btn" name="edit-btn" value="Edit Task">
                             </fieldset>
                       </form>
                 </div>
                   <!-- update form -->
 
-                <div class="agent-form-div">
+                <!-- <div class="agent-form-div">
                       <form class="update-form" action="agent-taskaddhandel.php" method="post">
                             <fieldset>
                                   <legend>Update Form</legend>
                                   <div class="agent-label-div">
-                                      <label for="Cname">Task Id:</label>
+                                      <label for="Cname">Task id:</label>
                                   </div>
                                   <div class="agent-input-div">
-                                      <input type="text" name="task-id" placeholder="Task id" required>
+                                      <input type="text" name="task_id" value="<?php echo"$task_id" ?>" >
+                                  </div>
+
+                                  <div class="agent-label-div">
+                                      <label for="subject">Subject:</label>
+                                  </div>
+                                  <div class="agent-input-div">
+                                      <textarea class="agent-input-field" name="subject" value="<?php echo"$subject" ?>"></textarea>
+                                  </div>
+                                  <div class="agent-label-div">
+                                      <label for="task">Task:</label>
+                                  </div>
+                                  <div class="agent-input-div">
+                                      <textarea class="agent-input-field" name="task" value="<?php echo"$task" ?>"></textarea>
                                   </div>
                                   <div class="agent-label-div">
                                       <label for="report">Report:</label>
                                   </div>
                                   <div class="agent-input-div">
-                                      <input type="text" name="report" required>
+                                      <input type="text" name="report" value="<?php echo"$report" ?>">
                                   </div>
                                   <div class="agent-label-div">
                                       <label for="status">Status:</label>
                                   </div>
                                   <div class="agent-input-div">
-                                      <input type="text" name="status" required>
+                                      <input type="text" name="status" value="<?php echo"$status" ?>">
                                   </div>
                                   <input type="submit" class="add-btn" name="edit-btn" value="Update Task">
                             </fieldset>
                       </form>
-                </div>
+                </div> -->
 
           </div>
   </body>
