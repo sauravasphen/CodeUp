@@ -1,6 +1,6 @@
 <?php
 session_start();
-// blah blah
+
 
 
     $servername = "localhost";
