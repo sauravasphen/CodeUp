@@ -115,7 +115,7 @@
                       if (!$conn) {
                           die("Connection failed: " . mysqli_connect_error());
                         }
-                    
+
 
                         $selectquery="SELECT *FROM Task";
                         $query=mysqli_query($conn,$selectquery);
@@ -130,9 +130,6 @@
                             <td>".$res['status']."</td>
                             <td>". $res['issued_date']."</td>
                             <td>".$res['closed_date']."</td>
-                            <td> <a href='delete.php? task_id=$res[task_id] '>
-                              DELETE
-                            </td>
                           </tr>
                           ";
                         }
