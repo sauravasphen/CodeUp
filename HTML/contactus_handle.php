@@ -10,7 +10,7 @@ $conn = mysqli_connect($servername, $user, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
-echo "connection successfuly";
+
 
 $F_name=$_POST['f_name'];
 $company_name=$_POST['company_name'];

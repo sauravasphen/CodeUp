@@ -12,7 +12,7 @@ $conn = mysqli_connect($servername, $user, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
-echo "connection successfuly";
+
 
 $username=$_POST['username'];
 $name=$_POST['name'];

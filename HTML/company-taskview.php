@@ -61,8 +61,6 @@ $company_id=$_SESSION['company_id'];
           <input type="search" placeholder="Search">
         </div>
         <div class="social-icons">
-          <span class="ti-bell"></span>
-          <span class="ti-comment"></span>
           <div class="">
 
           </div>
@@ -99,7 +97,7 @@ $company_id=$_SESSION['company_id'];
                       if (!$conn) {
                           die("Connection failed: " . mysqli_connect_error());
                         }
-                        echo "connection successfuly";
+                        // echo "connection successfuly";
 
                         // $sql="SELECT * FROM Task";
                         //       $result=mysqli_query($conn,$sql);
@@ -142,7 +140,7 @@ $company_id=$_SESSION['company_id'];
 </html>
 
 <?php
-  
+
 }
 else{
   header("location:mainpage.php");

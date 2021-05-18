@@ -102,7 +102,7 @@
                     if (!$conn) {
                         die("Connection failed: " . mysqli_connect_error());
                       }
-                      echo "connection successfuly";
+                      
 
                       $selectquery="SELECT *FROM Agent";
                       $query=mysqli_query($conn,$selectquery);
