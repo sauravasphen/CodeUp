@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="../CSS/registration.css">
+    <link rel="stylesheet" href="../CSS/registrations.css">
     <script src="../JS/valid.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
   </head>
@@ -76,8 +76,8 @@
           <input type="search" placeholder="Search">
         </div>
         <div class="social-icons">
-          <span class="ti-bell"></span>
-          <span class="ti-comment"></span>
+          <!-- <span class="ti-bell"></span>
+          <span class="ti-comment"></span> -->
           <div class="">
 
           </div>
