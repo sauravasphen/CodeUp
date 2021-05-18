@@ -41,12 +41,6 @@
               </a>
             </li>
             <li>
-              <a href="">
-                <span class="ti-settings"></span>
-                <span>Edit Profile</span>
-            </a>
-          </li>
-            <li>
               <a href="logout.php">
                 <span class="ti-shift-right-alt"></span>
                 <span>LogOut</span>
@@ -102,7 +96,7 @@
                       if (!$conn) {
                           die("Connection failed: " . mysqli_connect_error());
                         }
-                        
+
 
                         $selectquery="SELECT *FROM Task";
                         $query=mysqli_query($conn,$selectquery);

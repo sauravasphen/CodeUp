@@ -23,9 +23,10 @@
       </div>
       <div class="sidebar-menu">
         <ul>
-                <li>
+                <li><a href="companypanal.php">
                       <span class="ti-user"></span>
                       <span><?php echo $_SESSION['company_name']; ?></span>
+                    </a>
                 </li>
                 <li>
                   <a href="company-taskview.php">
