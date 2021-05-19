@@ -54,7 +54,13 @@
             </a>
           </li>
           <li>
-            <a href="admin-editprofile.php">
+            <a href="admin-viewcontact.php">
+              <span class="ti-settings"></span>
+              <span>New Queries</span>
+          </a>
+        </li>
+          <li>
+            <a href="admin_editprofile.php">
               <span class="ti-settings"></span>
               <span>Edit Profile</span>
           </a>

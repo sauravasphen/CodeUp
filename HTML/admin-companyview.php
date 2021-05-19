@@ -52,13 +52,18 @@
                 <span class="ti-settings"></span>
                 <span>Register</span>
             </a>
+            <li>
+              <a href="admin-viewcontact.php">
+                <span class="ti-settings"></span>
+                <span>New Queries</span>
+            </a>
           </li>
-          <li>
-            <a href="">
-              <span class="ti-settings"></span>
-              <span>Edit Profile</span>
-          </a>
-        </li>
+            <li>
+              <a href="admin_editprofile.php">
+                <span class="ti-settings"></span>
+                <span>Edit Profile</span>
+            </a>
+          </li>
             <li>
               <a href="logout.php">
                 <span class="ti-shift-right-alt"></span>

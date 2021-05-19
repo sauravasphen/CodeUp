@@ -26,9 +26,11 @@
                   <a href="adminpanal.php">
                       <span class="ti-user"></span>
                       <span><?php echo $_SESSION['admin_name']; ?></span>
+                  </a>
+
                 </li>
                 <li>
-                  <a href="admin-agentview.php">
+                  <a href="admin-agentview.php" >
                     <span class="ti-ticket"></span>
                     <span>Agent List</span>
                 </a>
@@ -92,15 +94,18 @@
         <section class="recent">
           <div class="activity-grid">
             <div class="activity-card">
-              <h3>Agents</h3>
+              <h3>Tasks</h3>
               <table>
                 <thead>
                   <tr>
-                    <th>Agent ID</th>
-                    <th>Username</th>
-                    <th>Agent Name</th>
+                    <th>ContactUs ID</th>
+                    <th>Full Name</th>
+                    <th>Company Name</th>
                     <th>Email</th>
                     <th>Contact Number</th>
+                    <th>Subject</th>
+                    <th>Message</th>
+                    <th>Messaged Date</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -118,25 +123,31 @@
                         }
 
 
-                        $selectquery="SELECT *FROM Agent";
+                        $selectquery="SELECT *FROM Contactus";
                         $query=mysqli_query($conn,$selectquery);
                         while($res=mysqli_fetch_array($query)){
-                          ?>
+                          echo "
                           <tr>
-                            <td><?php echo $res['agent_id']; ?></td>
-                            <td><?php echo $res['agent_username']; ?></td>
-                            <td><?php echo $res['f_name']; ?></td>
-                            <td><?php echo $res['Email']; ?></td>
-                            <td><?php echo $res['contact_num']; ?></td>
+                            <td> ".$res['contactus_id'] ."</td>
+                            <td>".$res['F_name']."</td>
+                            <td>".$res['company_name']."</td>
+                            <td>".$res['Email']."</td>
+                            <td>".$res['contact_num']."</td>
+                            <td>".$res['subject']."</td>
+                            <td>". $res['message']."</td>
+                            <td>".$res['mgs_date']."</td>
                           </tr>
-                        <?php
+                          ";
                         }
+
                    ?>
 
                 </tbody>
               </table>
             </div>
+
           </div>
+
         </section>
       </main>
     </div>
