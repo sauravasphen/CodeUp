@@ -27,10 +27,9 @@
                       <span class="ti-user"></span>
                       <span><?php echo $_SESSION['admin_name']; ?></span>
                   </a>
-
                 </li>
                 <li>
-                  <a href="admin-agentview.php" >
+                  <a href="admin-agentview.php">
                     <span class="ti-ticket"></span>
                     <span>Agent List</span>
                 </a>
@@ -60,7 +59,7 @@
           </a>
         </li>
           <li>
-            <a href="admin_editprofile.php">
+            <a href="admin-editprofile.php">
               <span class="ti-settings"></span>
               <span>Edit Profile</span>
           </a>

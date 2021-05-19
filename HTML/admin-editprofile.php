@@ -60,7 +60,7 @@
           </a>
         </li>
           <li>
-            <a href="admin_editprofile.php">
+            <a href="admin-editprofile.php">
               <span class="ti-settings"></span>
               <span>Edit Profile</span>
           </a>
@@ -72,7 +72,6 @@
             </a>
           </li>
         </ul>
-
       </div>
     </div>
     <div class="main-content">

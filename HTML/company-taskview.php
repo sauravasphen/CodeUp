@@ -22,12 +22,11 @@ $company_id=$_SESSION['company_id'];
       </div>
       <div class="sidebar-menu">
         <ul>
-          <li>
-            <a href="companypanal.php">
-                <span class="ti-user"></span>
-                <span><?php echo $_SESSION['company_name']; ?></span>
-              </a>
-          </li>
+                <li><a href="companypanal.php">
+                      <span class="ti-user"></span>
+                      <span><?php echo $_SESSION['company_name']; ?></span>
+                    </a>
+                </li>
                 <li>
                   <a href="company-taskview.php">
                     <span class="ti-clipboard"></span>
@@ -40,12 +39,7 @@ $company_id=$_SESSION['company_id'];
                   <span>Add Task</span>
               </a>
             </li>
-            <li>
-              <a href="">
-                <span class="ti-settings"></span>
-                <span>Edit Profile</span>
-            </a>
-          </li>
+
             <li>
               <a href="logout.php">
                 <span class="ti-shift-right-alt"></span>

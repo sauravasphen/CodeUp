@@ -27,7 +27,6 @@
                       <span class="ti-user"></span>
                       <span><?php echo $_SESSION['admin_name']; ?></span>
                   </a>
-
                 </li>
                 <li>
                   <a href="admin-agentview.php">
@@ -52,18 +51,19 @@
                 <span class="ti-settings"></span>
                 <span>Register</span>
             </a>
-            <li>
-              <a href="admin-viewcontact.php">
-                <span class="ti-settings"></span>
-                <span>New Queries</span>
-            </a>
           </li>
-            <li>
-              <a href="admin_editprofile.php">
-                <span class="ti-settings"></span>
-                <span>Edit Profile</span>
-            </a>
-          </li>
+          <li>
+            <a href="admin-viewcontact.php">
+              <span class="ti-settings"></span>
+              <span>New Queries</span>
+          </a>
+        </li>
+          <li>
+            <a href="admin-editprofile.php">
+              <span class="ti-settings"></span>
+              <span>Edit Profile</span>
+          </a>
+        </li>
             <li>
               <a href="logout.php">
                 <span class="ti-shift-right-alt"></span>
@@ -93,7 +93,7 @@
         <section class="recent">
           <div class="activity-grid">
             <div class="activity-card">
-              <h3>Agents</h3>
+              <h3>Company</h3>
               <table>
                 <thead>
                   <tr>

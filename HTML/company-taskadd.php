@@ -40,12 +40,7 @@
                   <span>Add Task</span>
               </a>
             </li>
-            <li>
-              <a href="">
-                <span class="ti-settings"></span>
-                <span>Edit Profile</span>
-            </a>
-          </li>
+
             <li>
               <a href="logout.php">
                 <span class="ti-shift-right-alt"></span>
