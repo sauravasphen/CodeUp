@@ -129,7 +129,7 @@
     <!-- FOOTER -->
     <div class="footer">
       <div class="footer-idea">
-        <a href="contactus.php">Have an idea?<br>Tell us about it.</a>
+        <a href="HTML/contactus.php">Have an idea?<br>Tell us about it.</a>
       </div>
       <div class="footer-email">
         <h3>info@codup.com</h3>
