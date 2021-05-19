@@ -8,7 +8,6 @@
     <script type="text/javascript" src="../JS/menu.js"></script>
   </head>
   <body>
-    <!-- Copy -->
     <header>
       <div class="nav-logo">
         <a href="mainpage.php">
@@ -58,10 +57,7 @@
             </form>
         </div>
     </div>
-    <!-- Copy till here for Navigation-->
-    <div class="work-section">
       <h1>Our Work</h1>
-    </div>
     <div class="work-container">
       <div class="card">
         <img src="../MEDIA/nirpro.png">
@@ -86,7 +82,7 @@
         <div class="content">
           <h3>Interactive Resume</h3>
           <p>A brief website of personal resume</p>
-          <a href="https://aniraj1.github.io/Website/#Contacts" target="_blank">read more</a>
+          <a href="https://aniraj1.github.io/Website/#Profile" target="_blank">read more</a>
         </div>
       </div>
 

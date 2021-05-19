@@ -79,47 +79,47 @@
       <h1>Our Services</h1>
       <div class="box" id="box1">
         <div class="text">
-          <h1>Make Your Brand Look Unique</h1>
+          <h2>Make Your Brand Look Unique</h2>
           <p>Logo Design, Digital Content</p>
         </div>
         <div class="image">
-          <video src="../media/design.mp4" autoplay loop>
+          <video class="vid" src="../media/design.mp4" autoplay loop>
         </div>
       </div>
       <div class="box" id="box2">
         <div class="text">
-          <h1>Let Clients know you are Digital.</h1>
+          <h2>Let Clients know you are Digital.</h2>
           <p>Social Media, Content Creation</p>
         </div>
         <div class="image">
-          <video src="../media/socialmedia.mp4" autoplay loop>
+          <video class="vid" src="../media/socialmedia.mp4" autoplay loop>
         </div>
       </div>
       <div class="box" id="box3">
         <div class="text">
-          <h1>Make more sales online.</h1>
+          <h2>Make more sales online.</h2>
           <p>Digital Advertising</p>
         </div>
         <div class="image">
-          <video src="../media/sales.mp4" autoplay loop>
+          <video class="vid" src="../media/sales.mp4" autoplay loop>
         </div>
       </div>
       <div class="box" id="box4">
         <div class="text">
-          <h1>Get your dazling website now.</h1>
+          <h2>Get your dazling website now.</h2>
           <p>Web Design, Web Development</p>
         </div>
         <div class="image">
-          <video src="../media/website.mp4" autoplay loop>
+          <video class="vid" src="../media/website.mp4" autoplay loop>
         </div>
       </div>
       <div class="box" id="box5">
         <div class="text">
-          <h1>Know your Digital status painlessly.</h1>
+          <h2>Know your Digital status painlessly.</h2>
           <p>Portal</p>
         </div>
         <div class="image">
-          <video src="../media/portal.mp4" autoplay loop>
+          <video class="vid" src="../media/portal.mp4" autoplay loop>
         </div>
       </div>
     </div>
@@ -142,7 +142,7 @@
         ©2021 COPYRIGHT<br>BY CODEUP
     </div>
     <script type="text/javascript">
-      VanillaTilt.init(document.querySelectorAll(".image"), {
+      VanillaTilt.init(document.querySelectorAll(".vid"), {
         max: 10,
         speed:50,
         glare:true,
