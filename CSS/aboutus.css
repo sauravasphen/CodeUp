@@ -41,7 +41,7 @@ div.body1, div.body2{
 div.sub-body{
   position: relative;
   width: 80%;
-  top: 34%;
+  top: 32%;
   left: 10%;
   height: auto;
 }
@@ -49,10 +49,13 @@ div.sub-body{
 div.sub1{
     width: 30%;
     float: left;
-    font-size: 22px;
+    font-size: 25px;
     height: 36vh;
 }
-
+div.sub2{
+  font-size: 24px;
+  text-align: justify;
+}
 
 div.img-parallax2{
   width: 100%;
