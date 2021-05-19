@@ -3,28 +3,33 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../CSS/work.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/navigation.css">
-    <script type="text/javascript" src="../JS/menu.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/mainpage.css">
+    <script type="text/javascript" src="JS/menu.js"></script>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY>0);})
+    </script>
+    <script type="text/javascript" src="JS/vanilla-tilt.js"></script>
   </head>
   <body>
     <header>
       <div class="nav-logo">
-        <a href="mainpage.php">
-          <img src="../MEDIA/logo.png" alt="logo">
+        <a href="HTMl/mainpage.php">
+          <img src="MEDIA/logo.png" alt="logo">
           <span>CodeUp</span>
         </a>
       </div>
     </header>
     <div class="menu-bar" onclick="menuslide()">
-      <img src="../MEDIA/menu.png">
+      <img src="MEDIA/menu.png">
     </div>
     <div id="menu" onclick="menuslide()">
       <ul>
-        <li><a href="mainpage.php">Home</a></li>
-        <li><a href="work.php">Our Work</a></li>
-        <li><a href="aboutus.php">About Us</a></li>
-        <li><a href="contactus.php">Contact Us</a></li>
+        <li><a href="HTMl/mainpage.php">Home</a></li>
+        <li><a href="HTMl/work.php">Our Work</a></li>
+        <li><a href="HTMl/aboutus.php">About Us</a></li>
+        <li><a href="HTMl/contactus.php">Contact Us</a></li>
         <li><a href="#" onclick="Popup()">Client Portal</a></li>
       </ul>
     </div>
@@ -57,47 +62,71 @@
             </form>
         </div>
     </div>
-      <h1>Our Work</h1>
-    <div class="work-container">
-      <div class="card">
-        <img src="../MEDIA/nirpro.png">
-        <div class="content">
-          <h3>Nirvana</h3>
-          <p>Music Band</p>
-          <a href="https://pradhan21.github.io/kurt-cobain/" target="_blank">read more</a>
+
+
+    <div class="container">
+      <video src="MEDIA/touch.mp4" autoplay loop></video>
+      <div class="CodeUp">
+        <p>It's time to get digital!</p>
+        <h1>CodeUp</h1>
+      </div>
+      <div class="logo">
+        <img src="MEDIA/logo.png" alt="logo">
+      </div>
+    </div>
+    </div>
+    <div class="attract">
+      <h1>Our Services</h1>
+      <div class="box" id="box1">
+        <div class="text">
+          <h2>Make Your Brand Look Unique</h2>
+          <p>Logo Design, Digital Content</p>
+        </div>
+        <div class="image">
+          <video class="vid" src="media/design.mp4" autoplay loop>
         </div>
       </div>
-
-      <div class="card">
-        <img src="../MEDIA/saurav.png">
-        <div class="content">
-          <h3>Asphen Gallery</h3>
-          <p>Photography Portfolio</p>
-          <a href="https://sauravasphen.github.io/asphenphotos/index.html" target="_blank">read more</a>
+      <div class="box" id="box2">
+        <div class="text">
+          <h2>Let Clients know you are Digital.</h2>
+          <p>Social Media, Content Creation</p>
+        </div>
+        <div class="image">
+          <video class="vid" src="media/socialmedia.mp4" autoplay loop>
         </div>
       </div>
-
-      <div class="card">
-        <img src="../MEDIA/aniraj.png">
-        <div class="content">
-          <h3>Interactive Resume</h3>
-          <p>A brief website of personal resume</p>
-          <a href="https://aniraj1.github.io/Website/#Profile" target="_blank">read more</a>
+      <div class="box" id="box3">
+        <div class="text">
+          <h2>Make more sales online.</h2>
+          <p>Digital Advertising</p>
+        </div>
+        <div class="image">
+          <video class="vid" src="media/sales.mp4" autoplay loop>
         </div>
       </div>
-
-      <div class="card">
-        <img src="../MEDIA/Capture.png">
-        <div class="content">
-          <h3>Cyberpunk 2077</h3>
-          <p>Game reference Website</p>
-          <a href="https://forlorn4eva.github.io/cyber/" target="_blank">read more</a>
+      <div class="box" id="box4">
+        <div class="text">
+          <h2>Get your dazling website now.</h2>
+          <p>Web Design, Web Development</p>
+        </div>
+        <div class="image">
+          <video class="vid" src="media/website.mp4" autoplay loop>
+        </div>
+      </div>
+      <div class="box" id="box5">
+        <div class="text">
+          <h2>Know your Digital status painlessly.</h2>
+          <p>Portal</p>
+        </div>
+        <div class="image">
+          <video class="vid" src="media/portal.mp4" autoplay loop>
         </div>
       </div>
     </div>
-    <div class="contactus-link">
-      <a href="contactus.php">Grab Yours Now!</a>
+    <div class="service-link">
+      <a href="work.php">Check out our work!</a>
     </div>
+    <!-- FOOTER -->
     <div class="footer">
       <div class="footer-idea">
         <a href="contactus.php">Have an idea?<br>Tell us about it.</a>
@@ -107,10 +136,18 @@
         <span>1261 Devkota Sadak Mid Baneshor<br>Kathmandu, Nepal</span>
       </div>
       <div class="footer-logo">
-        <a href="mainpage.php"><img src="../MEDIA/logo.png" alt="logo"></a>
+        <a href="mainpage.php"><img src="MEDIA/logo.png" alt="logo"></a>
       </div>
       <div class="copyright">
         ©2021 COPYRIGHT<br>BY CODEUP
     </div>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".vid"), {
+        max: 10,
+        speed:50,
+        glare:true,
+        "max-glare":1,
+      });
+  </script>
   </body>
-  </html>
+</html>
