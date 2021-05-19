@@ -87,11 +87,11 @@
       </div>
 
       <div class="card">
-        <img src="../MEDIA/nirpro.png">
+        <img src="../MEDIA/Capture.png">
         <div class="content">
           <h3>Cyberpunk 2077</h3>
-          <p>Game Website</p>
-          <a href="https://sauravasphen.github.io/asphenphotos/index.html" target="_blank">read more</a>
+          <p>Game reference Website</p>
+          <a href="https://forlorn4eva.github.io/cyber/" target="_blank">read more</a>
         </div>
       </div>
     </div>
