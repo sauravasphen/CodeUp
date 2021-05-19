@@ -8,6 +8,7 @@ body{
   background: linear-gradient( black 16%, #111111);
   color: #d8e3e7;
   cursor: default;
+  margin: 0;
 }
 
 /* --------------------ANIMATIONS------------------------ */
@@ -314,8 +315,8 @@ button.submit-btn:hover{
   transition: 0.5s ease-out;
   background-size: 200%;
   position: absolute;
-  top: 10%;
-  left: 7%;
+  top: 13%;
+  left: 30%;
   float: left;
 }
 .CodeUp:hover{
@@ -328,25 +329,25 @@ button.submit-btn:hover{
 .CodeUp h1{
   letter-spacing: 5px;
   line-height: 5px;
-  font-size: 180px;
+  padding-left: 30px;
+  font-size: 150px;
 }
-.logo{
+.logo{}
+.logo img{
+  width: 20%;
+  opacity: 0.9;
   position: absolute;
   float: right;
-  top: 45%;
-  right: 7%;
-}
-.logo img{
-  width: 400px;
-  opacity: 0.95;
+  top: 20%;
+  left: 5%;
 }
 .container video{
   position: absolute;
   top: 40%;
-  left: 28%;
+  left: 40%;
   z-index: -1;
   opacity: 0.9;
-  width: 800px;
+  width: 50%;
 }
 
 /* --------------- 2. ATTRACT-SECTION ------------*/
@@ -357,36 +358,37 @@ button.submit-btn:hover{
 }
 .attract h1{
   text-align: center;
-  margin: 0 0 50px;
+  /* margin: 0 0 50px; */
   padding: 0;
   font-size: 100px;
 }
 .box{
   display: flex;
-  height: 90vh;
-  /* margin-top: 50px; */
+  /* height: 90vh; */
+  margin-bottom: 50px;
   padding: 0px;
 }
 .text{
-  flex: 2;
+  flex: 1;
+  padding-left: 100px;
+  padding-top: 50px;
   font-size: 40px;
 }
 .text h2{
-  padding: 100px 0px 0px 90px;
   font-size: 50px;
   letter-spacing: 3px;
   color: #ffffff;
 }
 .text p{
-  padding-left: 100px;
   font-size: 27px;
   letter-spacing: 3px;
 }
 .image{
+  text-align: center;
   flex: 1;
 }
 .image video{
-  width: 550px;
+  width: 500px;
   border-radius: 20px;
 }
 .service-link{
@@ -406,8 +408,32 @@ button.submit-btn:hover{
 }
 
 /* -------------Responsive Design--------------- */
-@media screen and (max-width: 1200px) {
-
+@media screen and (max-width: 1300px) {
+  .CodeUp p{
+    font-size: 28px;
+  }
+  .CodeUp h1{
+    font-size: 100px;
+  }
+  .container video{
+    width: 550px;
+    left: 25%;
+  }
+  .logo img{
+    width: 250px;
+  }
+  .text h2{
+    font-size: 40px;
+  }
+  .text p{
+    font-size: 20px;
+  }
+  .image video{
+    width: 300px;
+  }
+  .box{
+    margin-bottom: 40px;
+  }
 }
 @media screen and (max-width: 450px) {
 }
