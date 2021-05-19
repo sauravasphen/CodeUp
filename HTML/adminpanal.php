@@ -178,29 +178,6 @@
           </div>
 
         </div>
-        <section class="recent">
-          <div class="activity-grid">
-            <div class="activity-card">
-              <h3>Recent Activities</h3>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Projects</th>
-                    <th>Start Date</th>
-                    <th>End Date</th>
-                    <th>Team</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-
-                </tbody>
-              </table>
-            </div>
-
-          </div>
-
-        </section>
       </main>
     </div>
   </body>
