@@ -12,10 +12,10 @@ if(!$conn){
 }
 $sql_admin = "CREATE TABLE Admin (
     admin_id int(10) AUTO_INCREMENT PRIMARY KEY,
-    admin_username VARCHAR(50) NOT NULL,
+    admin_username VARCHAR(30) NOT NULL,
     f_name VARCHAR(50) NOT NULL,
     Email VARCHAR(40) NOT NULL Unique,
-    Password CHAR(128),
+    Password CHAR(16),
     contact_num CHAR(10) Unique
     )";
 
@@ -28,10 +28,10 @@ $sql_admin = "CREATE TABLE Admin (
 
     $sql_agent = "CREATE TABLE Agent (
         agent_id int(10) AUTO_INCREMENT PRIMARY KEY,
-        agent_username VARCHAR(50) NOT NULL,
+        agent_username VARCHAR(30) NOT NULL,
         f_name VARCHAR(50) NOT NULL,
         Email VARCHAR(40) NOT NULL Unique,
-        Password CHAR(128),
+        Password CHAR(16),
         contact_num CHAR(10) Unique
         )";
 
@@ -43,10 +43,10 @@ $sql_admin = "CREATE TABLE Admin (
 
     $sql_company = "CREATE TABLE Company (
         company_id int(10) AUTO_INCREMENT  PRIMARY KEY,
-        company_username VARCHAR(50) NOT NULL,
+        company_username VARCHAR(30) NOT NULL,
         company_name VARCHAR(50) NOT NULL,
         Email VARCHAR(40) NOT NULL Unique,
-        Password CHAR(128),
+        Password CHAR(16),
         contact_num CHAR(10) Unique,
         agent_id int(10),
         FOREIGN KEY(agent_id) REFERENCES Agent(agent_id)

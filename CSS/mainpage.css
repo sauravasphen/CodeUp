@@ -3,15 +3,12 @@
 /* font-family: 'Rubik', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* font-family: 'Poppins', sans-serif; */
-*{
-  cursor: default;
-}
 body{
   font-family: 'Poppins', sans-serif;
-  padding: 0px;
-  margin: 0px;
   background: linear-gradient( black 16%, #111111);
   color: #d8e3e7;
+  cursor: default;
+  margin: 0;
 }
 
 /* --------------------ANIMATIONS------------------------ */
@@ -56,6 +53,7 @@ header.sticky{
   position: absolute;
   top: 15px;
   left: 40px;
+  cursor: pointer;
 }
 .nav-logo span{
   position: absolute;
@@ -80,6 +78,7 @@ header.sticky{
   z-index: 4;
   top: 12px;
   right: 40px;
+  cursor: pointer;
 }
 .menu-bar img{
   width: 65px;
@@ -99,7 +98,7 @@ header.sticky{
   display: none;
   background-color: rgb(4, 4, 4, 0.8);
 }
-#menu ul,#menu portal-btn{
+#menu ul{
   position: relative;
   right: 30px;
   top: 20vh;
@@ -108,7 +107,7 @@ header.sticky{
   font-weight: bolder;
   list-style-type: none;
 }
-#menu a,#menu portal-btn{
+#menu a{
   text-decoration: none;
   text-transform: uppercase;
   font-size: 60px;
@@ -307,6 +306,7 @@ button.submit-btn:hover{
 /* -------------- 1.HEAD SECTION ----------------- */
 .container{
   height: 100vh;
+  position: relative;
 }
 .CodeUp{
   background: linear-gradient(to right, white 60%, #3bf3ff, #3bf3ff, white);
@@ -315,8 +315,8 @@ button.submit-btn:hover{
   transition: 0.5s ease-out;
   background-size: 200%;
   position: absolute;
-  top: 10%;
-  left: 7%;
+  top: 13%;
+  left: 30%;
   float: left;
 }
 .CodeUp:hover{
@@ -329,25 +329,25 @@ button.submit-btn:hover{
 .CodeUp h1{
   letter-spacing: 5px;
   line-height: 5px;
-  font-size: 180px;
+  padding-left: 30px;
+  font-size: 150px;
 }
-.logo{
+.logo{}
+.logo img{
+  width: 20%;
+  opacity: 0.9;
   position: absolute;
   float: right;
-  top: 45%;
-  right: 7%;
-}
-.logo img{
-  width: 450px;
-  opacity: 0.95;
+  top: 20%;
+  left: 5%;
 }
 .container video{
   position: absolute;
   top: 40%;
-  left: 28%;
+  left: 40%;
   z-index: -1;
   opacity: 0.9;
-  width: 1000px;
+  width: 50%;
 }
 
 /* --------------- 2. ATTRACT-SECTION ------------*/
@@ -358,23 +358,23 @@ button.submit-btn:hover{
 }
 .attract h1{
   text-align: center;
-  margin: 0;
+  /* margin: 0 0 50px; */
   padding: 0;
   font-size: 100px;
 }
 .box{
-  position: relative;
-  height: 100vh;
-  margin: 0px;
+  display: flex;
+  /* height: 90vh; */
+  margin-bottom: 50px;
   padding: 0px;
 }
 .text{
-  position: absolute;
-  top: 25%;
-  left: 8%;
+  flex: 1;
+  padding-left: 100px;
+  padding-top: 50px;
   font-size: 40px;
 }
-.text h1{
+.text h2{
   font-size: 50px;
   letter-spacing: 3px;
   color: #ffffff;
@@ -384,12 +384,11 @@ button.submit-btn:hover{
   letter-spacing: 3px;
 }
 .image{
-  position: absolute;
-  top: 15%;
-  right: 7%;
+  text-align: center;
+  flex: 1;
 }
 .image video{
-  width: 550px;
+  width: 500px;
   border-radius: 20px;
 }
 .service-link{
@@ -409,8 +408,32 @@ button.submit-btn:hover{
 }
 
 /* -------------Responsive Design--------------- */
-@media screen and (max-width: 1200px) {
-
+@media screen and (max-width: 1300px) {
+  .CodeUp p{
+    font-size: 28px;
+  }
+  .CodeUp h1{
+    font-size: 100px;
+  }
+  .container video{
+    width: 550px;
+    left: 25%;
+  }
+  .logo img{
+    width: 250px;
+  }
+  .text h2{
+    font-size: 40px;
+  }
+  .text p{
+    font-size: 20px;
+  }
+  .image video{
+    width: 300px;
+  }
+  .box{
+    margin-bottom: 40px;
+  }
 }
 @media screen and (max-width: 450px) {
 }
