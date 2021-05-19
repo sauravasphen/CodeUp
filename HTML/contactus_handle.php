@@ -12,7 +12,7 @@ if (!$conn) {
   }
 
 
-$F_name=$_POST['f_name'];
+$f_name=$_POST['f_name'];
 $company_name=$_POST['company_name'];
 $email=$_POST['email'];
 $contact_num=$_POST['contact_num'];
