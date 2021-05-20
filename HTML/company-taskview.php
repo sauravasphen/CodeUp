@@ -53,8 +53,8 @@ $company_id=$_SESSION['company_id'];
     <div class="main-content">
       <header>
         <div class="search-wrap">
-          <span class="ti-search"></span>
-          <input type="search" placeholder="Search">
+          <!-- <span class="ti-search"></span>
+          <input type="search" placeholder="Search"> -->
         </div>
         <div class="social-icons">
           <div class="">

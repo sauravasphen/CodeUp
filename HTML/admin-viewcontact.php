@@ -78,8 +78,8 @@
     <div class="main-content">
       <header>
         <div class="search-wrap">
-          <span class="ti-search"></span>
-          <input type="search" placeholder="Search">
+          <!-- <span class="ti-search"></span>
+          <input type="search" placeholder="Search"> -->
         </div>
         <div class="social-icons">
           <!-- <span class="ti-bell"></span>
