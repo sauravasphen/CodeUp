@@ -33,17 +33,30 @@
         <li><a href="#" onclick="Popup()">Client Portal</a></li>
       </ul>
     </div>
-    <div class="popup" id="popup-1">
+  <!-- LOGIN FORM -->
+  <div class="login-cover" id="loginpop">
+    <div class="login-container" id="loginpop">
+      <div class="login-header">Login
+          <div class="close"><span>X</span></div>
+      </div>
+      <form class="" action="index.html" method="post">
+      <div class="user-select">
+
+      </div>
+      </form>
+    </div>
+  </div>
+    <!-- <div class="popup" id="popup-1">
          <div class="login">
             <span onclick="Popup()" class="close">X</span>
             <div class="login-head">
                 <h4>Login</h4>
             </div>
-            <div class='button-box'>
+            <div class='user-box'>
                 <div id='btn'></div>
-                <button type='button' onclick='user()' class='toggle-btn'>Agent</button>
-                <button type='button' onclick='company()' class='toggle-btn'>Company</button>
-                <button type='button' onclick='admin()' class='toggle-btn'>Admin</button>
+                <button type='button' onclick='user()' class='user-toggle'>Agent</button>
+                <button type='button' onclick='company()' class='user-toggle'>Company</button>
+                <button type='button' onclick='admin()' class='user-toggle'>Admin</button>
             </div>
             <form id='user' class='input-group-user' method="post" action="agentloginhandel.php">
                 <input type='text' class='input-field' placeholder='Agent ID' name="username" required >
@@ -61,7 +74,7 @@
                 <button type='submit' class='submit-btn'>Sign In</button>
             </form>
         </div>
-    </div>
+    </div> -->
 
 
     <div class="container">

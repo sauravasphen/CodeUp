@@ -28,22 +28,12 @@ $sql="select *from Admin
           header("location:adminpanal.php");
           exit();
         }
-        else{
-          header("location:mainpage.php");
-          window.alert("incorrect username or password");
-          exit();
-        }
       }
-      //
-      // else{
-      //   header("location:form.php?error=Incorrect Username or Password");
-      //   exit();
-      //     // echo "<script> alert('Invalid Username or Password')</script>";
-      //     // echo "<script>window.location.href='http://localhost/loginform/form.php'</script>";
-      // }
-      else{
-        header("location:mainpage.php");
-        window.alert("not registered.");
+        else{
+          // header("location:mainpage.php");
+          echo "<script>location.href='mainpage.php';
+          window.alert('incorrect username or password');
+          </script>";
         exit();
       }
   ?>
