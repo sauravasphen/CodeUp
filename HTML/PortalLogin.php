@@ -25,7 +25,10 @@ if ($acc_type == 'company') {
     }
   }
   else{
-   header("location:mainpage.php");
+    echo "<script>location.href='mainpage.php';
+    window.alert('Incorrect Credentials');
+    </script>";
+   // header("location:mainpage.php");
    exit();
   }
 }
@@ -37,11 +40,14 @@ elseif ($acc_type == 'agent') {
     if($row['agent_username']===$username && $row['Password']===$password){
       $_SESSION['agent_id']=$row['agent_id'];
       $_SESSION['agent_name']=$row['f_name'];
-      header("location:agentpanal.php");
+      // header("location:agentpanal.php");
       exit();
     }
   }
   else{
+    echo "<script>location.href='mainpage.php';
+    window.alert('Incorrect Credentials');
+    </script>";
    header("location:mainpage.php");
    exit();
   }
@@ -59,7 +65,10 @@ elseif ($acc_type == 'admin') {
     }
   }
   else{
-   header("location:mainpage.php");
+    echo "<script>location.href='mainpage.php';
+    window.alert('Incorrect Credentials');
+    </script>";
+   // header("location:mainpage.php");
    exit();
   }
 }
