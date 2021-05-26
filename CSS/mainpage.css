@@ -138,6 +138,7 @@ header.sticky{
 
 #loginpop{
   display: none;
+  z-index: 1000;
 }
 /* ---------Footer----------- */
 .footer{
