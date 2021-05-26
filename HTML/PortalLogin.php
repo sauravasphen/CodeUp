@@ -23,11 +23,10 @@ if ($acc_type == 'company') {
       header("location:companypanal.php");
       exit();
     }
-    else{
-      header("location:mainpage.php");
-      window.alert("incorrect username or password");
-      exit();
-    }
+  }
+  else{
+   header("location:mainpage.php");
+   exit();
   }
 }
 elseif ($acc_type == 'agent') {
@@ -41,11 +40,10 @@ elseif ($acc_type == 'agent') {
       header("location:agentpanal.php");
       exit();
     }
-    else{
-      header("location:mainpage.php");
-      window.alert("incorrect username or password");
-      exit();
-    }
+  }
+  else{
+   header("location:mainpage.php");
+   exit();
   }
 }
 elseif ($acc_type == 'admin') {
@@ -59,11 +57,10 @@ elseif ($acc_type == 'admin') {
       header("location:adminpanal.php");
       exit();
     }
-    else{
-      header("location:mainpage.php");
-      window.alert("incorrect username or password");
-      exit();
-    }
+  }
+  else{
+   header("location:mainpage.php");
+   exit();
   }
 }
   ?>
