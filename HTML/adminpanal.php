@@ -1,10 +1,10 @@
 <?php
   SESSION_start();
 
-  if (isset($_SESSION['admin_name']) && isset($_SESSION['contact_num'])){
+  if (isset($_SESSION['admin_name']) && isset($_SESSION['admin_id'])){
 
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html>s
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">

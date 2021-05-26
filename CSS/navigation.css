@@ -110,149 +110,104 @@ header{
 }
 
 /* ------------login and registration form---------------- */
-div.popup div.login {
-      width:360px;
-      height:380px;
-      position:fixed;
-      left: 50%;
-      top: 50%;
-      background-color: rgb(38, 38, 38);
-      padding: 0px;
+.popup{
+      width: 25%;
+      height:auto;
+      position: fixed;
+      left: 45%;
+      top: 45%;
+      background-color: rgba(216, 227, 231, 0.95);
+      padding: 20px;
       border-radius: 15px;
       overflow: hidden;
       z-index: 10000;
       transform: translate(-50%,-150%) scale(0);
+      color: #111111;
 }
-div.login span.close{
-     position: absolute;
-     right: 10px;
-     top: 5px;
-     color: #126e82;
-     font-size: 1.5em;
-     padding: 3px;
-     cursor: pointer;
- }
-div.popup.active div.login{
+.popup.active{
     transition: all 300ms ease-in-out;
     transform: translate(-50%,-50%) scale(1);
 }
-div.login-head{
-    position: relative;
-    text-align: center;
-    font-size: 1.6em;
-    font-weight: bold;
-    letter-spacing: 3px;
-    top: 3%;
-    color: #fff;
-}
-div.button-box
-{
-  width:92%;
-  left: 4%;
-  top: 5%;
+.close{
+  float: right;
+  font-size: 20px;
+  /* padding: 3px; */
+  cursor: pointer;
+ }
+ .popup h4{
   text-align: center;
-	position:relative;
-	box-shadow: 0 0 7px 5px #126e82;
-	border-radius: 25px;
-}
-div button.toggle-btn
+  padding: 5px 0;
+  font-size: 30px;
+ }
+.login-form{
+   text-align: center;
+   padding: 0px 30px;
+ }
+.radio-div
 {
-	padding:10px 30px;
+  width: 100%;
+  margin: 0;
+  display: inline-flex;
+  overflow: hidden;
+}
+.acc-radiobutton{
+  display: none;
+}
+.acc-label
+{
+  width: 100%;
+  padding:10px 20px;
+  border-radius: 5px 5px 0 0;
+  color: black;
 	cursor:pointer;
-	background:transparent;
-	border:0;
-	outline: none;
-	position: relative;
-  color: white;
-  font-weight: bold;
 }
-#btn
-{
-	top: 0;
-	left:0;
-	position: absolute;
-	width: 110px;
-	height: 100%;
-	background: #126e82;
-  /* box-shadow: 0 0 7px 5px #126e82; */
-	border-radius: 25px;
-	transition: .5s;
+.acc-radiobutton:checked + .acc-label{
+  background-color: #51c4d3;
 }
-form.input-group-user,form.input-group-company,form.input-group-admin
-{
-	top: 47%;;
-	position:absolute;
-	width:85%;
-  left: 7.5%;
-	transition:.5s;
+.credential{
+  background-color: #51c4d3;
+  padding: 0 20px 20px;
+  border-radius: 5px 5px 5px 5px;
+  margin-bottom: 10px;
+  /* width: 100%; */
 }
-input.input-field
-{
-	width: 100%;
-  font-size: 1.1em;
-	padding:15px 0;
-	border-left:0;
-	border-top:0;
-	border-right:0;
-	border-bottom: 1px solid #999;
-	outline:none;
-  cursor: text;
-	background: transparent;
-}
-input.input-field:hover{
+input{
+  font-size: 18px;
+  text-align: center;
+  width: 80%;
+  padding: 5px;
+  border: 0;
+  border-bottom: 1px solid #111111;
+  margin-top: 20px;
   background: transparent;
-  /* box-shadow: 0 0 20px 9px #51c4d3; */
 }
+::placeholder{
+  color: rgba(17, 17, 17, 0.87);
+}
+input:focus{
+  /* border: 0; */
+  outline: none;
+  border-radius: 5px;
+  background-color: rgb(168, 225, 232);
+}
+
 button.submit-btn
 {
-  position: absolute;
-  margin-top: 12%;
-	/* width: 85%; */
-  /* left: 7.5%; */
 	padding: 10px 30px;
 	cursor: pointer;
-	display: block;
-	background: #126e82;
-  color: #fff;
+	background: #51c4d3;
+  color: #111111;
 	border: 0;
 	outline: none;
 	border-radius: 20px;
   font-size: 1.1em;
 }
 button.submit-btn:hover{
-    background: #51c4d3;
-    animation-name: glow;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+    background: #126e82;
+    color: white;
     /* box-shadow: 0 0 20px 9px #126e82; */
 }
-#user
-{
-	left:32px;
-}
-#user input
-{
-	color:white;
-	font-size:15;
-}
-#company
-{
-	left:432px;
-}
-#company input
-{
-	color:white;
-	font-size: 15;
-}
-#admin
-{
-    left: 832px;
-}
-#admin input
-{
-	color:white;
-	font-size: 15;
-}
+
 /* ------------------------Footer---------------------------- */
 .footer{
   background-color: #51c4d3;

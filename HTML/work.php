@@ -29,33 +29,23 @@
       </ul>
     </div>
     <div class="popup" id="popup-1">
-         <div class="login">
             <span onclick="Popup()" class="close">X</span>
-            <div class="login-head">
                 <h4>Login</h4>
-            </div>
-            <div class='button-box'>
-                <div id='btn'></div>
-                <button type='button' onclick='user()' class='toggle-btn'>Agent</button>
-                <button type='button' onclick='company()' class='toggle-btn'>Company</button>
-                <button type='button' onclick='admin()' class='toggle-btn'>Admin</button>
-            </div>
-            <form id='user' class='input-group-user' method="post" action="agentloginhandel.php">
-                <input type='text' class='input-field' placeholder='Agent ID' name="username" required >
+            <form class='login-form' method="post" action="PortalLogin.php">
+              <div class='radio-div'>
+                <input id="1" type='radio' name="acc-type" class="acc-radiobutton" value="company" checked>
+                <label for="1" class='acc-label'>Company</label>
+                <input id="2" type='radio' name="acc-type" class="acc-radiobutton" value="agent">
+                <label for="2" class='acc-label'>Agent</label>
+                <input id="3" type='radio' name="acc-type" class="acc-radiobutton" value="admin">
+                <label for="3" class='acc-label'>Admin</label>
+              </div>
+              <div class="credential">
+                <input type='text' class='input-field' placeholder='Username' name="username" required>
                 <input type='password'class='input-field' placeholder='Password' name="password" required>
-                <button type='submit' class='submit-btn'>Sign In</button>
+              </div>
+              <button type='submit' class='submit-btn'>Sign In</button>
             </form>
-            <form id='company' class='input-group-company' method="post" action="companyloginhandel.php">
-                <input type='text' class='input-field' placeholder='Company ID' name="username" required >
-                <input type='password' class='input-field' placeholder='Password' name="password" required>
-                <button type='submit' class='submit-btn'>Sign In</button>
-            </form>
-            <form id='admin' class='input-group-admin' method="post" action="adminloginhandel.php">
-                <input type='text' class='input-field' placeholder='Admin ID' name="username" required >
-                <input type='password' class='input-field' placeholder='Password' name="password" required>
-                <button type='submit' class='submit-btn'>Sign In</button>
-            </form>
-        </div>
     </div>
       <h1>Our Work</h1>
     <div class="work-container">
