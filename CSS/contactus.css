@@ -39,7 +39,7 @@ textarea.input{
   resize: none;
   overflow-y: auto;
 }
-.input:focus{
+.input input:focus{
   background-color: rgb(81, 195, 210, 0.4);
 ;
 }

@@ -44,7 +44,7 @@
                 <input type='text' class='input-field' placeholder='Username' name="username" required>
                 <input type='password'class='input-field' placeholder='Password' name="password" required>
               </div>
-              <button type='submit' class='submit-btn'>Sign In</button>
+              <button type='submit' class='sign-in'>Sign In</button>
             </form>
     </div>
       <h1>Our Work</h1>

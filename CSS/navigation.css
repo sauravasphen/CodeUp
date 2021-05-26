@@ -163,16 +163,16 @@ header{
 }
 .acc-radiobutton:checked + .acc-label{
   transition: linear 0.5s;
-  background-color: #51c4d3;
+  background-color: rgba(81, 195, 210, 0.95);
 }
 .credential{
-  background-color: #51c4d3;
+  background-color: rgba(81, 195, 210, 0.95);
   padding: 0 20px 20px;
   border-radius: 5px 5px 5px 5px;
-  margin-bottom: 10px;
+  margin: 0 0 15px;
   /* width: 100%; */
 }
-input{
+.credential input{
   font-size: 18px;
   text-align: center;
   width: 80%;
@@ -185,28 +185,27 @@ input{
 ::placeholder{
   color: rgba(17, 17, 17, 0.87);
 }
-input:focus{
-  /* border: 0; */
+.credential input:focus{
   outline: none;
   border-radius: 5px;
-  background-color: rgb(168, 225, 232);
+  background-color: rgb(168, 225, 232, 0.95);
 }
 
-button.submit-btn
+button.sign-in
 {
 	padding: 10px 30px;
 	cursor: pointer;
-	background: #51c4d3;
+	background: rgba(81, 195, 210, 0.95);
   color: #111111;
 	border: 0;
 	outline: none;
 	border-radius: 20px;
   font-size: 1.1em;
 }
-button.submit-btn:hover{
-    background: #126e82;
-    color: white;
-    /* box-shadow: 0 0 20px 9px #126e82; */
+button.sign-in:hover{
+  transition: ease-in 0.3s;
+  background: #126e82;
+  color: white;
 }
 
 /* ------------------------Footer---------------------------- */
