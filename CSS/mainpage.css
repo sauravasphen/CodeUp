@@ -175,7 +175,7 @@ header.sticky{
 	cursor:pointer;
 }
 .acc-radiobutton:checked + .acc-label{
-  transition: linear 0.6s;
+  transition: linear 0.5s;
   background-color: #51c4d3;
 }
 .credential{
