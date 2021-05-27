@@ -1,15 +1,5 @@
 <?php
-$servername="localhost";
-$username="root";
-$password="";
-$dbname="CodeUp_db";
-
-//create connection
-$conn=mysqli_connect($servername,$username,$password,$dbname);
-//check connections
-if(!$conn){
-  die("connection failed:".mysqli_connect_error());
-}
+include('../HTML/connection.php')
 $sql_admin = "CREATE TABLE Admin (
     admin_id int(10) AUTO_INCREMENT PRIMARY KEY,
     admin_username VARCHAR(30) NOT NULL,
@@ -64,8 +54,8 @@ $sql_admin = "CREATE TABLE Admin (
         subject VARCHAR(50) NOT NULL,
         task VARCHAR(40) NOT NULL,
         report VARCHAR (90),
-        status BIT(1) default 0,
-        issued_date date,
+        status VARCHAR(10) default 'Pending',
+        due_date date,
         closed_date date,
         FOREIGN KEY(company_id) REFERENCES Company(company_id)
         )";

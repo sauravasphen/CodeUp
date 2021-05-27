@@ -29,6 +29,12 @@
                   </a>
                 </li>
                 <li>
+                  <a href="admin-dashboard.php">
+                      <span class="ti-user"></span>
+                      <span>Dashboard 2</span>
+                  </a>
+                </li>
+                <li>
                   <a href="admin-agentview.php">
                     <span class="ti-ticket"></span>
                     <span>Agent List</span>

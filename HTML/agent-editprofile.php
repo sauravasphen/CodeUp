@@ -7,7 +7,7 @@
   $report= $_GET['report'];
   $status=$_GET['status'];
 
-  if (isset($_SESSION['agent_name']) && isset($_SESSION['contact_num'])){
+  if (isset($_SESSION['agent_name']) && isset($_SESSION['agent_id'])){
 
 ?>
 <!DOCTYPE html>

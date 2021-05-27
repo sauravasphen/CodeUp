@@ -1,7 +1,7 @@
 <?php
   session_start();
 $company_id=$_SESSION['company_id'];
-  if (isset($_SESSION['company_name']) && isset($_SESSION['contact_num'])){
+  if (isset($_SESSION['company_name']) && isset($_SESSION['company_id'])){
 
 ?>
 <!DOCTYPE html>
