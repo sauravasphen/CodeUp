@@ -185,6 +185,9 @@ header{
 ::placeholder{
   color: rgba(17, 17, 17, 0.87);
 }
+:focus::placeholder{
+  color: transparent;
+}
 .credential input:focus{
   outline: none;
   border-radius: 5px;

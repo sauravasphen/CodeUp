@@ -198,6 +198,9 @@ header.sticky{
 ::placeholder{
   color: rgba(17, 17, 17, 0.87);
 }
+:focus::placeholder{
+  color: transparent;
+}
 .credential input:focus{
   outline: none;
   border-radius: 5px;
@@ -219,6 +222,43 @@ button.sign-in:hover{
   transition: ease-in 0.3s;
   background: #126e82;
   color: white;
+}
+
+/* ------------------------Footer---------------------------- */
+.footer{
+  background-color: #51c4d3;
+  padding: 20px 10px 10px;
+  height: auto;
+  max-width: 100vw;
+}
+.footer-idea{
+  text-align: center;
+}
+.footer-idea a{
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.footer-email{
+  padding-left: 20px;
+  color: white;
+}
+.footer-logo{
+  text-align: center;
+}
+.footer-logo img{
+  width: 55px;
+  cursor: pointer;
+}
+.copyright{
+  text-align: center;
+  color: white;
+  font-family: Montserrat-Regular;
+  font-size: 10px;
+  letter-spacing: 5px;
+  font-weight: normal;
 }
 
 /* -------------- 1.HEAD SECTION ----------------- */
