@@ -66,6 +66,7 @@
        <div class="box">
          <div class="profile" id="flex-item">
            <h2>Profile</h2>
+           <img src="../MEDIA/profile.png" alt="profile" width="200px"><br />
            <?php
            $id = $_SESSION['admin_id'];
             $sql = "SELECT * FROM admin WHERE admin_id = '$id'";
@@ -81,29 +82,29 @@
           ?>
          </div>
          <div class="data1" id="flex-item">
-           <h3>Number of Agents<br />
+           <h2>Number of Agents<br />
            <?php
            $sql="SELECT *FROM Agent";
            $query=mysqli_query($conn,$sql);
            $count=mysqli_num_rows($query);
             ?>
-            <?php echo "$count"; ?></h3>
+            <?php echo "$count"; ?></h2>
             <hr width='70%'>
-            <h3>Number of Companies<br />
+            <h2>Number of Companies<br />
             <?php
             $sql="SELECT *FROM company";
             $query=mysqli_query($conn,$sql);
             $count=mysqli_num_rows($query);
              ?>
-             <?php echo "$count"; ?></h3>
+             <?php echo "$count"; ?></h2>
              <hr width='70%'>
-             <h3>New Queries<br />
+             <h2>New Queries<br />
              <?php
              $sql="SELECT *FROM contactus";
              $query=mysqli_query($conn,$sql);
              $count=mysqli_num_rows($query);
               ?>
-              <?php echo "$count"; ?></h3>
+              <?php echo "$count"; ?></h2>
          </div>
        </div>
      </div>

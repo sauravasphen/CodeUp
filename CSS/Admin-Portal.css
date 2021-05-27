@@ -4,23 +4,25 @@
     display: flex;
 }
 #flex-item{
-  margin: 10px;
-  background: white;
-  border: 2px solid #2b2e4a;
-  border-radius: 20px 0 20px 0;
-  box-shadow: 5px 5px 8px #888888;
+  margin: 35px;
+  background: #f3f4ed;
+  /* border: 2px solid #424642; */
+  border-radius: 20px;
+  box-shadow: 3px 3px 12px #888888;
 }
 .profile{
   flex: 3;
-  padding: 0 0 20px 20px;
+  padding: 0 0 20px 40px;
   font-size: 20px;
   line-height: 30px;
 }
+#flex-item:hover{
+  background: #424642;
+  color: #fff;
+  transition: linear .3s;
+}
 .data1{
   flex: 2;
-  padding: 0 0 20px 20px;
+  padding: 20px 0 20px 20px;
   text-align: center;
-}
-.data1 span{
-  font-size: 30px;
 }
