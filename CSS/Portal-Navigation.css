@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* font-family: 'Poppins', sans-serif; */
-
+:root{
+  --main: #51c4d3;
+  --white: #d8e3e7;
+}
 body{
   font-family: 'Poppins', sans-serif;
   margin: 0px;
   padding: 0px;
-  background-color: #fff;
+  width: 100%;
+  background-color: var(--white);
 }
 
 /* ---------------------Navigation------------------------------ */
@@ -13,7 +17,7 @@ body{
   position: fixed;
   width: 15%;
   height: 100vh;
-  background-color: #424642 ;
+  background-color: var(--main) ;
 }
 .navigation-container ul{
   padding:80px 0;
@@ -29,18 +33,18 @@ body{
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 1px;
-  color: #f3f4ed;
+  color: var(--white);
   text-align: center;
 }
 .navigation-container span{
   padding-left: 20px;
 }
 .navigation-container li.active{
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 35px 0 0 35px;
 }
 .navigation-container li.active a{
-  color: #424642;
+  color: var(--main);
   font-weight: 600;
 }
 .navigation-container a:hover{
@@ -50,6 +54,7 @@ body{
 
 /* ------------------------Content--------------------- */
 .content{
+  position: fixed;
   height: auto;
   width: 85%;
   float: right;

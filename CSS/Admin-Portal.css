@@ -1,28 +1,29 @@
-.box{
-    height: auto;
-    width: 100%;
-    display: flex;
+:root{
+  --main: #51c4d3;
+  --white: #d8e3e7;
 }
-#flex-item{
-  margin: 35px;
-  background: #f3f4ed;
-  /* border: 2px solid #424642; */
-  border-radius: 20px;
-  box-shadow: 3px 3px 12px #888888;
+
+.grid-container{
+  display: grid;
+  margin-top: 40px;
+  width: 100%;
+  grid-gap: 40px;
+  justify-content: center;
+  grid-template-columns: repeat(4, 20%);
+}
+.grid-box{
+  background-color: var(--main);
+  box-shadow: 2px 2px 8px var(--main);
+  border-radius: 10px;
+  text-align: center;
+  padding: 0 30px 30px;
 }
 .profile{
-  flex: 3;
-  padding: 0 0 20px 40px;
-  font-size: 20px;
-  line-height: 30px;
+  grid-column: span 2;
+  grid-row: span 2;
 }
-#flex-item:hover{
-  background: #424642;
-  color: #fff;
-  transition: linear .3s;
-}
-.data1{
-  flex: 2;
-  padding: 20px 0 20px 20px;
+.agents, .companies, .queries, .pending-task{
+  grid-column: span 1;
+  grid-row: span 1;
   text-align: center;
 }

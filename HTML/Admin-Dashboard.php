@@ -63,8 +63,8 @@
 
      <!-- ***************** Body ********************** -->
      <div class="content">
-       <div class="box">
-         <div class="profile" id="flex-item">
+       <div class="grid-container">
+         <div class="grid-box profile">
            <h2>Profile</h2>
            <img src="../MEDIA/profile.png" alt="profile" width="200px"><br />
            <?php
@@ -81,33 +81,40 @@
             }
           ?>
          </div>
-         <div class="data1" id="flex-item">
+         <div class="grid-box agents">
            <h2>Number of Agents<br />
            <?php
            $sql="SELECT *FROM Agent";
            $query=mysqli_query($conn,$sql);
            $count=mysqli_num_rows($query);
-            ?>
-            <?php echo "$count"; ?></h2>
-            <hr width='70%'>
-            <h2>Number of Companies<br />
+           echo "$count"; ?></h2>
+         </div>
+         <div class="grid-box companies">
+            <h2>Number of Companies<br>
             <?php
             $sql="SELECT *FROM company";
             $query=mysqli_query($conn,$sql);
             $count=mysqli_num_rows($query);
-             ?>
-             <?php echo "$count"; ?></h2>
-             <hr width='70%'>
+            echo "$count"; ?></h2>
+           </div>
+           <div class="grid-box queries">
              <h2>New Queries<br />
              <?php
              $sql="SELECT *FROM contactus";
              $query=mysqli_query($conn,$sql);
              $count=mysqli_num_rows($query);
-              ?>
-              <?php echo "$count"; ?></h2>
+             echo "$count"; ?></h2>
+           </div>
+           <div class="grid-box pending-task">
+             <h2>Pending Tasks<br />
+             <?php
+             $sql="SELECT *FROM task";
+             $query=mysqli_query($conn,$sql);
+             $count=mysqli_num_rows($query);
+             echo "$count"; ?></h2>
+           </div>
          </div>
        </div>
-     </div>
    </body>
  </html>
  <?php
