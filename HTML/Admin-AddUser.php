@@ -1,6 +1,7 @@
 <?php
   SESSION_start();
   if (isset($_SESSION['admin_name']) && isset($_SESSION['admin_id'])){
+    include('connection.php');
  ?>
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
@@ -59,7 +60,7 @@
          </li>
        </ul>
      </div>
-s
+
      <!-- ***************** Body ********************** -->
      <div class="content">
        <div class="grid-container">
