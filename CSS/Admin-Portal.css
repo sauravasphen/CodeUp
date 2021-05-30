@@ -7,16 +7,12 @@
   grid-template-columns: repeat(5, 17%);
 }
 .grid-box{
-  background-color: #d8e3e7;
+  background-color: var(--white);
   box-shadow: 2px 2px 10px var(--main);
   border-radius: 15px;
   border: 1px solid var(--main);
   color: #111111;
   padding: 0 25px 30px;
-}
-.grid-box:hover{
-  background-color: var(--white);
-  transition: ease 0.8s;
 }
 
 /* ----------------------------------Dashboard------------------------- */
@@ -109,13 +105,20 @@ input:focus{
   background-color: #d8e3e7;
 }
 .adduser-btn{
-  padding: 10px 20px;
+  padding: 10px 25px;
   color: var(--white);
   border-radius: 10px;
   border: 0;
   font-size: 20px;
   cursor: pointer;
+  border: 1.5px var(--main) solid;
   background-color: var(--main);
 }
 .adduser-btn:hover{
+  background-color: #d8e3e7;
+  color: var(--main);
+  border: 1.5px var(--main) solid;
+  transition: ease 0.4s;
 }
+
+/* ---------------------------------------New Queries-------------------------- */
