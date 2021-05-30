@@ -64,8 +64,8 @@
      <!-- ***************** Body ********************** -->
      <div class="content">
        <div class="grid-container">
-         <div class="grid-box profile">
-           <h2>Profile</h2>
+         <div class="grid-box dash-profile">
+           <h2 class="dash-box-header">Profile</h2>
            <img src="../MEDIA/profile.png" alt="profile" width="200px"><br />
            <?php
            $id = $_SESSION['admin_id'];
@@ -81,37 +81,40 @@
             }
           ?>
          </div>
-         <div class="grid-box agents">
-           <h2>Number of Agents<br />
-           <?php
+         <div class="grid-box dash-agents">
+           <h2 class="dash-box-header"><span class="ti-user"></span>Agents</h2>
+           <div class="dash-count"><?php
            $sql="SELECT *FROM Agent";
            $query=mysqli_query($conn,$sql);
            $count=mysqli_num_rows($query);
-           echo "$count"; ?></h2>
+           echo "$count"; ?></div>
          </div>
-         <div class="grid-box companies">
-            <h2>Number of Companies<br>
-            <?php
+         <div class="grid-box dash-companies">
+            <h2 class="dash-box-header"><span class="ti-briefcase"></span>Companies</h2>
+            <div class="dash-count"><?php
             $sql="SELECT *FROM company";
             $query=mysqli_query($conn,$sql);
             $count=mysqli_num_rows($query);
-            echo "$count"; ?></h2>
+            echo "$count"; ?></div>
            </div>
-           <div class="grid-box queries">
-             <h2>New Queries<br />
-             <?php
+           <div class="grid-box dash-queries">
+             <h2 class="dash-box-header"><span class="ti-email"></span>New Queries</h2>
+             <div class="dash-count"><?php
              $sql="SELECT *FROM contactus";
              $query=mysqli_query($conn,$sql);
              $count=mysqli_num_rows($query);
-             echo "$count"; ?></h2>
+             echo "$count"; ?></div>
            </div>
-           <div class="grid-box pending-task">
-             <h2>Pending Tasks<br />
-             <?php
-             $sql="SELECT *FROM task";
+           <div class="grid-box dash-pending-task">
+             <h2 class="dash-box-header"><span class="ti-check-box"></span>Pending Tasks</h2>
+             <div class="dash-count"><?php
+             $sql="SELECT *FROM task where status='0'";
              $query=mysqli_query($conn,$sql);
              $count=mysqli_num_rows($query);
-             echo "$count"; ?></h2>
+             echo "$count"; ?></div>
+           </div>
+           <div class="grid-box dash-task-list">
+
            </div>
          </div>
        </div>

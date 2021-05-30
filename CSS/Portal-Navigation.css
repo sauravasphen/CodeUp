@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* font-family: 'Poppins', sans-serif; */
+
 :root{
-  --main: #51c4d3;
-  --white: #d8e3e7;
+  --main: #126e82;
+  --white: #fff;
+  --black: #111111;
 }
+
 body{
   font-family: 'Poppins', sans-serif;
   margin: 0px;
@@ -17,7 +20,7 @@ body{
   position: fixed;
   width: 15%;
   height: 100vh;
-  background-color: var(--main) ;
+  background-color: var(--main);
 }
 .navigation-container ul{
   padding:80px 0;
@@ -57,5 +60,6 @@ body{
   position: fixed;
   height: auto;
   width: 85%;
-  float: right;
+  top:0;
+  right: 0;
 }

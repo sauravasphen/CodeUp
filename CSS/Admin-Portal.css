@@ -1,29 +1,121 @@
-:root{
-  --main: #51c4d3;
-  --white: #d8e3e7;
-}
-
 .grid-container{
   display: grid;
   margin-top: 40px;
   width: 100%;
-  grid-gap: 40px;
+  grid-gap: 30px;
   justify-content: center;
-  grid-template-columns: repeat(4, 20%);
+  grid-template-columns: repeat(5, 17%);
 }
 .grid-box{
-  background-color: var(--main);
-  box-shadow: 2px 2px 8px var(--main);
-  border-radius: 10px;
-  text-align: center;
-  padding: 0 30px 30px;
+  background-color: #d8e3e7;
+  box-shadow: 2px 2px 10px var(--main);
+  border-radius: 15px;
+  border: 1px solid var(--main);
+  color: #111111;
+  padding: 0 25px 30px;
 }
-.profile{
-  grid-column: span 2;
+.grid-box:hover{
+  background-color: var(--white);
+  transition: ease 0.8s;
+}
+
+/* ----------------------------------Dashboard------------------------- */
+.dash-profile{
+  grid-column: span 3;
   grid-row: span 2;
+  text-align: center;
 }
-.agents, .companies, .queries, .pending-task{
+.dash-agents, .dash-companies, .dash-queries, .dash-pending-task{
   grid-column: span 1;
   grid-row: span 1;
+}
+.dash-box-header{
+  font-size: 25px;
+}
+.dash-count{
+  font-size: 50px;
+  font-weight: 600;
   text-align: center;
+}
+.dash-box-header span{
+  font-size: 25px;
+  padding-right: 10px;
+}
+.dash-task-list{
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+/* -------------------------------------------Add User---------------------------- */
+.add-user{
+  grid-column: span 5;
+  grid-row: auto;
+  padding: 50px 50px 20px;
+}
+.adduser-title{
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+}
+.adduser-title::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 50px;
+  background: var(--main);
+}
+form{
+  margin-top: 40px;
+}
+.adduser-details{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+.input-container{
+  width: 50%;
+  margin-bottom: 15px;
+}
+.acc-radiobutton{
+  display: none;
+}
+.acc-label{
+  font-size: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 0 10px 0 10px;
+}
+.acc-radiobutton:checked + .acc-label{
+  transition: linear 0.3s;
+  background-color: var(--main);
+  color: var(--white);
+}
+.input-container label{
+  font-size: 20px;
+}
+.input-container input{
+  outline: none;
+  width: 55%;
+  padding: 5px 8px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 1.5px var(--black) solid;
+  border-radius: 10px 0 10px 0;
+}
+input:focus{
+  border: 2px var(--main) solid;
+  background-color: #d8e3e7;
+}
+.adduser-btn{
+  padding: 10px 20px;
+  color: var(--white);
+  border-radius: 10px;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: var(--main);
+}
+.adduser-btn:hover{
 }
