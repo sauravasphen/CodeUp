@@ -64,15 +64,25 @@
      <!-- ***************** Body ********************** -->
      <div class="content">
        <div class="grid-container">
-         <div class="grid-box query-container">
+         <div class="grid-box query-box">
            <h2>New Queries</h2>
-           <table>
-             <thead>
-               <tr>
-                 <th></th>
-               </tr>
-             </thead>
-           </table>
+           <?php
+           $sql="SELECT *FROM contactus";
+           $query=mysqli_query($conn,$sql);
+           while($res=mysqli_fetch_array($query)){
+             ?>
+           <div class="query-item">
+             <div class="sender">
+             <?php echo $res['F_name']; ?>
+             <br>From <?php echo $res['company_name']; ?>
+            </div>
+            <div class="query-date">
+              <?php echo $res['mgs_date']; ?>
+            </div>
+             Subject: <?php echo $res['subject']; ?>
+             Message:
+           </div>
+         <?php } ?>
          </div>
        </div>
       </div>

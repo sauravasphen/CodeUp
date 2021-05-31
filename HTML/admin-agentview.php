@@ -133,7 +133,6 @@
                         <?php
                         }
                    ?>
-
                 </tbody>
               </table>
             </div>
@@ -143,7 +142,6 @@
     </div>
   </body>
 </html>
-
 <?php
 }else{
   header("location:mainpage.php");

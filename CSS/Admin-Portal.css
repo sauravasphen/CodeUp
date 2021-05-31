@@ -15,6 +15,9 @@
   padding: 0 25px 30px;
 }
 
+a{
+  text-decoration: none;
+}
 /* ----------------------------------Dashboard------------------------- */
 .dash-profile{
   grid-column: span 3;
@@ -122,3 +125,17 @@ input:focus{
 }
 
 /* ---------------------------------------New Queries-------------------------- */
+.query-box{
+  grid-column: span 5;
+  padding: 20px 50px 20px;
+}
+.query-item{
+  box-shadow: 2px 2px 10px var(--main);
+  border-radius: 15px;
+  display: grid;
+  padding: 20px;
+  margin-bottom: 10px;
+  grid-template-columns: 3fr 1fr;
+}
+.sender{
+}

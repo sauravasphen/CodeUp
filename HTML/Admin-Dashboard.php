@@ -97,6 +97,7 @@
             $count=mysqli_num_rows($query);
             echo "$count"; ?></div>
            </div>
+           <a href="Admin-NewQueries.php">
            <div class="grid-box dash-queries">
              <h2 class="dash-box-header"><span class="ti-email"></span>New Queries</h2>
              <div class="dash-count"><?php
@@ -104,7 +105,7 @@
              $query=mysqli_query($conn,$sql);
              $count=mysqli_num_rows($query);
              echo "$count"; ?></div>
-           </div>
+           </div></a>
            <div class="grid-box dash-pending-task">
              <h2 class="dash-box-header"><span class="ti-check-box"></span>Pending Tasks</h2>
              <div class="dash-count"><?php

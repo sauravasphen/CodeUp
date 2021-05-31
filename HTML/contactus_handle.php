@@ -18,13 +18,15 @@ $email=$_POST['email'];
 $contact_num=$_POST['contact_num'];
 $subject=$_POST['subject'];
 $message=$_POST['message'];
+$date = date('Y-m-d');
 
-$sql_contactus = "INSERT INTO Contactus(f_name,company_name,email,contact_num,subject,message)
-VALUES('$f_name','$company_name','$email','$contact_num','$subject','$message');";
+$sql_contactus = "INSERT INTO Contactus(f_name,company_name,email,contact_num,subject,message,mgs_date)
+VALUES('$f_name','$company_name','$email','$contact_num','$subject','$message','$date');";
 
 if (mysqli_query($conn, $sql_contactus)) {
-    echo '<script>  alert("welldone");   </script>';
-    // header("location:contactus.php"); Not Working
+    echo "<script>location.href='contactus.php';
+    window.alert('Message sent!');
+    </script>";
 } else {
     echo "Error: " . mysqli_error($conn);
 }
