@@ -11,6 +11,7 @@
      <link rel="stylesheet" href="../css/Portal-Navigation.css">
      <link rel="stylesheet" href="../css/Admin-Portal.css">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+     <script type="text/javascript" src="../JS/query-pop.js"></script>
    </head>
    <body>
      <!-- ************* Navigation ******************* -->
@@ -79,9 +80,26 @@
             <div class="query-date">
               <?php echo $res['mgs_date']; ?>
             </div>
-             Subject: <?php echo $res['subject']; ?>
+            <div class="query-mgs">
+             Subject: <?php echo $res['subject']; ?><br>
              Message:
            </div>
+           <div class="query-btn">
+             <button type="button" onclick="querypop()">View</button>
+             <div id="query-item-pop" class="query-item-pop">
+               Name: <?php echo $res['F_name']; ?>
+               <br>Company: <?php echo $res['company_name']; ?>
+               <br>Date: <?php echo $res['mgs_date']; ?>
+               <br>Subject: <?php echo $res['subject']; ?>
+               <br>Message: <?php echo $res['message']; ?>
+               <br>Phone No: <?php echo $res['contact_num']; ?>
+               <br>Message: <?php echo $res['Email']; ?>
+               <button type="button" onclick="querypop()">Close</button>
+               <button type="button" onclick="">Delete</button>
+             </div>
+             <button type="button" onclick="">Delete</button>
+           </div>
+         </div>
          <?php } ?>
          </div>
        </div>

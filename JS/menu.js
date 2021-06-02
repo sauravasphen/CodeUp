@@ -8,9 +8,7 @@ function menuslide(){
   }
  }
 
-
 function Popup() {
-
   var x = document.getElementById("popup-1");
     x.classList.toggle("active");
 }
