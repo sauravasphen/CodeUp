@@ -1,4 +1,4 @@
-.grid-container{
+.grid-container {
   display: grid;
   margin-top: 40px;
   width: 100%;
@@ -6,7 +6,8 @@
   justify-content: center;
   grid-template-columns: repeat(5, 17%);
 }
-.grid-box{
+
+.grid-box {
   background-color: var(--white);
   box-shadow: 2px 2px 10px var(--main);
   border-radius: 15px;
@@ -15,48 +16,56 @@
   padding: 0 25px 30px;
 }
 
-a{
+a {
   text-decoration: none;
 }
+
 /* ----------------------------------Dashboard------------------------- */
-.dash-profile{
+.dash-profile {
   grid-column: span 3;
   grid-row: span 2;
   text-align: center;
 }
-.dash-agents, .dash-companies, .dash-queries, .dash-pending-task{
+
+.dash-agents, .dash-companies, .dash-queries, .dash-pending-task {
   grid-column: span 1;
   grid-row: span 1;
 }
-.dash-box-header{
+
+.dash-box-header {
   font-size: 25px;
 }
-.dash-count{
+
+.dash-count {
   font-size: 50px;
   font-weight: 600;
   text-align: center;
 }
-.dash-box-header span{
+
+.dash-box-header span {
   font-size: 25px;
   padding-right: 10px;
 }
-.dash-task-list{
+
+.dash-task-list {
   grid-column: span 3;
   grid-row: span 2;
 }
 
 /* -------------------------------------------Add User---------------------------- */
-.add-user{
+.add-user {
   grid-column: span 5;
   grid-row: auto;
   padding: 50px 50px 20px;
 }
-.adduser-title{
+
+.adduser-title {
   font-size: 30px;
   font-weight: 600;
   position: relative;
 }
-.adduser-title::before{
+
+.adduser-title::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -65,36 +74,44 @@ a{
   width: 50px;
   background: var(--main);
 }
-form{
+
+form {
   margin-top: 40px;
 }
-.adduser-details{
+
+.adduser-details {
   display: flex;
   flex-wrap: wrap;
   margin-top: 15px;
 }
-.input-container{
+
+.input-container {
   width: 50%;
   margin-bottom: 15px;
 }
-.acc-radiobutton{
+
+.acc-radiobutton {
   display: none;
 }
-.acc-label{
+
+.acc-label {
   font-size: 20px;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 0 10px 0 10px;
 }
-.acc-radiobutton:checked + .acc-label{
+
+.acc-radiobutton:checked+.acc-label {
   transition: linear 0.3s;
   background-color: var(--main);
   color: var(--white);
 }
-.input-container label{
+
+.input-container label {
   font-size: 20px;
 }
-.input-container input{
+
+.input-container input {
   outline: none;
   width: 55%;
   padding: 5px 8px;
@@ -103,11 +120,13 @@ form{
   border: 1.5px var(--black) solid;
   border-radius: 10px 0 10px 0;
 }
-input:focus{
+
+input:focus {
   border: 2px var(--main) solid;
   background-color: #d8e3e7;
 }
-.adduser-btn{
+
+.adduser-btn {
   padding: 10px 25px;
   color: var(--white);
   border-radius: 10px;
@@ -117,7 +136,8 @@ input:focus{
   border: 1.5px var(--main) solid;
   background-color: var(--main);
 }
-.adduser-btn:hover{
+
+.adduser-btn:hover {
   background-color: #d8e3e7;
   color: var(--main);
   border: 1.5px var(--main) solid;
@@ -125,29 +145,40 @@ input:focus{
 }
 
 /* ---------------------------------------New Queries-------------------------- */
-.query-box{
+.query-box {
   grid-column: span 5;
   padding: 20px 50px 20px;
   position: relative;
+  align-content: center;
 }
-.query-item{
+
+.query-item {
   box-shadow: 2px 2px 10px var(--main);
   border-radius: 15px;
+  width: 75%;
   display: grid;
   padding: 20px;
   margin-bottom: 10px;
   grid-template-columns: 3fr 1fr;
 }
-.query-item-pop{
+.query-info{
+  grid-row: span 3;
+}
+.query-date{
+  grid-row: span 2;
+}
+.query-item-pop {
   position: absolute;
-  height: 500px;
+  height: auto;
   width: 50%;
   left: 30%;
   top: 20%;
   display: none;
   z-index: 10000;
+  padding: 20px;
   background-color: red;
 }
-.query-item-pop.active{
+
+.query-item-pop.active {
   display: block;
 }
