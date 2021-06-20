@@ -81,19 +81,19 @@
             <div class="query-date">
               <?php echo $res['mgs_date']; ?>
             </div>
+            <div id="query-item-pop" class="query-item-pop">
+              Name: <?php echo $res['F_name']; ?>
+              <br>Company: <?php echo $res['company_name']; ?>
+              <br>Date: <?php echo $res['mgs_date']; ?>
+              <br>Subject: <?php echo $res['subject']; ?>
+              <br>Message: <?php echo $res['message']; ?>
+              <br>Phone No: <?php echo $res['contact_num']; ?>
+              <br>Message: <?php echo $res['Email']; ?><br>
+              <button type="button" onclick="querypop()">Close</button>
+              <button type="button" onclick="">Delete</button>
+            </div>
            <div class="query-btn">
              <button type="button" onclick="querypop()">View</button>
-             <div id="query-item-pop" class="query-item-pop">
-               Name: <?php echo $res['F_name']; ?>
-               <br>Company: <?php echo $res['company_name']; ?>
-               <br>Date: <?php echo $res['mgs_date']; ?>
-               <br>Subject: <?php echo $res['subject']; ?>
-               <br>Message: <?php echo $res['message']; ?>
-               <br>Phone No: <?php echo $res['contact_num']; ?>
-               <br>Message: <?php echo $res['Email']; ?><br>
-               <button type="button" onclick="querypop()">Close</button>
-               <button type="button" onclick="">Delete</button>
-             </div>
              <button type="button" onclick="">Delete</button>
            </div>
          </div>

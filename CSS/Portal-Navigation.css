@@ -57,7 +57,7 @@ body{
 
 /* ------------------------Content--------------------- */
 .content{
-  position: fixed;
+  position: absolute;
   height: auto;
   width: 85%;
   top:0;
