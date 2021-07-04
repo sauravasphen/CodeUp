@@ -1,66 +1,66 @@
-<?php
-  SESSION_start();
-  if (isset($_SESSION['admin_name']) && isset($_SESSION['admin_id'])){
-    include('connection.php');
- ?>
- <!DOCTYPE html>
- <html lang="en" dir="ltr">
-   <head>
-     <meta charset="utf-8">
-     <title></title>
-     <link rel="stylesheet" href="../css/Portal-Navigation.css">
-     <link rel="stylesheet" href="../css/Admin-Portal.css">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
-   </head>
-   <body>
-     <!-- ************* Navigation ******************* -->
-     <div class="navigation-container">
-       <ul>
-         <li>
-           <a href="Admin-Dashboard.php">
-             <span class="ti-panel"></span>
-             <span>Dashboard</span>
-           </a>
-         </li>
-         <li>
-           <a href="Admin-NewQueries.php">
-             <span class="ti-email"></span>
-             <span>New Queries</span>
-           </a>
-         </li>
-         <li>
-           <a href="Admin-AgentList.php">
-             <span class="ti-user"></span>
-             <span>Agents</span>
-           </a>
-         </li>
-         <li>
-           <a href="Admin-CompanyList.php">
-             <span class="ti-briefcase"></span>
-             <span>Companies</span>
-           </a>
-         </li>
-         <li>
-           <a href="Admin-TaskList.php">
-             <span class="ti-check-box"></span>
-             <span>Tasks</span>
-           </a>
-         </li>
-         <li class="active">
-           <a href="Admin-AddUser.php">
-             <span class="ti-plus"></span>
-             <span>Add User</span>
-           </a>
-         </li>
-         <li>
-           <a href="logout.php">
-             <span class="ti-back-left"></span>
-             <span>Logout</span>
-           </a>
-         </li>
-       </ul>
-     </div>
+<<?php
+  session_start();
 
+    if (isset($_SESSION['admin_name']) && isset($_SESSION['admin_id'])){
+?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/Portal-Navigation.css">
+    <link rel="stylesheet" href="../CSS/admin.css">
+     <link rel="stylesheet" href="../css/Admin-Portal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+  </head>
+  <body>
+    <!-- ************* Navigation ******************* -->
+    <div class="navigation-container">
+      <ul>
+        <li class="active">
+          <a href="Admin-Dashboard.php">
+            <span class="ti-panel"></span>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="Admin-NewQueries.php">
+            <span class="ti-email"></span>
+            <span>New Queries</span>
+          </a>
+        </li>
+        <li>
+          <a href="admin-agentview.php">
+            <span class="ti-user"></span>
+            <span>Agents</span>
+          </a>
+        </li>
+        <li>
+          <a href="admin-companyview.php">
+            <span class="ti-briefcase"></span>
+            <span>Companies</span>
+          </a>
+        </li>
+        <li>
+          <a href="admin-taskview.php">
+            <span class="ti-check-box"></span>
+            <span>Tasks</span>
+          </a>
+        </li>
+        <li>
+          <a href="Admin-AddUser.php">
+            <span class="ti-plus"></span>
+            <span>Add User</span>
+          </a>
+        </li>
+        <li>
+          <a href="logout.php">
+            <span class="ti-back-left"></span>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
      <!-- ***************** Body ********************** -->
      <div class="content">
        <div class="grid-container">

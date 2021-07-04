@@ -180,5 +180,5 @@ input:focus {
 }
 
 .query-item-pop.active {
-  display: block;
+  display: none;
 }

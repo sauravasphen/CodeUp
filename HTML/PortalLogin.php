@@ -60,7 +60,7 @@ elseif ($acc_type == 'admin') {
     if($row['admin_username']===$username && $row['Password']===$password){
       $_SESSION['admin_id']=$row['admin_id'];
       $_SESSION['admin_name']=$row['f_name'];
-      header("location:adminpanal.php");
+      header("location:admin-Dashboard.php");
       exit();
     }
   }

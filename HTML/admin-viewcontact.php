@@ -1,7 +1,7 @@
 <?php
   SESSION_start();
 
-  if (isset($_SESSION['admin_name']) && isset($_SESSION['contact_num'])){
+    if (isset($_SESSION['admin_name']) && isset($_SESSION['admin_id'])){
 
 ?>
 <!DOCTYPE html>
