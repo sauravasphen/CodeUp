@@ -1,5 +1,5 @@
 <?php
-  SESSION_start();
+  session_start();
   if (isset($_SESSION['admin_name']) && isset($_SESSION['admin_id'])){
     include('connection.php');
  ?>
@@ -29,19 +29,19 @@
            </a>
          </li>
          <li>
-           <a href="Admin-AgentList.php">
+           <a href="admin-agentview.php">
              <span class="ti-user"></span>
              <span>Agents</span>
            </a>
          </li>
          <li>
-           <a href="Admin-CompanyList.php">
+           <a href="admin-companyview.php">
              <span class="ti-briefcase"></span>
              <span>Companies</span>
            </a>
          </li>
          <li>
-           <a href="Admin-TaskList.php">
+           <a href="admin-taskview.php">
              <span class="ti-check-box"></span>
              <span>Tasks</span>
            </a>

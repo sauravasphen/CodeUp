@@ -1,93 +1,66 @@
 <?php
-  SESSION_start();
+  session_start();
 
-  if (isset($_SESSION['admin_name']) && isset($_SESSION['contact_num'])){
-
+    if (isset($_SESSION['admin_name']) && isset($_SESSION['admin_id'])){
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="../css/Portal-Navigation.css">
     <link rel="stylesheet" href="../CSS/admin.css">
+     <link rel="stylesheet" href="../css/Admin-Portal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
   </head>
   <body>
-    <div class="sidebar">
-      <div class="sidebar-header">
-        <h3 class="brand">
-          <span class="ti-nlink"></span>
-          <span>CodeUp</span>
-        </h3>
-      </div>
-      <div class="sidebar-menu">
-        <ul>
-                <li>
-                  <a href="adminpanal.php">
-                      <span class="ti-user"></span>
-                      <span><?php echo $_SESSION['admin_name']; ?></span>
-                  </a>
-                </li>
-                <li>
-                  <a href="admin-agentview.php">
-                    <span class="ti-ticket"></span>
-                    <span>Agent List</span>
-                </a>
-              </li>
-              <li>
-                <a href="admin-companyview.php">
-                  <span class="ti-ticket"></span>
-                  <span>Clients List</span>
-              </a>
-            </li>
-              <li>
-                <a href="admin-taskview.php">
-                  <span class="ti-settings"></span>
-                  <span>Task List</span>
-              </a>
-            </li>
-            <li>
-              <a href="admin_registration.php">
-                <span class="ti-settings"></span>
-                <span>Register</span>
-            </a>
-          </li>
-          <li>
-            <a href="admin-viewcontact.php">
-              <span class="ti-settings"></span>
-              <span>New Queries</span>
+    <!-- ************* Navigation ******************* -->
+    <div class="navigation-container">
+      <ul>
+        <li class="active">
+          <a href="Admin-Dashboard.php">
+            <span class="ti-panel"></span>
+            <span>Dashboard</span>
           </a>
         </li>
-          <li>
-            <a href="admin-editprofile.php">
-              <span class="ti-settings"></span>
-              <span>Edit Profile</span>
+        <li>
+          <a href="Admin-NewQueries.php">
+            <span class="ti-email"></span>
+            <span>New Queries</span>
           </a>
         </li>
-            <li>
-              <a href="logout.php">
-                <span class="ti-shift-right-alt"></span>
-                <span>LogOut</span>
-            </a>
-          </li>
-        </ul>
-
-      </div>
+        <li>
+          <a href="admin-agentview.php">
+            <span class="ti-user"></span>
+            <span>Agents</span>
+          </a>
+        </li>
+        <li>
+          <a href="admin-companyview.php">
+            <span class="ti-briefcase"></span>
+            <span>Companies</span>
+          </a>
+        </li>
+        <li>
+          <a href="admin-taskview.php">
+            <span class="ti-check-box"></span>
+            <span>Tasks</span>
+          </a>
+        </li>
+        <li>
+          <a href="Admin-AddUser.php">
+            <span class="ti-plus"></span>
+            <span>Add User</span>
+          </a>
+        </li>
+        <li>
+          <a href="logout.php">
+            <span class="ti-back-left"></span>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
     </div>
-    <div class="main-content">
-      <header>
-        <div class="search-wrap">
-          <!-- <span class="ti-search"></span>
-          <input type="search" placeholder="Search"> -->
-        </div>
-        <div class="social-icons">
-          <!-- <span class="ti-bell"></span>
-          <span class="ti-comment"></span> -->
-          <div class="">
-
-          </div>
-        </div>
-      </header>
       <main>
         <h2 class="dash-title">Overview</h2>
         <section class="recent">
