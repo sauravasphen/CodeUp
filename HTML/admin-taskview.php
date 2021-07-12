@@ -61,7 +61,7 @@
         </li>
       </ul>
     </div>
-      <main>
+      <main class="content">
         <h2 class="dash-title">Overview</h2>
         <section class="recent">
           <div class="activity-grid">

@@ -10,61 +10,43 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="../CSS/admin.css">
+     <link rel="stylesheet" href="../css/Portal-Navigation.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
   </head>
   <body>
-    <div class="sidebar">
-      <div class="sidebar-header">
-        <h3 class="brand">
-          <span class="ti-nlink"></span>
-          <span>CodeUp</span>
-        </h3>
-      </div>
-      <div class="sidebar-menu">
-        <ul>
-                <li>
-                  <a href="agentpanal.php">
-                    <span class="ti-user"></span>
-                    <span><?php echo $_SESSION['agent_name']; ?></span>
-                  </a>
-                </li>
-                <li>
-                  <a href="agent-taskview.php">
-                    <span class="ti-clipboard"></span>
-                    <span>Task List</span>
-                </a>
-              </li>
-              <li>
-                <a href="agent-taskadd.php">
-                  <span class="ti-pin-alt"></span>
-                  <span>Add Task</span>
-              </a>
-            </li>
-            <li>
-              <a href="logout.php">
-                <span class="ti-shift-right-alt"></span>
-                <span>LogOut</span>
+    <!-- ************* Navigation ******************* -->
+    <div class="navigation-container">
+      <ul>
+        <li class="active">
+            <a href="agentpanal.php">
+              <span class="ti-user"></span>
+              <span><?php echo $_SESSION['agent_name']; ?></span>
             </a>
-          </li>
-        </ul>
-
-      </div>
+        </li>
+        <li>
+          <a href="agent-taskview.php">
+            <span class="ti-check-box"></span>
+            <span>Tasks</span>
+          </a>
+        </li>
+        <li>
+          <a href="agent-taskadd.php">
+            <span class="ti-pin-alt"></span>
+            <span>Add Task</span>
+        </a>
+      </li>
+      
+        <li>
+          <a href="logout.php">
+            <span class="ti-back-left"></span>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
     </div>
-    <div class="main-content">
-      <header>
-        <div class="search-wrap">
-          <!-- <span class="ti-search"></span>
-          <input type="search" placeholder="Search"> -->
-        </div>
-        <div class="social-icons">
-          <!-- <span class="ti-bell"></span>
-          <span class="ti-comment"></span> -->
-          <div class="">
 
-          </div>
-        </div>
-      </header>
-      <main>
+    <!-- ***************** Body ********************** -->
+      <main class="content">
         <h2 class="dash-title">Overview</h2>
 
         <div class="dash-cards">

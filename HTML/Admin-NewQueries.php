@@ -10,6 +10,7 @@
      <title></title>
      <link rel="stylesheet" href="../css/Portal-Navigation.css">
      <link rel="stylesheet" href="../css/Admin-Portal.css">
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
      <script type="text/javascript" src="../JS/query-pop.js"></script>
      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -91,7 +92,7 @@
               <br>Phone No: <?php echo $res['contact_num']; ?>
               <br>Message: <?php echo $res['Email']; ?><br>
               <span class="action_btn">
-													<a href="#" class="delete delete-btn" data-id="<?php echo $res["contactus_id"]; ?>"><button>Delete</button></a>
+													<a href="#" class="delete delete-btn" data-id="<?php echo $res["contactus_id"]; ?>"><button class="">Delete</button></a>
 												</span>
             </div>
          </div>
