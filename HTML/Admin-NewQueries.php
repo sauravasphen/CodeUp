@@ -10,7 +10,11 @@
      <title></title>
      <link rel="stylesheet" href="../css/Portal-Navigation.css">
      <link rel="stylesheet" href="../css/Admin-Portal.css">
+<<<<<<< HEAD
      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+=======
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+>>>>>>> b6fe433167ca7ab1215252bc3ea43b669535ce05
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
      <script type="text/javascript" src="../JS/query-pop.js"></script>
      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -66,7 +70,6 @@
 
      <!-- ***************** Body ********************** -->
      <div class="content">
-       <div class="grid-container">
          <div class="grid-box query-box">
            <h2>New Queries</h2>
            <?php
@@ -76,13 +79,15 @@
              ?>
            <div class="query-item">
              <div class="query-info">
-            <h3><?php echo $res['subject']; ?></h3>
-             <?php echo $res['contactus_id']; ?>
-             <br>From <?php echo $res['company_name']; ?>
+            <span class="light">Name</span> <?php echo $res['F_name']; ?>
+             <br> <span class="light">From</span> <?php echo $res['company_name']; ?>
+             <br> <span class="light">Ph. No.</span> <?php echo $res['contact_num']; ?>
+             <br> <span class="light">Email</span> <?php echo $res['Email']; ?>
             </div>
             <div class="query-date">
-              <?php echo $res['mgs_date']; ?>
+              <span class="light">Date:</span> <?php echo $res['mgs_date']; ?>
             </div>
+<<<<<<< HEAD
             <div id="query-item-pop" class="query-item-pop">
               Name: <?php echo $res['F_name']; ?>
               <br>Company: <?php echo $res['company_name']; ?>
@@ -94,12 +99,19 @@
               <span class="action_btn">
 													<a href="#" class="delete delete-btn" data-id="<?php echo $res["contactus_id"]; ?>"><button class="">Delete</button></a>
 												</span>
+=======
+            <div class="">
+            <span class="light">Subject:</span> <?php echo $res['subject']; ?>
+            <br><span class="light">Message:</span> <?php echo $res['message']; ?>
+>>>>>>> b6fe433167ca7ab1215252bc3ea43b669535ce05
             </div>
+            <span class="action_btn">
+            <a href="#" class="delete delete-btn" data-id="<?php echo $res["contactus_id"]; ?>"><button>Delete</button></a>
+                      </span>
          </div>
        <?php }
          ?>
          </div>
-       </div>
       </div>
       <!-- modal starts here -->
 				<div id="delete_model" class="modal">
