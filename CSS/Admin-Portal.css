@@ -205,3 +205,48 @@ input:focus {
 .query-date{
   grid-row: span 2;
 }
+
+
+.modal{
+    top: 15%;
+    width: 450px;
+    left: 35%;
+    position: absolute;
+    border: 1px solid gray;
+    padding: 10px 30px;
+    background-color: red;
+    z-index: 100;
+    border-radius: 5px;
+    color: white;
+}
+.modal-close{
+    right: 0;
+    top: 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 25px;
+    color: whitesmoke;
+    position: absolute;
+}
+.modal-cont{
+    margin: 10px 0;
+    padding: 10px 15px;
+}
+.modal-delete-btn{
+    right: 0;
+    padding: 5px 20px;
+    border: 1px solid red;
+    color: red;
+    background-color: white;
+    border-radius: 14px;
+    text-align: center;
+    font-weight: bold;
+    float: right;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+.modal-delete-btn:hover{
+    color: red;
+    border: 1px solid red;
+    background-color: whitesmoke;
+}
