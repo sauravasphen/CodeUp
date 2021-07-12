@@ -1,7 +1,7 @@
 <?php
   session_start();
-
     if (isset($_SESSION['admin_name']) && isset($_SESSION['admin_id'])){
+      include('connection.php');
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -61,12 +61,10 @@
         </li>
       </ul>
     </div>
-      <main class="content">
-        <h2 class="dash-title">Overview</h2>
-        <section class="recent">
+      <div class="content">
             <div class="activity-card">
-              <h3>Agents</h3>
-              <table >
+              <center><h3>Agents</h3></center>
+              <table>
                 <thead>
                   <tr>
                     <th>Agent ID</th>
@@ -78,19 +76,6 @@
                 </thead>
                 <tbody>
                   <?php
-                      $servername = "localhost";
-                      $username = "root";
-                      $password = "";
-                      $dbname = "CodeUp_db";
-
-                      // Create connection
-                      $conn = mysqli_connect($servername, $username, $password, $dbname);
-                      // Check connection
-                      if (!$conn) {
-                          die("Connection failed: " . mysqli_connect_error());
-                        }
-
-
                         $selectquery="SELECT *FROM Agent";
                         $query=mysqli_query($conn,$selectquery);
                         while($res=mysqli_fetch_array($query)){
@@ -108,8 +93,7 @@
                 </tbody>
               </table>
             </div>
-        </section>
-      </main>
+      </div>
     </div>
   </body>
 </html>

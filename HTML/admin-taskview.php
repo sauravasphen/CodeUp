@@ -61,12 +61,9 @@
         </li>
       </ul>
     </div>
-      <main class="content">
-        <h2 class="dash-title">Overview</h2>
-        <section class="recent">
-          <div class="activity-grid">
+      <div class="content">
             <div class="activity-card">
-              <h3>Tasks</h3>
+              <center><h3>Tasks</h3></center>
               <table>
                 <thead>
                   <tr>
@@ -93,8 +90,6 @@
                       if (!$conn) {
                           die("Connection failed: " . mysqli_connect_error());
                         }
-
-
                         $selectquery="SELECT *FROM Task";
                         $query=mysqli_query($conn,$selectquery);
                         while($res=mysqli_fetch_array($query)){
@@ -111,17 +106,11 @@
                           </tr>
                           ";
                         }
-
                    ?>
-
                 </tbody>
               </table>
             </div>
-
           </div>
-
-        </section>
-      </main>
     </div>
   </body>
 </html>

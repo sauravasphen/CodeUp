@@ -169,51 +169,7 @@ main{
   margin-top: 3rem;
 }
 
-.activity-grid{
-  display: grid;
-  grid-template-columns: 85% 15%;
-  grid-column-gap: 1.8rem;
-}
 
-
-.activity-card{
-  background: #fff;
-  border-radius: 7px;
-
-}
-
-.activity-card h3{
-  color: #8390A2;
-  margin: 1rem;
-}
-
-.activity-card table{
-  width: 50%;
-  border-collapse: collapse;
-}
-
-.activity-card thead{
-  background: #efefef;
-  text-align: left;
-}
-
-th,td{
-  font-size: 1rem;
-<<<<<<< HEAD
-  padding: 1rem 2rem;
-=======
-  /* padding: 1rem .5rem; */
->>>>>>> b6fe433167ca7ab1215252bc3ea43b669535ce05
-  color:#1D2231;
-}
-
-td{
-  font-size: .9rem;
-}
-
-tbody tr:nth-child(even){
-  background: #f9fafc;
-}
 
 .badge{
   padding:

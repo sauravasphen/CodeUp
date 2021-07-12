@@ -61,12 +61,9 @@
         </li>
       </ul>
     </div>
-      <main class="content">
-        <h2 class="dash-title">Overview</h2>
-        <section class="recent">
-          <div class="activity-grid">
+      <div class="content">
             <div class="activity-card">
-              <h3>Company</h3>
+              <center><h3>Company</h3></center>
               <table>
                 <thead>
                   <tr>
@@ -108,16 +105,11 @@
                         <?php
                         }
                    ?>
-
                 </tbody>
               </table>
             </div>
-
           </div>
-
-        </section>
-      </main>
-    </div>
+      </div>
   </body>
 </html>
 

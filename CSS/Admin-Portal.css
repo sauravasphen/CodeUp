@@ -201,7 +201,8 @@ input:focus {
   grid-template-columns: 3fr 1fr;
 }
 .light{
-  font-size: 15px;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 .query-item:hover{
   background-color: rgb(18, 110, 130, 15%);
@@ -279,15 +280,48 @@ input:focus {
   color: var(--main);
   transition: ease 0.3s;
 }
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+
+/* ------------------ Agents & Companies ------------------------ */
+
+.activity-grid{
+  display: grid;
+  grid-template-columns: 85% 15%;
+  grid-column-gap: 1.8rem;
+}
+
+
+.activity-card{
+  padding: 10px;
+  background: #fff;
+  border-radius: 7px;
+
+}
+
+.activity-card h3{
+  color: #8390A2;
+  margin: 1rem;
+}
+
+.activity-card table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.activity-card thead{
+  background: #efefef;
+  text-align: left;
+}
+
+th,td{
+  font-size: 1rem;
+  padding: 1rem .5rem;
+  color:#1D2231;
+}
+
+td{
+  font-size: .9rem;
+}
+
+tbody tr:nth-child(even){
+  background: #f9fafc;
+}
