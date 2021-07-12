@@ -5,6 +5,7 @@
   grid-gap: 30px;
   justify-content: center;
   grid-template-columns: repeat(5, 17%);
+  padding-bottom: 20px;
 }
 
 .grid-box {
@@ -13,7 +14,7 @@
   border-radius: 15px;
   border: 1px solid var(--main);
   color: #111111;
-  padding: 0 25px 30px;
+  padding: 20px 30px;
 }
 
 a {
@@ -49,9 +50,45 @@ a {
 
 .dash-task-list {
   grid-column: span 3;
+  grid-row: auto;
+}
+.dash-task{
+  font-size: 20px;
+  margin-bottom: 15px;
+  /* padding: 10px; */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.dash-task-date{
+  font-size: 20px;
+}
+.viewtask-button{
+  text-align: center;
+}
+.viewtask-button a{
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  border: 2px solid var(--main);
+  border-radius: 0 10px 0 10px;
+}
+.viewtask-button a:hover{
+  background-color: var(--main);
+  color: var(--white);
+  transition: ease 0.4s;
+}
+.dash-query-list{
+  grid-column: span 2;
   grid-row: span 2;
 }
-
+.dash-query{
+  font-size: 20px;
+  margin-bottom: 15px;
+  /* padding: 10px; */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
 /* -------------------------------------------Add User---------------------------- */
 .add-user {
   grid-column: span 5;
@@ -166,19 +203,4 @@ input:focus {
 }
 .query-date{
   grid-row: span 2;
-}
-.query-item-pop {
-  position: absolute;
-  height: auto;
-  width: 50%;
-  left: 30%;
-  top: 20%;
-  display: none;
-  z-index: 10000;
-  padding: 20px;
-  background-color: red;
-}
-
-.query-item-pop.active {
-  display: none;
 }

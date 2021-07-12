@@ -30,19 +30,19 @@
            </a>
          </li>
          <li>
-           <a href="admin-agentview.php">
+           <a href="Admin-AgentView.php">
              <span class="ti-user"></span>
              <span>Agents</span>
            </a>
          </li>
          <li>
-           <a href="admin-companyview.php">
+           <a href="Admin-CompanyView.php">
              <span class="ti-briefcase"></span>
              <span>Companies</span>
            </a>
          </li>
          <li>
-           <a href="admin-taskview.php">
+           <a href="Admin-TaskView.php">
              <span class="ti-check-box"></span>
              <span>Tasks</span>
            </a>

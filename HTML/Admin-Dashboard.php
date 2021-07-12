@@ -29,19 +29,19 @@
            </a>
          </li>
          <li>
-           <a href="admin-agentview.php">
+           <a href="Admin-AgentView.php">
              <span class="ti-user"></span>
              <span>Agents</span>
            </a>
          </li>
          <li>
-           <a href="admin-companyview.php">
+           <a href="Admin-CompanyView.php">
              <span class="ti-briefcase"></span>
              <span>Companies</span>
            </a>
          </li>
          <li>
-           <a href="admin-taskview.php">
+           <a href="Admin-TaskView.php">
              <span class="ti-check-box"></span>
              <span>Tasks</span>
            </a>
@@ -114,15 +114,55 @@
              $count=mysqli_num_rows($query);
              echo "$count"; ?></div>
            </div>
-           <div class="grid-box dash-task-list">
-
+           <!-- .......................Query List............... -->
+           <div class="grid-box dash-query-list">
+             <h2 class="dash-box-header"><span class="ti-check-box"></span>Queries</h2>
+             <?php
+             $sql="SELECT *FROM contactus";
+             $query=mysqli_query($conn,$sql);
+             while($res=mysqli_fetch_array($query)){
+               ?>
+               <div class="dash-query">
+                 <div class="dash-query-info">
+               <b><?php echo $res['subject']; ?></b><br>
+               &nbsp; &nbsp;From <?php echo $res['company_name']; ?>
+             </div>
+               <div class="dash-query-date">
+                 <?php echo $res['mgs_date']; ?>
+               </div>
+             </div>
+             <?php } ?>
+             <div class="viewtask-button">
+             <a href="Admin-TaskView.php">View Queries</a>
+           </div>
+           </div>
+             <div class="grid-box dash-task-list">
+               <h2 class="dash-box-header"><span class="ti-check-box"></span>Tasks</h2>
+             <?php
+             $sql="SELECT *FROM task NATURAL JOIN company ORDER BY task_id DESC LIMIT 3";
+             $query=mysqli_query($conn,$sql);
+             while($res=mysqli_fetch_array($query)){
+               ?>
+               <div class="dash-task">
+                 <div class="dash-task-info">
+               <b><?php echo $res['subject']; ?></b><br>
+               &nbsp; &nbsp;For <?php echo $res['company_name']; ?>
+             </div>
+               <div class="dash-task-date">
+                 <?php echo $res['issued_date']; ?>
+               </div>
+             </div>
+             <?php } ?>
+             <div class="viewtask-button">
+             <a href="Admin-TaskView.php">View Task</a>
+           </div>
            </div>
          </div>
        </div>
    </body>
  </html>
  <?php
-  }
+}
   else{
    header("location:mainpage.php");
    exit();
