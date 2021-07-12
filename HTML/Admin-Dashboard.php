@@ -119,7 +119,7 @@
            <div class="grid-box dash-query-list">
              <h2 class="dash-box-header"><span class="ti-check-box"></span>Queries</h2>
              <?php
-             $sql="SELECT *FROM contactus";
+             $sql="SELECT *FROM contactus LIMIT 3";
              $query=mysqli_query($conn,$sql);
              while($res=mysqli_fetch_array($query)){
                ?>
@@ -137,6 +137,7 @@
              <a href="Admin-TaskView.php">View Queries</a>
            </div>
            </div>
+           <!-- ..........Task List........... -->
              <div class="grid-box dash-task-list">
                <h2 class="dash-box-header"><span class="ti-check-box"></span>Tasks</h2>
              <?php

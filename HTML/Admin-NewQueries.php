@@ -169,10 +169,14 @@
      <link rel="stylesheet" href="../css/Portal-Navigation.css">
      <link rel="stylesheet" href="../css/Admin-Portal.css">
 <<<<<<< HEAD
+<<<<<<< HEAD
      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
 =======
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
 >>>>>>> b6fe433167ca7ab1215252bc3ea43b669535ce05
+=======
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+>>>>>>> ab39f5baee698346d8a6406b35490c001bfc1216
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
      <script type="text/javascript" src="../JS/query-pop.js"></script>
      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -246,6 +250,9 @@
               <span class="light">Date:</span> <?php echo $res['mgs_date']; ?>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ab39f5baee698346d8a6406b35490c001bfc1216
             <div id="query-item-pop" class="query-item-pop">
               Name: <?php echo $res['F_name']; ?>
               <br>Company: <?php echo $res['company_name']; ?>
@@ -257,11 +264,14 @@
               <span class="action_btn">
 													<a href="#" class="delete delete-btn" data-id="<?php echo $res["contactus_id"]; ?>"><button class="">Delete</button></a>
 												</span>
+<<<<<<< HEAD
 =======
             <div class="">
             <span class="light">Subject:</span> <?php echo $res['subject']; ?>
             <br><span class="light">Message:</span> <?php echo $res['message']; ?>
 >>>>>>> b6fe433167ca7ab1215252bc3ea43b669535ce05
+=======
+>>>>>>> ab39f5baee698346d8a6406b35490c001bfc1216
             </div>
             <span class="action_btn">
             <a href="#" class="delete delete-btn" data-id="<?php echo $res["contactus_id"]; ?>"><button>Delete</button></a>
