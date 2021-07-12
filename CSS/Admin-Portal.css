@@ -50,12 +50,12 @@ a {
 
 .dash-task-list {
   grid-column: span 3;
-  grid-row: auto;
+  grid-row: span 1;
 }
 .dash-task{
   font-size: 20px;
-  margin-bottom: 15px;
-  /* padding: 10px; */
+  /* margin-bottom: 15px; */
+  padding: 10px;
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
@@ -70,7 +70,8 @@ a {
   text-decoration: none;
   color: black;
   padding: 5px 10px;
-  border: 2px solid var(--main);
+  border: 1px solid var(--main);
+  box-shadow: 2px 2px 10px var(--main);
   border-radius: 0 10px 0 10px;
 }
 .viewtask-button a:hover{
@@ -80,12 +81,12 @@ a {
 }
 .dash-query-list{
   grid-column: span 2;
-  grid-row: span 2;
+  grid-row: span 1;
 }
 .dash-query{
   font-size: 20px;
-  margin-bottom: 15px;
-  /* padding: 10px; */
+  /* margin-bottom: 15px; */
+  padding: 10px;
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
