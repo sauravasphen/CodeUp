@@ -91,7 +91,7 @@
               <br>Phone No: <?php echo $res['contact_num']; ?>
               <br>Message: <?php echo $res['Email']; ?><br>
               <span class="action_btn">
-													<a href="#" class="delete delete-btn" data-id="<?php echo $res["contactus_id"]; ?>">Delete</a>
+													<a href="#" class="delete delete-btn" data-id="<?php echo $res["contactus_id"]; ?>"><button>Delete</button></a>
 												</span>
             </div>
          </div>
