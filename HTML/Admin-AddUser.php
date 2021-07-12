@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title></title>
     <link rel="stylesheet" href="../css/Portal-Navigation.css">
     <link rel="stylesheet" href="../CSS/admin.css">
@@ -17,7 +17,7 @@
     <!-- ************* Navigation ******************* -->
     <div class="navigation-container">
       <ul>
-        <li class="active">
+        <li>
           <a href="Admin-Dashboard.php">
             <span class="ti-panel"></span>
             <span>Dashboard</span>
@@ -47,7 +47,7 @@
             <span>Tasks</span>
           </a>
         </li>
-        <li>
+        <li class="active">
           <a href="Admin-AddUser.php">
             <span class="ti-plus"></span>
             <span>Add User</span>
