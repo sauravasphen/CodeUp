@@ -283,13 +283,6 @@ input:focus {
 
 /* ------------------ Agents & Companies ------------------------ */
 
-.activity-grid{
-  display: grid;
-  grid-template-columns: 85% 15%;
-  grid-column-gap: 1.8rem;
-}
-
-
 .activity-card{
   padding: 10px;
   background: #fff;

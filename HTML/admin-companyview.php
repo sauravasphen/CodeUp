@@ -1,7 +1,7 @@
 <?php
   session_start();
-
     if (isset($_SESSION['admin_name']) && isset($_SESSION['admin_id'])){
+      include('connection.php');
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -9,7 +9,6 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="../css/Portal-Navigation.css">
-    <link rel="stylesheet" href="../CSS/admin.css">
      <link rel="stylesheet" href="../css/Admin-Portal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
   </head>
@@ -77,19 +76,6 @@
                 </thead>
                 <tbody>
                   <?php
-                      $servername = "localhost";
-                      $username = "root";
-                      $password = "";
-                      $dbname = "CodeUp_db";
-
-                      // Create connection
-                      $conn = mysqli_connect($servername, $username, $password, $dbname);
-                      // Check connection
-                      if (!$conn) {
-                          die("Connection failed: " . mysqli_connect_error());
-                        }
-
-
                         $selectquery="SELECT *FROM Company";
                         $query=mysqli_query($conn,$selectquery);
                         while($res=mysqli_fetch_array($query)){
@@ -100,7 +86,6 @@
                             <td><?php echo $res['company_name']; ?></td>
                             <td><?php echo $res['Email']; ?></td>
                             <td><?php echo $res['contact_num']; ?></td>
-
                           </tr>
                         <?php
                         }
