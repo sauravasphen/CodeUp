@@ -124,7 +124,7 @@
 <?php
 }else{
 
-  // header("location:mainpage.php");
+  header("location:mainpage.php");
   exit();
 }
 ?>
