@@ -380,13 +380,12 @@ input:focus {
 }
 
 .query-item {
-  /* width: 100%; */
   border: 1px solid var(--main);
   box-shadow: 2px 2px 5px var(--main);
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   display: grid;
-  padding: 30px;
+  padding: 30px 20px;
   font-size: 20px;
   grid-template-columns: 3fr 1fr;
 }
@@ -403,8 +402,12 @@ input:focus {
 .query-date{
   grid-row: span 1;
 }
+.query-mgs{
+  grid-column: span 2;
+}
  .action_btn button{
    font-size: 20px;
+   float: right;
    text-decoration: none;
    color: black;
    background-color: var(--white);
@@ -472,13 +475,6 @@ input:focus {
 }
 
 /* ------------------ Agents & Companies ------------------------ */
-
-.activity-grid{
-  display: grid;
-  grid-template-columns: 85% 15%;
-  grid-column-gap: 1.8rem;
-}
-
 
 .activity-card{
   padding: 10px;

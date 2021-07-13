@@ -40,7 +40,7 @@ elseif ($acc_type == 'agent') {
     if($row['agent_username']===$username && $row['Password']===$password){
       $_SESSION['agent_id']=$row['agent_id'];
       $_SESSION['agent_name']=$row['f_name'];
-      header("location:agentpanal.php");
+      header("location:Agent-Dashboard.php");
       exit();
     }
   }

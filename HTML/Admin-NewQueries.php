@@ -83,7 +83,7 @@
             <div class="query-date">
               <span class="light">Date:</span> <?php echo $res['mgs_date']; ?>
             </div>
-            <div class="">
+            <div class="query-mgs">
             <span class="light">Subject:</span> <?php echo $res['subject']; ?>
             <br><span class="light">Message:</span> <?php echo $res['message']; ?>
             </div>
