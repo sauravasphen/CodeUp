@@ -2,7 +2,7 @@
   SESSION_start();
 
   if (isset($_SESSION['agent_name']) && isset($_SESSION['agent_id'])){
-
+    include("connection.php");
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -53,13 +53,23 @@
           <div class="grid-container">
             <div class="grid-box add-user">
               <div class="adduser-title">
-                Add User
+                Add Task
               </div>
               <form action="agent-taskaddhandel.php" method="post">
                 <div class="adduser-details">
                  <div class="input-container">
                    <label for="">Company Name</label><br />
-                   <input type="text" name="cname" placeholder="Company Name" required></input>
+                   <select name="cname">
+                     <?php
+                     $id = $_SESSION['agent_id'];
+                     $selectquery="SELECT * FROM Company LEFT Join agent ON company.agent_id=agent.agent_id WHERE agent.agent_id='$id'";
+                     $query=mysqli_query($conn,$selectquery);
+                     while($res=mysqli_fetch_array($query)){
+                       ?>
+                     <option value="<?php echo $res['company_username'] ?>"><?php echo $res['company_username'] ?></option>
+                   <?php } ?>
+                   </select>
+                   <!-- <input type="text" name="cname" placeholder="Company Name" required></input> -->
                  </div>
                 <div class="input-container">
                   <label for="">Subject</label><br />
@@ -67,7 +77,7 @@
                 </div>
                 <div class="input-container">
                   <label for="">Task</label><br />
-                <input class="agent-input-field" name="task"required></input>
+                <input class="agent-input-field" name="task" required></input>
                 </div>
                 <div class="input-container">
                   <label for="">Report</label><br />

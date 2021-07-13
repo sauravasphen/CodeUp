@@ -337,7 +337,7 @@ form {
   font-size: 20px;
 }
 
-.input-container input{
+.input-container input, select{
   outline: none;
   width: 55%;
   padding: 5px 8px;
@@ -548,3 +548,11 @@ tbody tr:nth-child(even){
   background-color: var(--main);
   color: var(--white);
 }
+
+/* -----------------Agent Add Task ---------------------- */
+/* .input-container select{
+  font-size: 20px;
+  background-color: transparent;
+  border: 1.5px var(--black) solid;
+  border-radius: 10px 0 10px 0;
+} */

@@ -54,7 +54,7 @@ $sql_admin = "CREATE TABLE Admin (
         subject VARCHAR(50) NOT NULL,
         task VARCHAR(40) NOT NULL,
         report VARCHAR (90),
-        status VARCHAR(10) default 'Pending',
+        status tinyint(1) default 0,
         due_date date,
         closed_date date,
         FOREIGN KEY(company_id) REFERENCES Company(company_id)
