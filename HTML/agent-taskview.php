@@ -11,6 +11,8 @@
     <title></title>
     <link rel="stylesheet" href="../CSS/admin.css">
      <link rel="stylesheet" href="../css/Portal-Navigation.css">
+     <link rel="stylesheet" href="../css/Admin-Portal.css">
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
   </head>
   <body>
@@ -18,7 +20,7 @@
     <div class="navigation-container">
       <ul>
         <li>
-            <a href="agentpanal.php">
+            <a href="Agent-Dashboard.php">
               <span class="ti-user"></span>
               <span><?php echo $_SESSION['agent_name']; ?></span>
             </a>
@@ -60,6 +62,7 @@
                     <th>Status</th>
                     <th>Issued Date</th>
                     <th>Closed Date</th>
+                    <th>EDIT</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -87,9 +90,12 @@
                             <td><?php echo $res['subject']; ?></td>
                             <td><?php echo $res['task']; ?></td>
                             <td><?php echo $res['report']; ?></td>
-                            <td><?php echo $res['status']; ?></td>
+                            <td><?php if ($res['status'] == 0) {echo "Pending";}
+                            else { echo "Finished"; }?></td>
                             <td><?php echo $res['issued_date']; ?></td>
                             <td><?php echo $res['closed_date']; ?></td>
+                            <td><a href="#" class="delete delete-btn" data-id="<?php echo $res['task_id']; ?>"><button class="edit">Edit</button></a>
+                            </span><td>
                           </tr>
                         <?php
                         }
@@ -100,6 +106,49 @@
             </div>
 
     </div>
+    <!-- modal starts here -->
+      <div id="delete_model" class="modal">
+          <i class="fas fa-times modal-close"></i>
+
+          <div class="modal-cont">
+          </div>
+
+          <form action="agent_edit_task.php" method="POST">
+              <input type="hidden" id="Deliting_id" name="Deliting_id">
+              <div class="element">
+                <label for="report">Report<b></b></label>
+                <input type="text"  placeholder="Report" name="report" id="report" required="required">
+              </div>
+              <div class="element">
+                <div class="account-type">
+                  <input id="1" type='radio' name="status" class="acc-radiobutton" value="0" checked>
+                  <label for="1" class='acc-label'>Pending</label>
+                  <input id="2" type='radio' name="status" class="acc-radiobutton" value="1">
+                  <label for="2" class='acc-label'>Completed</label>
+                </div>
+              </div>
+
+              <button class="modal-delete-btn" name="submit">Submit</button>
+          </form>
+      </div>
+
+         <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+
+      <script>
+          $(document).ready(function(){
+            $("#delete_model").hide();
+            $(".delete-btn").click(function(){
+              $("#delete_model").toggle();
+            });
+            $(".modal-close").click(function(){
+              $("#delete_model").hide();
+            });
+            $(document).on("click",".delete-btn", function(){
+                      var Id = $(this).data("id");
+                      $("#Deliting_id").val(Id);
+                  });
+          });
+      </script>
   </body>
 </html>
 

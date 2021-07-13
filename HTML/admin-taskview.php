@@ -87,7 +87,7 @@
                             <td><?php echo $res['subject']?></td>
                             <td><?php echo $res['task']?></td>
                             <td><?php echo $res['report']?></td>
-                            <td><?php if ($res['status'] == 1) {echo "Pending";}
+                            <td><?php if ($res['status'] == 0) {echo "Pending";}
                             else { echo "Finished"; }?></td>
                             <td><?php echo  $res['issued_date']?></td>
                             <td><?php echo $res['closed_date']?></td>
