@@ -83,6 +83,7 @@
           ?>
           <button class="button button1" onclick="openform()"> Change Information </button>
            <button class="button button2" onclick="changeform()"> Change Password </button>
+           <span id="message"></span>
          </div>
          <div class="grid-box dash-agents">
            <h2 class="dash-box-header"><span class="ti-user"></span>Agents</h2>
