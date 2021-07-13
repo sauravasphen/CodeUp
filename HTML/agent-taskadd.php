@@ -59,21 +59,27 @@
                 <div class="adduser-details">
                  <div class="input-container">
                    <label for="">Company Name</label><br />
-                   <select name="cname">
+                   <select name="username">
                      <?php
                      $id = $_SESSION['agent_id'];
                      $selectquery="SELECT * FROM Company LEFT Join agent ON company.agent_id=agent.agent_id WHERE agent.agent_id='$id'";
                      $query=mysqli_query($conn,$selectquery);
                      while($res=mysqli_fetch_array($query)){
                        ?>
-                     <option value="<?php echo $res['company_username'] ?>"><?php echo $res['company_username'] ?></option>
+                     <option value="<?php echo $res['company_id'] ?>"><?php echo $res['company_username'] ?></option>
                    <?php } ?>
                    </select>
                    <!-- <input type="text" name="cname" placeholder="Company Name" required></input> -->
                  </div>
                 <div class="input-container">
                   <label for="">Subject</label><br />
-                  <input class="agent-input-field" name="subject" required></input>
+                  <select name="subject">
+                    <option value="Modify Website">Modify Website</option>
+                    <option value="Advertising/Boosting">Advertising/Boosting</option>
+                    <option value="Product Shoot">Product Shoot</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Others">Others</option>
+                  </select>
                 </div>
                 <div class="input-container">
                   <label for="">Task</label><br />
@@ -84,7 +90,7 @@
                   <input type="text" name="report"></input>
                 </div>
               </div>
-                <input type="submit" class="adduser-btn" value="Add"></input>
+                <input type="submit" class="adduser-btn" name="adduser-btn" value="Add"></input>
               </form>
             </div>
           </div>

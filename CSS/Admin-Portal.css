@@ -13,7 +13,7 @@
   border-radius: 15px;
   border: 1px solid var(--main);
   color: #111111;
-  padding: 20px 30px;
+  padding: 10px 30px 20px;
 }
 /* .grid-box:hover{
   background-color: rgb(18, 110, 130, 15%);
