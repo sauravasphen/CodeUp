@@ -194,13 +194,6 @@
       <label for="phone"><b>Phone number</b></label>
         <input type="text"  placeholder="Phone number" name="Phone_number" id="phone" value="<?php echo $row['contact_num']; ?>"  required="required">
     </div>
-    <?php
-              if(isset($_GET['error'])){ $error = $_GET['error'];
-              ?>
-
-             <p class="error"><?php echo $error ; ?></p>
-            <?php } ?>
-            </div>
     <div class="element">
       <center><button type="submit" class="button2" name="save">Save changes</button></center>
     </div>
@@ -237,12 +230,7 @@
             <label for="cpwd"><b>Confirm Password</b></label>
               <input type="password"  placeholder="confirm_password" name="cpwd" id="cpwd" required="required">
           </div>
-          <?php
-                    if(isset($_GET['error'])){ $error = $_GET['error'];
-                    ?>
 
-                   <p class="error"><?php echo $error ; ?></p>
-                  <?php } ?>
 
           <div class="element">
             <button type="submit" class="button3" name="savechange">Save changes</button>
