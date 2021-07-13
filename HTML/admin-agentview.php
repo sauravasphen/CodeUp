@@ -88,7 +88,7 @@
                             <td><?php echo $res['f_name']; ?></td>
                             <td><?php echo $res['Email']; ?></td>
                             <td><?php echo $res['contact_num']; ?></td>
-                            <td><a href="#" class="delete delete-btn" data-id="<?php echo $res['agent_id']; ?>"><button>Edit</button></a>
+                            <td><a href="#" class="delete delete-btn" data-id="<?php echo $res['agent_id']; ?>"><button class="edit">Edit</button></a>
                             </span><td>
                           </tr>
                         <?php

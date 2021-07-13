@@ -10,6 +10,7 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="../CSS/admin.css">
+    <link rel="stylesheet" href="../css/Admin-Portal.css">
      <link rel="stylesheet" href="../css/Portal-Navigation.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
   </head>
@@ -35,7 +36,7 @@
             <span>Add Task</span>
         </a>
       </li>
-      
+
         <li>
           <a href="logout.php">
             <span class="ti-back-left"></span>
@@ -46,8 +47,27 @@
     </div>
 
     <!-- ***************** Body ********************** -->
-      <main class="content">
-        <h2 class="dash-title">Overview</h2>
+      <div class="content">
+        <div class="grid-container">
+          <div class="grid-box dash-profile">
+            <h2 class="dash-box-header">Profile</h2>
+            <img src="../MEDIA/profile.png" alt="profile" width="200px"><br />
+            <?php
+            $id = $_SESSION['admin_id'];
+             $sql = "SELECT * FROM admin WHERE admin_id = '$id'";
+             $query = mysqli_query($conn, $sql);
+             while ($res = mysqli_fetch_assoc($query)) {
+            ?>
+            <b>Username: </b><?php echo $res['admin_username']; ?><br>
+            <b>Name: </b><?php echo $res['f_name']; ?><br>
+            <b>Email ID: </b><?php echo $res['Email']; ?><br>
+            <b>Contact No: </b><?php echo $res['contact_num']; ?><br>
+            <?php
+             }
+           ?>
+           <button class="button button1" onclick="openform()"> Change Information </button>
+            <button class="button button2" onclick="changeform()"> Change Password </button>
+          </div>
 
         <div class="dash-cards">
           <div class="card-single">
@@ -88,7 +108,7 @@
           </div>
 
         </div>
-      </main>
+      </div>
     </div>
   </body>
 </html>
