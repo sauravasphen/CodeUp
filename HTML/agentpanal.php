@@ -54,7 +54,7 @@
             <img src="../MEDIA/profile.png" alt="profile" width="200px"><br />
             <?php
             $id = $_SESSION['admin_id'];
-             $sql = "SELECT * FROM admin WHERE admin_id = '$id'";
+             $sql = "SELECT * FROM agent WHERE aagent_id = '$id'";
              $query = mysqli_query($conn, $sql);
              while ($res = mysqli_fetch_assoc($query)) {
             ?>
