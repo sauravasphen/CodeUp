@@ -45,7 +45,7 @@
     </div>
 
     <!-- ***************** Body ********************** -->
-      <main class="content">
+      <div class="content">
         <h2 class="dash-title">Overview</h2>
 
         <div class="dash-cards">
@@ -87,8 +87,7 @@
           </div>
 
         </div>
-      </main>
-    </div>
+      </div>
   </body>
 </html>
 

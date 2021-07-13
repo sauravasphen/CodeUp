@@ -44,10 +44,8 @@ $company_id=$_SESSION['company_id'];
     </div>
 
     <!-- ***************** Body ********************** -->
-      <main class="content">
+      <div class="content">
         <h2 class="dash-title">Overview</h2>
-        <section class="recent">
-          <div class="activity-grid">
             <div class="activity-card">
               <h3>Tasks</h3>
               <table>
@@ -110,10 +108,6 @@ $company_id=$_SESSION['company_id'];
             </div>
 
           </div>
-
-        </section>
-      </main>
-    </div>
   </body>
 </html>
 
