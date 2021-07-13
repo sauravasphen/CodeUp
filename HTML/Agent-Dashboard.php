@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if (isset($_SESSION['admin_name']) && isset($_SESSION['admin_id'])){
+  if (isset($_SESSION['agent_name']) && isset($_SESSION['agent_id'])){
     include('connection.php');
  ?>
  <!DOCTYPE html>
@@ -17,13 +17,13 @@
      <div class="navigation-container">
        <ul>
          <li class="active">
-           <a href="Admin-Dashboard.php">
+           <a href="Agent-Dashboard.php">
              <span class="ti-panel"></span>
              <span>Dashboard</span>
            </a>
          </li>
          <li>
-           <a href="Admin-NewQueries.php">
+           <a href="Agent-NewQueries.php">
              <span class="ti-email"></span>
              <span>New Queries</span>
            </a>
