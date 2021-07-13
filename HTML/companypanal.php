@@ -1,6 +1,5 @@
 <?php
   SESSION_start();
-
   if (isset($_SESSION['company_name']) && isset($_SESSION['company_id'])){
   include("connection.php");
 ?>
