@@ -67,25 +67,29 @@
           <button class="button button2" onclick="changeform()"> Change Password </button>
         </div>
         <div class="grid-box dash-agents">
-          <h2 class="dash-box-header"><span class="ti-briefcase"></span>Account Balance</h2>
+          <h2 class="dash-box-header"><span class="ti-briefcase"></span>Company ID</h2>
           <div class="dash-count">
-              $30,000
+              <?php echo $id ?>
           </div>
         </div>
-        <div class="grid-box dash-companies">
+        <!-- <div class="grid-box dash-companies">
            <h2 class="dash-box-header"><span class="ti-reload"></span>Pending Bills</h2>
            <div class="dash-count">
               $18,000
            </div>
-          </div>
+          </div> -->
           <div class="grid-box dash-queries">
-            <h2 class="dash-box-header"><span class="ti-check-box"></span>Processed</h2>
+            <h2 class="dash-box-header"><span class="ti-check-box"></span>Completed Tasks</h2>
             <div class="dash-count">
-                $18,000
+              <?php
+              $sql="SELECT *FROM task where status='1' And company_id='$id'";
+              $query=mysqli_query($conn,$sql);
+              $count=mysqli_num_rows($query);
+              echo "$count"; ?>
             </div>
           </div>
           <div class="grid-box dash-pending-task">
-            <h2 class="dash-box-header"><span class="ti-check-box"></span>Pending Tasks</h2>
+            <h2 class="dash-box-header"><span class="ti-reload"></span>Pending Tasks</h2>
             <div class="dash-count">
               <?php
               $sql="SELECT *FROM task where status='0' And company_id='$id'";
@@ -93,6 +97,23 @@
               $count=mysqli_num_rows($query);
               echo "$count"; ?>
             </div>
+          </div>
+          <!-- .......................Query List............... -->
+          <div class="grid-box dash-query-list">
+            <h2 class="dash-box-header"><span class="ti-check-box"></span>Handeling Aget Info </h2>
+            <?php
+            $sql="SELECT *FROM company LEFT JOIN agent on company.agent_id=agent.agent_id where company_id='$id'";
+            $query=mysqli_query($conn,$sql);
+            while($res=mysqli_fetch_array($query)){
+              ?>
+              <div class="dash-query">
+                <div class="dash-query-info">
+              <b>Name:</b><?php echo $res['f_name']; ?><br>
+              &nbsp;<b>Email:</b> <?php echo $res['Email']; ?>
+                &nbsp;<b>Contact Number:</b> <?php echo $res['contact_num']; ?>
+              </div>
+            </div>
+            <?php } ?>
           </div>
           <!-- ..........Task List........... -->
             <div class="grid-box dash-task-list">
@@ -118,6 +139,7 @@
           </div>
         </div>
       </div>
+
       <!-- change information -->
       <div class="popup-overlay"></div>
      <div class="popup">
