@@ -2,7 +2,7 @@
   SESSION_start();
   $id = $_SESSION['company_id'];
   if (isset($_SESSION['company_name']) && isset($_SESSION['company_id'])){
-      include('connection.php');
+  include("connection.php");
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -64,35 +64,6 @@
            }
          ?>
          <button class="button button1" onclick="openform()"> Change Information </button>
-<<<<<<< HEAD
-        </div>
-        <div class="grid-box dash-companies">
-           <h2 class="dash-box-header"><span class="ti-briefcase"></span>Company ID</h2>
-           <div class="dash-count"><?php
-           $sql="SELECT *FROM company WHERE company_id='$id'";
-           $query = mysqli_query($conn, $sql);
-           while ($res = mysqli_fetch_assoc($query)) {
-             echo $res['company_id'];
-           }
-          ?></div>
-          </div>
-          <div class="grid-box dash-pending-task">
-            <h2 class="dash-box-header"><span class="ti-check-box"></span>Pending Tasks</h2>
-            <div class="dash-count"><?php
-            $sql="SELECT *FROM task where status='0' AND company_id='$id' ";
-            $query=mysqli_query($conn,$sql);
-            $count=mysqli_num_rows($query);
-            echo "$count"; ?></div>
-          </div>
-          <div class="grid-box dash-queries">
-            <h2 class="dash-box-header"><span class="ti-email"></span>Completed Task</h2>
-            <div class="dash-count"><?php
-            $sql="SELECT *FROM task where status='1' AND company_id='$id' ";
-            $query=mysqli_query($conn,$sql);
-            $count=mysqli_num_rows($query);
-            echo "$count"; ?></div>
-          </div>
-=======
           <button class="button button2" onclick="changeform()"> Change Password </button>
         </div>
         <div class="grid-box dash-agents">
@@ -116,15 +87,18 @@
           <div class="grid-box dash-pending-task">
             <h2 class="dash-box-header"><span class="ti-check-box"></span>Pending Tasks</h2>
             <div class="dash-count">
-
+              <?php
+              $sql="SELECT *FROM task where status='0' And company_id='$id'";
+              $query=mysqli_query($conn,$sql);
+              $count=mysqli_num_rows($query);
+              echo "$count"; ?>
             </div>
           </div>
->>>>>>> 81fb79bfb002f3b3b05815e73d93ae62e42f4bdd
           <!-- ..........Task List........... -->
             <div class="grid-box dash-task-list">
               <h2 class="dash-box-header"><span class="ti-check-box"></span>Tasks</h2>
             <?php
-            $sql="SELECT *FROM task NATURAL JOIN company WHERE company_id='$id'ORDER BY task_id DESC LIMIT 3 ";
+            $sql="SELECT *FROM task NATURAL JOIN company ORDER BY task_id DESC LIMIT 3";
             $query=mysqli_query($conn,$sql);
             while($res=mysqli_fetch_array($query)){
               ?>
@@ -139,7 +113,7 @@
             </div>
             <?php } ?>
             <div class="viewtask-button">
-            <a href="company-taskview.php">View Task</a>
+            <a href="agent-taskview.php">View Task</a>
           </div>
           </div>
         </div>
@@ -164,8 +138,8 @@
           </div>
           <hr><br>
          <div class="element">
-           <label for="cname"><b>Company Name</b></label>
-           <input type="text"  placeholder="comapny name" name="cname" id="cname" value="<?php echo $row["company_name"];   ?>"  required="required">
+           <label for="fname"><b>Full Name</b></label>
+           <input type="text"  placeholder="Fullname" name="cname" id="fname" value="<?php echo $row["company_name"];   ?>"  required="required">
        </div>
    <div class="element">
      <label for="email"><b>Email</b></label>
@@ -185,20 +159,55 @@
    ?>
    </div>
    </div>
-   <script>
-   function openform(){
-   document.body.classList.add("showLoginForm");
-   }
-   function changeform(){
-   document.body.classList.add("showchangeForm");
-   }
-   function closeForm(){
-   document.body.classList.remove("showLoginForm");
-   }
-   function closeForm1(){
-   document.body.classList.remove("showchangeForm");
-   }
-   </script>
+   <!-- change password -->
+   <div class="popup-overlay"></div>
+     <div class="popup2">
+        <div class="popup2-close" onclick="closeForm1()">×</div>
+       <div class="form">
+
+         <form action="company_changeinfo_handle.php " method="POST">
+          <div class="header">
+                Change Password
+          </div>
+          <hr><br>
+
+         <div class="element">
+            <label for="cpw"><b>Current Password</b></label>
+             <input type="password"  placeholder="current_password" name="cpw" id="cpw" required="required">
+         </div>
+
+         <div class="element">
+           <label for="npw"><b>New Password</b></label>
+             <input type="password"  placeholder="new_password" name="npw" id="npw" required="required">
+         </div>
+
+         <div class="element">
+           <label for="cpwd"><b>Confirm Password</b></label>
+             <input type="password"  placeholder="confirm_password" name="cpwd" id="cpwd" required="required">
+         </div>
+
+
+         <div class="element">
+           <button type="submit" class="button3" name="savechange">Save changes</button>
+         </div>
+     </form>
+
+   </div>
+  </div>
+  <script>
+  function openform(){
+  document.body.classList.add("showLoginForm");
+  }
+  function changeform(){
+  document.body.classList.add("showchangeForm");
+  }
+  function closeForm(){
+  document.body.classList.remove("showLoginForm");
+  }
+  function closeForm1(){
+  document.body.classList.remove("showchangeForm");
+  }
+  </script>
   </body>
 </html>
 

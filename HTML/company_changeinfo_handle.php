@@ -19,6 +19,28 @@
       }
     }
   }
+  // password change
+  if(isset($_POST['savechange'])){
+  if(isset($_POST['cpw'])&&isset($_POST['npw'])&&isset($_POST['cpwd'])){
+        $current=$_POST['cpw'];
+        $new_pwd=$_POST['npw'];
+        $confirm_pwd=$_POST['cpwd'];
+              $result = mysqli_query($conn,"SELECT *from company WHERE company_id='" . $id . "'");
+              $row=mysqli_fetch_array($result);
+              if($current == $row["Password"] && $new_pwd===$confirm_pwd) {
+                mysqli_query($conn,"UPDATE company set Password='" . $confirm_pwd . "' WHERE company_id='" . $id . "'");
+                echo "<script>location.href='companypanal.php';
+                window.alert('Changed');
+                </script>";
+              }
+                else{
+                       echo "<script>
+                       location.href='companypanal.php';
+                       window.alert('Not Changed');
+                       </script>";
+                   }
+              }
+  }
     else{
       header("Location:companypanal.php?error=''");
       $error = '';

@@ -3,6 +3,7 @@
   if (isset($_SESSION['agent_name']) && isset($_SESSION['agent_id'])){
     include('connection.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
