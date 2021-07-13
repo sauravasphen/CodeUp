@@ -18,8 +18,6 @@ if(isset($_POST['adduser-btn'])){
             else{
               echo "error:".$sql."<br>".mysqli_error($conn);
             }
-
-
     }
 
     if(isset($_POST['edit-btn'])){

@@ -91,8 +91,7 @@
             <a href="#" class="delete delete-btn" data-id="<?php echo $res["contactus_id"]; ?>"><button>Delete</button></a>
                       </span>
          </div>
-       <?php }
-         ?>
+       <?php } ?>
          </div>
       </div>
       <!-- modal starts here -->

@@ -81,8 +81,9 @@
            <?php
             }
           ?>
-          <button class="button button1" onclick="openform()"> Change Information </button>
-           <button class="button button2" onclick="changeform()"> Change Password </button>
+          <!-- Change Info and Password -->
+          <button class="button" onclick="openform()"> Change Information </button>
+           <button class="button" onclick="changeform()"> Change Password </button>
            <span id="message"></span>
          </div>
          <div class="grid-box dash-agents">
@@ -196,7 +197,7 @@
         <input type="text"  placeholder="Phone number" name="Phone_number" id="phone" value="<?php echo $row['contact_num']; ?>"  required="required">
     </div>
     <div class="element">
-      <center><button type="submit" class="button2" name="save">Save changes</button></center>
+      <center><button type="submit" name="save">Update</button></center>
     </div>
   </form>
     <?php
@@ -231,10 +232,8 @@
             <label for="cpwd"><b>Confirm Password</b></label>
               <input type="password"  placeholder="confirm_password" name="cpwd" id="cpwd" required="required">
           </div>
-
-
           <div class="element">
-            <button type="submit" class="button3" name="savechange">Save changes</button>
+            <center><button type="submit" name="savechange">Update</button><center>
           </div>
       </form>
 

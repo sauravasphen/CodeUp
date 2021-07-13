@@ -71,7 +71,7 @@ a {
   margin: 10px 0px 0px;
 }
 .viewtask-button a{
-  font-size: 25px;
+  font-size: 20px;
   text-decoration: none;
   color: black;
   padding: 5px 10px;
@@ -162,37 +162,23 @@ body.showLoginForm .popup {
   font-size: 15px;
   letter-spacing: 2px;
 }
-.popup .form .element .button2 {
-  margin-top:5px;
-  margin-left:35%;
-  width:30%;
-  padding:10px 0px;
-  outline:none;
-  border:none;
-  font-size:15px;
-  font-weight:600;
-  border-radius:5px;
-  cursor:pointer;
-  background:#ff7733;
-  color:#f5f5f5;
+
+.element button, .button{
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  border: 1px solid var(--main);
+  box-shadow: 2px 2px 10px var(--main);
+  border-radius: 0 10px 0 10px;
 }
-.popup .form .element .button2:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+.element button:hover, .button:hover{
+  background-color: var(--main);
+  color: var(--white);
+  transition: ease 0.4s;
 }
 
 /*for change password*/
-
-.button2 {
-  background-color:#f2f2f2;
-   color: #ff7733;
-  border: 2px solid #ff7733;
-}
-
-.button2:hover {
-  background-color:#ff7733;
-  color:white;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
 
 .popup2 {
   position:absolute;
@@ -260,7 +246,7 @@ body.showchangeForm .popup2 {
   font-size: 15px;
   letter-spacing: 2px;
 }
-.popup2 .form .element .button3 {
+/* .popup2 .form .element .button3 {
   margin-top:5px;
   margin-left:35%;
   width:30%;
@@ -273,7 +259,7 @@ body.showchangeForm .popup2 {
   cursor:pointer;
   background:#ff7733;
   color:#f5f5f5;
-}
+} */
 .popup2 .form .element .button3:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
@@ -428,16 +414,15 @@ input:focus {
 
 .modal{
     top: 25%;
-    width: 450px;
+    width: 35%;
+    height: auto;
     left: 40%;
     position: absolute;
     border: 1px solid var(--main);
-    padding: 25px 30px;
     background-color: var(--white);
     z-index: 100;
     text-align: center;
     border-radius: 5px;
-    color: white;
 }
 .modal-close{
     right: 0;
@@ -451,27 +436,24 @@ input:focus {
 .modal-cont{
     margin: 10px 0 5px;
     padding: 5px 15px 0;
+    color: black;
 }
 .modal-delete-btn{
-  font-size: 20px;
-  text-decoration: none;
-  color: var(--white);
-  background-color: var(--main);
-  padding: 10px 20px;
-  border: 1px solid var(--white);
-  box-shadow: 2px 2px 2px var(--main);
-  border-radius: 0 10px 0 10px;
-    right: 0;
-    text-align: center;
-    transition: .3s ease-in-out;
-    cursor: pointer;
-}
-.modal-delete-btn:hover{
-  background-color: var(--white);
-  border: 1px solid var(--white);
-  color: var(--main);
-  transition: ease 0.3s;
-}
+  margin-bottom: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border: 1px solid var(--main);
+    box-shadow: 2px 2px 10px var(--main);
+    border-radius: 0 10px 0 10px;
+  }
+  .modal-delete-btn:hover{
+    background-color: var(--main);
+    color: var(--white);
+    transition: ease 0.4s;
+  }
+
 
 /* ------------------ Agents & Companies ------------------------ */
 
