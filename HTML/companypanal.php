@@ -84,6 +84,14 @@
             $count=mysqli_num_rows($query);
             echo "$count"; ?></div>
           </div>
+          <div class="grid-box dash-queries">
+            <h2 class="dash-box-header"><span class="ti-email"></span>Completed Task</h2>
+            <div class="dash-count"><?php
+            $sql="SELECT *FROM task where status='1' AND company_id='$id' ";
+            $query=mysqli_query($conn,$sql);
+            $count=mysqli_num_rows($query);
+            echo "$count"; ?></div>
+          </div>
           <!-- ..........Task List........... -->
             <div class="grid-box dash-task-list">
               <h2 class="dash-box-header"><span class="ti-check-box"></span>Tasks</h2>
