@@ -1,5 +1,6 @@
 <?php
   session_start();
+  $id=$_SESSION['admin_id'];
   if (isset($_SESSION['admin_name']) && isset($_SESSION['admin_id'])){
     include('connection.php');
  ?>
@@ -76,10 +77,12 @@
            <b>Username: </b><?php echo $res['admin_username']; ?><br>
            <b>Name: </b><?php echo $res['f_name']; ?><br>
            <b>Email ID: </b><?php echo $res['Email']; ?><br>
-           <b>Contact No: </b><?php echo $res['contact_num']; ?>
+           <b>Contact No: </b><?php echo $res['contact_num']; ?><br>
            <?php
             }
           ?>
+          <button class="button button1" onclick="openform()"> Change Information </button>
+           <button class="button button2" onclick="changeform()"> Change Password </button>
          </div>
          <div class="grid-box dash-agents">
            <h2 class="dash-box-header"><span class="ti-user"></span>Agents</h2>
@@ -133,7 +136,7 @@
              </div>
              <?php } ?>
              <div class="viewtask-button">
-             <a href="Admin-TaskView.php">View Queries</a>
+             <a href="Admin-NewQueries.php">View Queries</a>
            </div>
            </div>
            <!-- ..........Task List........... -->
@@ -160,6 +163,108 @@
            </div>
          </div>
        </div>
+       <!-- change information -->
+       <div class="popup-overlay"></div>
+      <div class="popup">
+         <div class="popup-close" onclick="closeForm()">×</div>
+        <div class="form">
+          <?php
+
+              $sql="SELECT * FROM admin WHERE admin_id = '$id'";
+              $query = mysqli_query($conn,$sql);
+              if (mysqli_num_rows($query) === 1) {
+              $row =  mysqli_fetch_assoc($query);
+              if($row['admin_id'] === $id){
+            ?>
+            <form action="admin_handle.php" method="POST">
+
+           <div class="header">
+                 Change information
+           </div>
+           <hr><br>
+          <div class="element">
+            <label for="fname"><b>Full Name</b></label>
+            <input type="text"  placeholder="Fullname" name="fname" id="fname" value="<?php echo $row["f_name"];   ?>"  required="required">
+        </div>
+    <div class="element">
+      <label for="email"><b>Email</b></label>
+        <input type="email"  placeholder="Email" name="email" id="email" value="<?php echo $row['Email']; ?>" required="required">
+    </div>
+    <div class="element">
+      <label for="phone"><b>Phone number</b></label>
+        <input type="text"  placeholder="Phone number" name="Phone_number" id="phone" value="<?php echo $row['contact_num']; ?>"  required="required">
+    </div>
+    <?php
+              if(isset($_GET['error'])){ $error = $_GET['error'];
+              ?>
+
+             <p class="error"><?php echo $error ; ?></p>
+            <?php } ?>
+            </div>
+    <div class="element">
+      <center><button type="submit" class="button2" name="save">Save changes</button></center>
+    </div>
+  </form>
+    <?php
+        }
+      }
+    ?>
+    </div>
+    </div>
+    <!-- change password -->
+    <div class="popup-overlay"></div>
+      <div class="popup2">
+         <div class="popup2-close" onclick="closeForm1()">×</div>
+        <div class="form">
+
+          <form action="admin_handle.php " method="POST">
+           <div class="header">
+                 Change Password
+           </div>
+           <hr><br>
+
+          <div class="element">
+             <label for="cpw"><b>Current Password</b></label>
+              <input type="password"  placeholder="current_password" name="cpw" id="cpw" required="required">
+          </div>
+
+          <div class="element">
+            <label for="npw"><b>New Password</b></label>
+              <input type="password"  placeholder="new_password" name="npw" id="npw" required="required">
+          </div>
+
+          <div class="element">
+            <label for="cpwd"><b>Confirm Password</b></label>
+              <input type="password"  placeholder="confirm_password" name="cpwd" id="cpwd" required="required">
+          </div>
+          <?php
+                    if(isset($_GET['error'])){ $error = $_GET['error'];
+                    ?>
+
+                   <p class="error"><?php echo $error ; ?></p>
+                  <?php } ?>
+
+          <div class="element">
+            <button type="submit" class="button3" name="savechange">Save changes</button>
+          </div>
+      </form>
+
+    </div>
+  </div>
+  <script>
+function openform(){
+document.body.classList.add("showLoginForm");
+}
+function changeform(){
+document.body.classList.add("showchangeForm");
+}
+function closeForm(){
+document.body.classList.remove("showLoginForm");
+}
+function closeForm1(){
+   document.body.classList.remove("showchangeForm");
+}
+</script>
    </body>
  </html>
  <?php

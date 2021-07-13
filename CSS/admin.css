@@ -454,7 +454,11 @@ main{
   border-radius: 7px;
 
 }
+.activity-card .delete .edit{
 
+  background-color: green;
+
+}
 .activity-card h3{
   color: #8390A2;
   margin: 1rem;
