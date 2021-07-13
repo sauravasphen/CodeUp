@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="../CSS/admin.css">
+    <link rel="stylesheet" href="../CSS/Admin-Portal.css">
      <link rel="stylesheet" href="../css/Portal-Navigation.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
   </head>
@@ -30,7 +30,7 @@
           </a>
         </li>
         <li>
-          <a href="company-taskadd.php"
+          <a href="company-taskadd.php">
             <span class="ti-pin-alt"></span>
             <span>Add Task</span>
         </a>

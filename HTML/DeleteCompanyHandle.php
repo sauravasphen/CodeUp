@@ -5,7 +5,7 @@
     $id = $_SESSION['edit_id'];
       $sql ="DELETE FROM company WHERE company_id='$id'";
     if(mysqli_query($conn,$sql)){
-      echo "<script>location.href='Admin-AgentView.php';
+      echo "<script>location.href='Admin-CompanyView.php';
       </script>";
     }
     else {
