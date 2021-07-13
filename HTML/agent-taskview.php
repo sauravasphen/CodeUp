@@ -1,15 +1,13 @@
 <?php
   SESSION_start();
-
   if (isset($_SESSION['agent_name']) && isset($_SESSION['agent_id'])){
-
+    include('connection.php');
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="../CSS/admin.css">
      <link rel="stylesheet" href="../css/Portal-Navigation.css">
      <link rel="stylesheet" href="../css/Admin-Portal.css">
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
@@ -55,52 +53,39 @@
                 <thead>
                   <tr>
                     <th>Task ID</th>
-                    <th>Company ID</th>
+                    <th>Company Name</th>
                     <th>Subject</th>
                     <th>Task</th>
                     <th>Report</th>
                     <th>Status</th>
                     <th>Issued Date</th>
                     <th>Closed Date</th>
-                    <th>EDIT</th>
+                    <th>UPDATE</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php
-                      $servername = "localhost";
-                      $username = "root";
-                      $password = "";
-                      $dbname = "CodeUp_db";
-
-                      // Create connection
-                      $conn = mysqli_connect($servername, $username, $password, $dbname);
-                      // Check connection
-                      if (!$conn) {
-                          die("Connection failed: " . mysqli_connect_error());
-                        }
-
-
-                        $selectquery="SELECT *FROM Task";
+                        $selectquery="SELECT *FROM Task Inner Join company ON task.company_id=company.company_id ORDER BY issued_date DESC";
                         $query=mysqli_query($conn,$selectquery);
                         while($res=mysqli_fetch_array($query)){
                           ?>
                           <tr>
                             <td><?php echo $res['task_id']; ?></td>
-                            <td><?php echo $res['company_id']; ?></td>
+                            <td><?php echo $res['company_name']; ?></td>
                             <td><?php echo $res['subject']; ?></td>
                             <td><?php echo $res['task']; ?></td>
                             <td><?php echo $res['report']; ?></td>
-                            <td><?php if ($res['status'] == 0) {echo "Pending";}
-                            else { echo "Finished"; }?></td>
+                            <td><?php echo $res['status']; ?></td>
+                            <!-- <td><?php if ($res['status'] == 0) {echo "Pending";}
+                            else { echo "Finished"; }?></td> -->
                             <td><?php echo $res['issued_date']; ?></td>
                             <td><?php echo $res['closed_date']; ?></td>
-                            <td><a href="#" class="delete delete-btn" data-id="<?php echo $res['task_id']; ?>"><button class="edit">Edit</button></a>
+                            <td><a href="#" class="delete delete-btn" data-id="<?php echo $res['task_id']; ?>">UPDATE</a>
                             </span><td>
                           </tr>
                         <?php
                         }
                    ?>
-
                 </tbody>
               </table>
             </div>
@@ -109,26 +94,22 @@
     <!-- modal starts here -->
       <div id="delete_model" class="modal">
           <i class="fas fa-times modal-close"></i>
-
-          <div class="modal-cont">
-          </div>
-
           <form action="agent_edit_task.php" method="POST">
               <input type="hidden" id="Deliting_id" name="Deliting_id">
               <div class="element">
-                <label for="report">Report<b></b></label>
+                <label for="report">Report</label>
                 <input type="text"  placeholder="Report" name="report" id="report" required="required">
               </div>
               <div class="element">
                 <div class="account-type">
-                  <input id="1" type='radio' name="status" class="acc-radiobutton" value="0" checked>
-                  <label for="1" class='acc-label'>Pending</label>
-                  <input id="2" type='radio' name="status" class="acc-radiobutton" value="1">
-                  <label for="2" class='acc-label'>Completed</label>
+                  <input id="1" type='radio' name="status" class="status-radiobutton" value="0" checked>
+                  <label for="1" class='status-label'>Pending</label>
+                  <input id="2" type='radio' name="status" class="status-radiobutton" value="1">
+                  <label for="2" class='status-label'>Completed</label>
                 </div>
               </div>
-
-              <button class="modal-delete-btn" name="submit">Submit</button>
+              <input type="submit" class="modal-delete-btn" name="submit" value="Update">
+              <!-- <button class="modal-delete-btn" name="submit">Submit</button> -->
           </form>
       </div>
 
