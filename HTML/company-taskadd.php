@@ -12,6 +12,8 @@
     <script src="../JS/task.js" charset="utf-8"></script>
     <link rel="stylesheet" href="../CSS/task.css">
      <link rel="stylesheet" href="../css/Portal-Navigation.css">
+     <link rel="stylesheet" href="../css/Admin-Portal.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
   </head>
   <body>
@@ -51,7 +53,6 @@
     <div class="task">
         <h1>Create Task</h1>
         <button type="button" onclick="togglePopup()" class="create-btn" name="create">Create</button>
-        <button type="button" class="edit-btn" name="Edit">Edit</button>
 
              <form class="task-form" id="popup-2"  action="companytaskhandel.php" method="post">
                  <fieldset class="form-content">

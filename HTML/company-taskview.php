@@ -2,7 +2,7 @@
   session_start();
 $company_id=$_SESSION['company_id'];
   if (isset($_SESSION['company_name']) && isset($_SESSION['company_id'])){
-
+include('connection.php');
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -11,6 +11,7 @@ $company_id=$_SESSION['company_id'];
     <title></title>
     <link rel="stylesheet" href="../CSS/admin.css">
      <link rel="stylesheet" href="../css/Portal-Navigation.css">
+     <link rel="stylesheet" href="../css/Admin-Portal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
   </head>
   <body>
@@ -45,9 +46,8 @@ $company_id=$_SESSION['company_id'];
 
     <!-- ***************** Body ********************** -->
       <div class="content">
-        <h2 class="dash-title">Overview</h2>
             <div class="activity-card">
-              <h3>Tasks</h3>
+              <center><h3>Tasks</h3></center>
               <table>
                 <thead>
                   <tr>
@@ -62,30 +62,6 @@ $company_id=$_SESSION['company_id'];
                 </thead>
                 <tbody>
                   <?php
-                      $servername = "localhost";
-                      $username = "root";
-                      $password = "";
-                      $dbname = "CodeUp_db";
-
-                      // Create connection
-                      $conn = mysqli_connect($servername, $username, $password, $dbname);
-                      // Check connection
-                      if (!$conn) {
-                          die("Connection failed: " . mysqli_connect_error());
-                        }
-                        // echo "connection successfuly";
-
-                        // $sql="SELECT * FROM Task";
-                        //       $result=mysqli_query($conn,$sql);
-                        //       $row=mysqli_fetch_assoc($result);
-                        //       if($row['company_id']===$company_id){
-                        //         $cmp_id=$row['company_id'];
-                        //
-                        //       }
-                        //       else{
-                        //         echo "error:".$sql."<br>".mysqli_error($conn);
-                        //       }
-                        // if($company_id===$cmp_id){
                         $selectquery="SELECT *FROM Task where company_id='$company_id'";
                         $query=mysqli_query($conn,$selectquery);
                         while($res=mysqli_fetch_array($query)){
@@ -95,7 +71,8 @@ $company_id=$_SESSION['company_id'];
                             <td><?php echo $res['subject']; ?></td>
                             <td><?php echo $res['task']; ?></td>
                             <td><?php echo $res['report']; ?></td>
-                            <td><?php echo $res['status']; ?></td>
+                            <td><?php if ($res['status'] == 0) {echo "Pending";}
+                            else { echo "Finished"; }?></td>
                             <td><?php echo $res['issued_date']; ?></td>
                             <td><?php echo $res['closed_date']; ?></td>
                           </tr>
