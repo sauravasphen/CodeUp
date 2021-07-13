@@ -77,14 +77,14 @@
              <div class="query-info">
             <span class="light">Name</span> <?php echo $res['F_name']; ?>
              <br> <span class="light">From</span> <?php echo $res['company_name']; ?>
-             <br> <span class="light">Ph. No.</span> <?php echo $res['contact_num']; ?>
+             <br><br> <span class="light">Ph. No.</span> <?php echo $res['contact_num']; ?>
              <br> <span class="light">Email</span> <?php echo $res['Email']; ?>
             </div>
             <div class="query-date">
               <span class="light">Date:</span> <?php echo $res['mgs_date']; ?>
             </div>
             <div class="query-mgs">
-            <span class="light">Subject:</span> <?php echo $res['subject']; ?>
+            <br><span class="light">Subject:</span> <?php echo $res['subject']; ?>
             <br><span class="light">Message:</span> <?php echo $res['message']; ?>
             </div>
             <span class="action_btn">

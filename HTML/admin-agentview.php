@@ -80,16 +80,21 @@
                   <?php
                         $selectquery="SELECT *FROM Agent";
                         $query=mysqli_query($conn,$selectquery);
-                        while($res=mysqli_fetch_array($query)){
+                        while($res=mysqli_fetch_assoc($query)){
+                          $id = $res['agent_id'];
+                          $un = $res['agent_username'];
+                          $fn = $res['f_name'];
+                          $em = $res['Email'];
+                          $cn = $res['contact_num'];
                           ?>
                           <tr>
-                            <td><?php echo $res['agent_id']; ?></td>
-                            <td><?php echo $res['agent_username']; ?></td>
-                            <td><?php echo $res['f_name']; ?></td>
-                            <td><?php echo $res['Email']; ?></td>
-                            <td><?php echo $res['contact_num']; ?></td>
-                            <td><a href="#" class="delete delete-btn" data-id="<?php echo $res['agent_id']; ?>"><button class="edit">Edit</button></a>
-                            </span><td>
+                            <td><?php echo $id; ?></td>
+                            <td><?php echo $un; ?></td>
+                            <td><?php echo $fn; ?></td>
+                            <td><?php echo $em; ?></td>
+                            <td><?php echo $cn; ?></td>
+                            <?php echo "<td><a href='Admin-EditUser.php?id=".$id."&un=".$res["agent_username"]."&fn=".$fn."&em=".$em."&cn=".$cn."'>Edit</a>"; ?>
+                              <!-- &nbsp/ <?php echo "<a href='DeleteAgentHandle.php?id=".$id."'>Delete</a> <td>"; ?> -->
                           </tr>
                         <?php
                         }
@@ -99,48 +104,6 @@
             </div>
       </div>
     </div>
-    <!-- modal starts here -->
-      <div id="delete_model" class="modal">
-          <i class="fas fa-times modal-close"></i>
-
-          <div class="modal-cont">
-          </div>
-
-          <form action="delete_user.php" method="POST">
-              <input type="hidden" id="Deliting_id" name="Deliting_id">
-              <div class="element">
-                <label for="Fullname"><b>Full Name</b></label>
-                <input type="text"  placeholder="Fullname" name="fname" id="fname" required="required">
-              </div>
-              <div class="element">
-                <label for="Email"><b>Email</b></label>
-                <input type="email"  placeholder="Email" name="email" id="email"  required="required">
-              </div>
-              <div class="element">
-                <label for="contact_num"><b>Contact Number</b></label>
-                <input type="text"  placeholder="contact_num" name="contact_num" id="contact_num"   required="required">
-              </div>
-              <button class="modal-delete-btn" name="submit">Submit</button>
-          </form>
-      </div>
-
-         <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-
-      <script>
-          $(document).ready(function(){
-            $("#delete_model").hide();
-            $(".delete-btn").click(function(){
-              $("#delete_model").toggle();
-            });
-            $(".modal-close").click(function(){
-              $("#delete_model").hide();
-            });
-            $(document).on("click",".delete-btn", function(){
-                      var Id = $(this).data("id");
-                      $("#Deliting_id").val(Id);
-                  });
-          });
-      </script>
   </body>
 </html>
 <?php

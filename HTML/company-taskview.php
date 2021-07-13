@@ -9,7 +9,7 @@ include('connection.php');
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="../CSS/admin.css">
+    <link rel="stylesheet" href="../CSS/admin-portal.css">
      <link rel="stylesheet" href="../css/Portal-Navigation.css">
      <link rel="stylesheet" href="../css/Admin-Portal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
@@ -30,7 +30,7 @@ include('connection.php');
           </a>
         </li>
         <li>
-          <a href="company-taskadd.php"
+          <a href="company-taskadd.php">
             <span class="ti-pin-alt"></span>
             <span>Add Task</span>
         </a>
@@ -80,11 +80,30 @@ include('connection.php');
                         }
                    ?>
 
-                </tbody>
-              </table>
-            </div>
+                      $selectquery="SELECT *FROM Task";
+                      $query=mysqli_query($conn,$selectquery);
+                      while($res=mysqli_fetch_array($query)){
+                        ?>
+                        <tr>
+                          <td><?php echo $res['task_id']; ?></td>
+                          <td><?php echo $res['company_id']; ?></td>
+                          <td><?php echo $res['subject']; ?></td>
+                          <td><?php echo $res['task']; ?></td>
+                          <td><?php echo $res['report']; ?></td>
+                          <td><?php if ($res['status'] == 0) {echo "Pending";}
+                          else { echo "Finished"; }?></td>
+                          <td><?php echo $res['issued_date']; ?></td>
+                          <td><?php echo $res['closed_date']; ?></td>
+                        </tr>
+                      <?php
+                      }
+                 ?>
 
+              </tbody>
+            </table>
           </div>
+
+  </div>
   </body>
 </html>
 

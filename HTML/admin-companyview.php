@@ -71,21 +71,28 @@
                     <th>Company Name</th>
                     <th>Email</th>
                     <th>Contact Number</th>
-
+                    <th>EDIT</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php
                         $selectquery="SELECT *FROM Company";
                         $query=mysqli_query($conn,$selectquery);
-                        while($res=mysqli_fetch_array($query)){
+                        while($res=mysqli_fetch_assoc($query)){
+                          $id = $res['company_id'];
+                          $un = $res['company_username'];
+                          $fn = $res['company_name'];
+                          $em = $res['Email'];
+                          $cn = $res['contact_num'];
                           ?>
                           <tr>
-                            <td><?php echo $res['company_id']; ?></td>
-                            <td><?php echo $res['company_username']; ?></td>
-                            <td><?php echo $res['company_name']; ?></td>
-                            <td><?php echo $res['Email']; ?></td>
-                            <td><?php echo $res['contact_num']; ?></td>
+                            <td><?php echo $id; ?></td>
+                            <td><?php echo $un; ?></td>
+                            <td><?php echo $fn; ?></td>
+                            <td><?php echo $em; ?></td>
+                            <td><?php echo $cn; ?></td>
+                            <?php echo "<td><a href='Admin-EditCompany.php?id=".$id."&un=".$res["company_username"]."&fn=".$fn."&em=".$em."&cn=".$cn."'>Edit</a>"; ?>
+                              &nbsp/ <?php echo "<a href='DeleteCompanyHandle.php?id=".$id."'>Delete</a> <td>"; ?>
                           </tr>
                         <?php
                         }

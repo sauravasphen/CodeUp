@@ -1,6 +1,5 @@
 <?php
 include('connection.php');
-if (isset($_POST['submit'])) {
   $id =$_POST['Deliting_id'];
   $report=$_POST['report'];
   $status=$_POST['status'];
@@ -10,7 +9,6 @@ if (isset($_POST['submit'])) {
   } else {
     echo "Error deleting record: " . mysqli_error($conn);
   }
-}
 mysqli_close($conn);
 
  ?>

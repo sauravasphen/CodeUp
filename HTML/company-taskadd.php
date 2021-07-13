@@ -10,10 +10,8 @@
     <meta charset="utf-8">
     <title></title>
     <script src="../JS/task.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="../CSS/task.css">
-     <link rel="stylesheet" href="../css/Portal-Navigation.css">
-     <link rel="stylesheet" href="../css/Admin-Portal.css">
-
+    <link rel="stylesheet" href="../CSS/admin-portal.css">
+    <link rel="stylesheet" href="../css/Portal-Navigation.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
   </head>
   <body>
@@ -32,7 +30,7 @@
           </a>
         </li>
         <li class="active">
-          <a href="company-taskadd.php"
+          <a href="company-taskadd.php">
             <span class="ti-pin-alt"></span>
             <span>Add Task</span>
         </a>
@@ -47,34 +45,30 @@
     </div>
 
     <!-- ***************** Body ********************** -->
-
-
+    <!--Agent Task form -->
     <div class="content">
-    <div class="task">
-        <h1>Create Task</h1>
-        <button type="button" onclick="togglePopup()" class="create-btn" name="create">Create</button>
-
-             <form class="task-form" id="popup-2"  action="companytaskhandel.php" method="post">
-                 <fieldset class="form-content">
-                     <legend>Task</legend><br>
-                               <div class="task-label-div">
-                                   <label for="subject">Subject:</label>
-                               </div>
-                               <div class="task-input-div">
-                                   <textarea class="task-input-field" name="subject"></textarea>
-                               </div>
-                               <div class="task-label-div">
-                                   <label for="Task">Task:</label>
-                               </div>
-                               <div class="task-input-div">
-                                   <textarea class="task-input-field" name="task"></textarea>
-                               </div>
-                               <input type="submit" class="task-btn" name="submit" value="Submit">
-                               <button type="button" class="close-btn" onclick="togglePopup()" name="close">Close</button>
-                 </fieldset>
-             </form>
+      <div class="grid-container">
+        <div class="grid-box add-user">
+          <div class="adduser-title">
+            Add Task
+          </div>
+          <form action="agent-taskaddhandel.php" method="post">
+            <div class="adduser-details">
+            <div class="input-container">
+              <label for="">Task</label><br />
+            <input class="agent-input-field" name="task"required></input>
+            </div>
+            <div class="input-container">
+              <label for="">Subject</label><br />
+              <input class="agent-input-field" name="subject" required></input>
+            </div>
+          </div>
+            <br>
+            <input type="submit" class="adduser-btn" value="Add"></input>
+          </form>
+        </div>
+      </div>
     </div>
-</div>
 </body>
 </html>
 <?php

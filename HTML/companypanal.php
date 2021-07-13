@@ -9,10 +9,9 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="../CSS/admin.css">
-     <link rel="stylesheet" href="../css/Portal-Navigation.css">
-     <link rel="stylesheet" href="../css/Admin-Portal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+      <link rel="stylesheet" href="../CSS/admin-portal.css">
+      <link rel="stylesheet" href="../css/Portal-Navigation.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
   </head>
   <body>
     <!-- ************* Navigation ******************* -->
@@ -31,7 +30,7 @@
           </a>
         </li>
         <li>
-          <a href="company-taskadd.php"
+          <a href="company-taskadd.php">
             <span class="ti-pin-alt"></span>
             <span>Add Task</span>
         </a>
@@ -65,6 +64,7 @@
            }
          ?>
          <button class="button button1" onclick="openform()"> Change Information </button>
+<<<<<<< HEAD
         </div>
         <div class="grid-box dash-companies">
            <h2 class="dash-box-header"><span class="ti-briefcase"></span>Company ID</h2>
@@ -92,6 +92,34 @@
             $count=mysqli_num_rows($query);
             echo "$count"; ?></div>
           </div>
+=======
+          <button class="button button2" onclick="changeform()"> Change Password </button>
+        </div>
+        <div class="grid-box dash-agents">
+          <h2 class="dash-box-header"><span class="ti-briefcase"></span>Account Balance</h2>
+          <div class="dash-count">
+              $30,000
+          </div>
+        </div>
+        <div class="grid-box dash-companies">
+           <h2 class="dash-box-header"><span class="ti-reload"></span>Pending Bills</h2>
+           <div class="dash-count">
+              $18,000
+           </div>
+          </div>
+          <div class="grid-box dash-queries">
+            <h2 class="dash-box-header"><span class="ti-check-box"></span>Processed</h2>
+            <div class="dash-count">
+                $18,000
+            </div>
+          </div>
+          <div class="grid-box dash-pending-task">
+            <h2 class="dash-box-header"><span class="ti-check-box"></span>Pending Tasks</h2>
+            <div class="dash-count">
+
+            </div>
+          </div>
+>>>>>>> 81fb79bfb002f3b3b05815e73d93ae62e42f4bdd
           <!-- ..........Task List........... -->
             <div class="grid-box dash-task-list">
               <h2 class="dash-box-header"><span class="ti-check-box"></span>Tasks</h2>

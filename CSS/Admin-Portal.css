@@ -337,7 +337,7 @@ form {
   font-size: 20px;
 }
 
-.input-container input {
+.input-container input{
   outline: none;
   width: 55%;
   padding: 5px 8px;
@@ -433,7 +433,7 @@ input:focus {
     position: absolute;
     border: 1px solid var(--main);
     padding: 25px 30px;
-    background-color: var(--main);
+    background-color: var(--white);
     z-index: 100;
     text-align: center;
     border-radius: 5px;
@@ -445,7 +445,7 @@ input:focus {
     padding: 10px 15px;
     cursor: pointer;
     font-size: 25px;
-    color: whitesmoke;
+    color: var(--main);
     position: absolute;
 }
 .modal-cont{
@@ -512,17 +512,17 @@ tbody tr:nth-child(even){
 }
 
 
-.modal .element {
+.modal, .element{
   padding:8px 20px;
 }
-.modal .element label {
+.element label {
   display:block;
   font-size:17px;
   color:#222;
   margin-bottom:5px;
   letter-spacing: 2px;
 }
-.modal .element input {
+.element input {
   width:100%;
   padding:8px 10px;
   box-sizing:border-box;
@@ -532,4 +532,19 @@ tbody tr:nth-child(even){
   border-radius:5px;
   font-size: 15px;
   letter-spacing: 2px;
+}
+.status_label {
+  font-size: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  /* width: 50%; */
+  border-radius: 0 10px 0 10px;
+}
+.status-radiobutton{
+  display: none;
+}
+.status-radiobutton:checked+.status-label {
+  transition: linear 0.3s;
+  background-color: var(--main);
+  color: var(--white);
 }
