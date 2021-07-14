@@ -93,7 +93,7 @@
                             <td><?php echo $fn; ?></td>
                             <td><?php echo $em; ?></td>
                             <td><?php echo $cn; ?></td>
-                            <?php echo "<td><a href='Admin-EditUser.php?id=".$id."&un=".$res["agent_username"]."&fn=".$fn."&em=".$em."&cn=".$cn."'>Edit</a>"; ?>
+                            <?php echo "<td><a href='Admin-EditUser.php?id=".$id."&un=".$res["agent_username"]."&fn=".$fn."&em=".$em."&cn=".$cn."'><button class='adduser-btn'style='background-colorgreen'>Edit</button></a>"; ?>
                               <!-- &nbsp/ <?php echo "<a href='DeleteAgentHandle.php?id=".$id."'>Delete</a> <td>"; ?> -->
                           </tr>
                         <?php

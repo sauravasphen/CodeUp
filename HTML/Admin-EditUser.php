@@ -107,6 +107,7 @@
              </div>
            </div>
              <input type="submit" class="adduser-btn" value="Edit"></input>
+              <a href="admin_agentview"><button class="adduser-btn">Back</button></a>
            </form>
          </div>
        </div>
