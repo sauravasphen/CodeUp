@@ -57,7 +57,7 @@
            while ($res = mysqli_fetch_assoc($query)) {
           ?>
           <b>Username: </b><?php echo $res['company_username']; ?><br>
-          <b>Name: </b><?php echo $res['company_name']; ?><br>
+          <b>Company Name: </b><?php echo $res['company_name']; ?><br>
           <b>Email ID: </b><?php echo $res['Email']; ?><br>
           <b>Contact No: </b><?php echo $res['contact_num']; ?><br>
           <?php
@@ -119,7 +119,7 @@
             <div class="grid-box dash-task-list">
               <h2 class="dash-box-header"><span class="ti-check-box"></span>Tasks</h2>
             <?php
-            $sql="SELECT *FROM task NATURAL JOIN company ORDER BY task_id DESC LIMIT 3";
+            $sql="SELECT *FROM task NATURAL JOIN company  WHERE company_id='$id' AND status='0' ORDER BY task_id DESC LIMIT 3";
             $query=mysqli_query($conn,$sql);
             while($res=mysqli_fetch_array($query)){
               ?>
@@ -134,7 +134,7 @@
             </div>
             <?php } ?>
             <div class="viewtask-button">
-            <a href="agent-taskview.php">View Task</a>
+            <a href="company-taskview.php">View Task</a>
           </div>
           </div>
         </div>
@@ -160,7 +160,7 @@
           </div>
           <hr><br>
          <div class="element">
-           <label for="fname"><b>Full Name</b></label>
+           <label for="fname"><b>Company Name</b></label>
            <input type="text"  placeholder="Fullname" name="cname" id="fname" value="<?php echo $row["company_name"];   ?>"  required="required">
        </div>
    <div class="element">

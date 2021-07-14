@@ -91,7 +91,7 @@
                             <td><?php echo $fn; ?></td>
                             <td><?php echo $em; ?></td>
                             <td><?php echo $cn; ?></td>
-                            <?php echo "<td><a href='Admin-EditCompany.php?id=".$id."&un=".$res["company_username"]."&fn=".$fn."&em=".$em."&cn=".$cn."'><button class='adduser-btn'>Edit</button></a>"; ?>
+                            <?php echo "<td><a href='Admin-EditCompany.php?id=".$id."&un=".$res["company_username"]."&fn=".$fn."&em=".$em."&cn=".$cn."'><button class='adduser-btn'style='background-colorgreen'>Edit</button></a>"; ?>
                               <!-- &nbsp/ <?php echo "<a href='DeleteCompanyHandle.php?id=".$id."'><button class='adduser-btn' style='background-color:red'>Delete</button></a> <td>"; ?> -->
                           </tr>
                         <?php

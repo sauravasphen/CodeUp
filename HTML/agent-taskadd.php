@@ -85,10 +85,6 @@
                   <label for="">Task</label><br />
                 <input class="agent-input-field" name="task" required></input>
                 </div>
-                <div class="input-container">
-                  <label for="">Report</label><br />
-                  <input type="text" name="report"></input>
-                </div>
               </div>
                 <input type="submit" class="adduser-btn" name="adduser-btn" value="Add"></input>
               </form>
