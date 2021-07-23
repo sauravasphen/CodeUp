@@ -52,7 +52,7 @@
           <div class="adduser-title">
             Add Task
           </div>
-          <form action="agent-taskaddhandel.php" method="post">
+          <form action="companytaskhandel.php" method="post">
             <div class="adduser-details">
             <div class="input-container">
               <label for="">Task</label><br />
@@ -60,7 +60,13 @@
             </div>
             <div class="input-container">
               <label for="">Subject</label><br />
-              <input class="agent-input-field" name="subject" required></input>
+              <select name="subject">
+                <option value="Modify Website">Modify Website</option>
+                <option value="Advertising/Boosting">Advertising/Boosting</option>
+                <option value="Product Shoot">Product Shoot</option>
+                <option value="Graphic Design">Graphic Design</option>
+                <option value="Others">Others</option>
+              </select>
             </div>
           </div>
             <br>

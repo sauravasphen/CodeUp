@@ -1,7 +1,8 @@
 <?php
 session_start();
+  if (isset($_SESSION['company_name']) && isset($_SESSION['company_id'])){
 $company_id=$_SESSION['company_id'];
-if(isset($_POST['submit'])){
+
 
 $servername = "localhost";
 $username = "root";
@@ -25,12 +26,12 @@ $task=$_POST['task'];
   if(mysqli_multi_query($conn,$sql)){
     echo"task added successfully";
     header("location:company-taskadd.php");
-  }
-  else{
-    echo "error:".$sql."<br>".mysqli_error($conn);
-  }
-
 
 mysqli_close($conn);
+}
+}
+else{
+  header("location:mainpage.php");
+  exit();
 }
 ?>
